@@ -1,0 +1,6 @@
+.divider {
+  height: .1rem;
+  width: 65%;
+  margin: .2em 1em;
+  background-color: var(--mike-purple);
+}
