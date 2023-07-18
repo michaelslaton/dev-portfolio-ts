@@ -1,0 +1,45 @@
+/* Fonts */
+@font-face {
+  font-family: "manrope";
+  src: url("../assets/fonts/manrope-light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "manrope-bold";
+  src: url("../assets/fonts/Manrope-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Root Variables */
+:root {
+  --bg-color-dark: #000000;
+  --muted-purple: #5c008a;
+  --mike-purple: #ae00ff;
+}
+
+/* Normalization */
+
+body {
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+img {
+  border-style: none;
+}
+
+/* Styling */
+
+.skill {
+  background: var(--mike-purple);
+  width: fit-content;
+  padding: .2em .55em;
+  border-radius: .2rem;
+  border: 1px solid #000000;
+}
