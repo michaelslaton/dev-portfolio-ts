@@ -1,0 +1,17 @@
+.light-switch {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  aspect-ratio: 1/1;
+  height: 2.3em;
+  border-radius: 100%;
+  border: 1px solid black;
+  margin: .5rem;
+  background-color: white;
+  color: black;
+}
+.light-switch.dark {
+  border-color: white;
+  background-color: black;
+  color: white;
+}
