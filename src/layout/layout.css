@@ -14,17 +14,18 @@
 }
 
 /* Root Variables */
+
 :root {
   --bg-color-dark: #000000;
-  --muted-purple: #5c008a;
   --mike-purple: #ae00ff;
+  --mike-purple-dark: #9818d3;
+  --mike-purple-muted: #5c008a;
 }
 
 /* Normalization */
 
 body {
   margin: 0;
-  background-color: rgb(0, 0, 0);
   background-attachment: fixed;
   scroll-behavior: smooth;
   color: white;
@@ -36,10 +37,22 @@ img {
 
 /* Styling */
 
+.main-screen {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+.main-screen.dark {
+  background-color: #000000;
+}
+
 .skill {
-  background: var(--mike-purple);
+  background: var(--mike-purple-dark);
   width: fit-content;
   padding: .2em .55em;
   border-radius: .2rem;
   border: 1px solid #000000;
+}
+.skill.dark {
+  background: var(--mike-purple);
 }

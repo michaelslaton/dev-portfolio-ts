@@ -1,9 +1,10 @@
 .divider {
   height: .15rem;
-  width: 65%;
-  margin: .2em 1em;
-  background-color: var(--mike-purple);
+  width: 85%;
+  margin: .2em auto;
+  background-color: var(--mike-purple-dark);
+  border-radius: 50%;
 }
 .divider.dark {
-  background-color: green;
+  background-color: var(--mike-purple);
 }
