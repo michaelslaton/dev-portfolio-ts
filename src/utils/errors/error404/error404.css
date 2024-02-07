@@ -1,0 +1,53 @@
+.error404__wrapper {
+  width: 100%;
+  margin: 10rem auto;
+}
+
+.error404__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error404__title {
+  display: inline;
+  position: relative;
+  right: -4rem;
+  font-size: 9rem;
+  color: var(--font-color);
+  letter-spacing: .6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.error404__links-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 1.4rem;
+}
+.error404-link {
+  background: transparent;
+  display: inline;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-size: 1.3em;
+  color: var(--font-color);
+  padding: 0;
+  margin: 0 1em;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.error404-link:hover {
+  border-bottom: 2px solid var(--font-color);
+  transition: 50ms ease-in-out;
+}
+
+.error404__text {
+  position: relative;
+  left: -2.75rem;
+  top: 3.3rem;
+  font-size: 3rem;
+  color: var(--font-color);
+  white-space: nowrap;
+}

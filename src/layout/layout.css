@@ -1,0 +1,16 @@
+:root {
+  /* Colors */
+  --off-black: #141414;
+  --font-color: #ffffff;
+  /* Values */
+}
+
+body {
+  background-color: var(--off-black);
+  color: var(--font-color);
+  margin: 0;
+}
+
+img {
+  border-style: none;
+}
