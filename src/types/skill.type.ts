@@ -3,6 +3,7 @@ type SkillType = {
   name: string;
   img: string;
   learned: boolean;
+  category: string;
   abbr?: string;
 };
 

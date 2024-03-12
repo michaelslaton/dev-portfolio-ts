@@ -1,6 +1,6 @@
 import sfccimg from '../assets/imgs/schools/sfcc.png';
 import thinkfulimg from '../assets/imgs/schools/thinkful.png';
-import SchoolType from '../types/SchoolType';
+import SchoolType from '../types/school.type';
 
 const schoolList: SchoolType[] = [
   {

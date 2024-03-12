@@ -1,16 +1,84 @@
 :root {
   /* Colors */
-  --off-black: #141414;
+  --backdrop: #000000;
+  --sliders: #130338;
+  --content-bg-light: #1c163b;
+  --content-bg-dark: #11101a;
   --font-color: #ffffff;
   /* Values */
 }
 
+html {
+  height:100%;
+}
+
 body {
-  background-color: var(--off-black);
+  background-color: var(--backdrop);
   color: var(--font-color);
   margin: 0;
 }
 
 img {
   border-style: none;
+}
+
+.bg {
+  animation:slide 2s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgba(141,0,255,1) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
+  background-color: black;
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  box-sizing:border-box;
+  background-color: var(--content-background);
+  border-radius: .5rem;
+  border-bottom: .14rem solid rgb(174, 0, 255);
+  border-right: .14rem solid rgb(174, 0, 255);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(-60deg, var(--content-bg-dark), var(--content-bg-light), #1d144b);
+  background-size: 400% 400%;
+  animation: contentGradient 15s ease infinite;
+  box-shadow: 0 0 1.3rem #120227;
+}
+
+@keyframes contentGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }
