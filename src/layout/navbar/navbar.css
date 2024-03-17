@@ -1,8 +1,0 @@
-.navbar-container {
-  position: absolute;
-  left: 1%;
-  top: 50%;
-  height: 80%;
-  width: 5rem;
-  transform: translate(0, -50%);
-}

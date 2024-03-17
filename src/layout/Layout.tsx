@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom';
+import Navphone from './navphone/Navphone';
 import './layout.css';
-import Navbar from './navbar/Navbar';
 
 const Layout: React.FC = () => {
 
   return (
     <>
       <div className="content">
-        <Navbar/>
+        <Navphone/>
         <Outlet/>
       </div>
       <div className="bg"/>
