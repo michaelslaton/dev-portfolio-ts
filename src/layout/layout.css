@@ -4,7 +4,7 @@
   --sliders: #130338;
   --content-bg-light: #1c163b;
   --content-bg-dark: #11101a;
-  --font-color: #ffffff;
+  --font-color-bright: #ffffff;
   /* Values */
 }
 
@@ -14,7 +14,7 @@ html {
 
 body {
   background-color: var(--backdrop);
-  color: var(--font-color);
+  color: var(--font-color-bright);
   margin: 0;
 }
 
@@ -23,16 +23,16 @@ img {
 }
 
 .bg {
-  animation:slide 2s ease-in-out infinite alternate;
+  animation: slide 2s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, rgba(141,0,255,1) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
   background-color: black;
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
 }
 
 .bg2 {
@@ -76,9 +76,9 @@ img {
 
 @keyframes slide {
   0% {
-    transform:translateX(-25%);
+    transform: translateX(-25%);
   }
   100% {
-    transform:translateX(25%);
+    transform: translateX(25%);
   }
 }
