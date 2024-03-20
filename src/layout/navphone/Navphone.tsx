@@ -21,9 +21,9 @@ const Navphone: React.FC = () => {
           className='phone-top__icons'
           onClick={()=> setPhoneState('tools')}
         >
-          <FontAwesomeIcon icon={faSignal}/>
-          <FontAwesomeIcon icon={faWifi}/>
-          <FontAwesomeIcon className="phone-top__battery" icon={faBatteryThreeQuarters}/>
+          <FontAwesomeIcon title='phone signal' icon={faSignal}/>
+          <FontAwesomeIcon title='phone wifi' icon={faWifi}/>
+          <FontAwesomeIcon title='phone battery' className="phone-top__battery" icon={faBatteryThreeQuarters}/>
         </div>
       </div>
     </div>
