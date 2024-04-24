@@ -52,10 +52,15 @@ img {
   border-right: .14rem solid rgb(174, 0, 255);
   position: fixed;
   top: 50%;
+  right: 2.5rem;
+  width: 75%;
+  height: 90%;
+  transform: translate(0%, -50%);
+  /* top: 50%;
   left: 50%;
   width: 95%;
   height: 95%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   background: linear-gradient(-60deg, var(--content-bg-dark), var(--content-bg-light), #1d144b);
   background-size: 400% 400%;
   animation: contentGradient 15s ease infinite;
