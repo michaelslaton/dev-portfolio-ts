@@ -6,13 +6,13 @@ const Layout: React.FC = () => {
 
   return (
     <>
+      <Navphone/>
       <div className="content">
-        <Navphone/>
         <Outlet/>
       </div>
-      <div className="bg"/>
-      <div className="bg bg2"/>
-      <div className="bg bg3"/>
+      <div data-testid='bg' className="bg"/>
+      <div data-testid='bg2' className="bg bg2"/>
+      <div data-testid='bg3' className="bg bg3"/>
     </>
   );
 };
