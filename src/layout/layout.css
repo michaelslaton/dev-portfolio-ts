@@ -5,6 +5,7 @@
   --content-bg-light: #1c163b;
   --content-bg-dark: #11101a;
   --font-color-bright: #ffffff;
+  --ren-purple: #8d00ff;
   /* Values */
 }
 
@@ -24,7 +25,7 @@ img {
 
 .bg {
   animation: slide 2s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, rgba(141,0,255,1) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
+  background-image: linear-gradient(-60deg, var(--ren-purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
   background-color: black;
   bottom: 0;
   left: -50%;
@@ -65,6 +66,25 @@ img {
   background-size: 400% 400%;
   animation: contentGradient 15s ease infinite;
   box-shadow: 0 0 1.3rem #120227;
+}
+.content-off {
+  box-sizing:border-box;
+  border-radius: .5rem;
+  border-bottom: .14rem solid transparent;
+  border-right: .14rem solid transparent;
+  position: fixed;
+  top: 50%;
+  right: 2.5rem;
+  width: 75%;
+  height: 90%;
+  transform: translate(0%, -50%);
+  /* top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%); */
+  background-size: 400% 400%;
+  box-shadow: 0 0 1.3rem transparent;
 }
 
 @keyframes contentGradient {

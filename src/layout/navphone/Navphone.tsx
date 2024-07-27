@@ -1,12 +1,30 @@
-import { faBatteryThreeQuarters, faWifi, faSignal } from '@fortawesome/free-solid-svg-icons';
+import { faBatteryThreeQuarters, faWifi, faSignal, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { PortfolioState } from '../../App';
 import './navphone.css';
 
 const Navphone: React.FC = () => {
+  const [appState, setAppState] = useContext(PortfolioState);
   const [ phoneState, setPhoneState ] = useState<string>('main');
 
-  if (phoneState === 'main') return (
+  if (appState.power !== 'on') return (
+    <div className='phone-container phone-off'>
+      <div className='phone-top'>
+        <div/>
+        <div className='phone-top__middle-bar'/>
+        <div/>
+      </div>
+      <div className='phone-buttons__container'>
+        <button
+          className='phone-buttons__power-button'
+          onClick={()=> setAppState({...appState , power: 'on'})}>
+            <FontAwesomeIcon data-testid='phone power' icon={faPowerOff}/>
+        </button>
+      </div>
+    </div>
+  )
+  else if (phoneState === 'main') return (
     <div className='phone-container phone-main'>
       <div className='phone-top'>
         <div className='phone-top__icons'>
@@ -25,6 +43,9 @@ const Navphone: React.FC = () => {
           <FontAwesomeIcon data-testid='phone wifi' icon={faWifi}/>
           <FontAwesomeIcon data-testid='phone battery' className="phone-top__battery" icon={faBatteryThreeQuarters}/>
         </div>
+      </div>
+      <div className='phone-buttons__container'>
+
       </div>
     </div>
   );

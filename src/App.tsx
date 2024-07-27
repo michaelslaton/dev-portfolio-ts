@@ -2,6 +2,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Error404 from "./utils/errors/error404/Error404";
 import RouteError from "./utils/errors/route-error/RouteError";
+import { createContext, useState } from "react";
+
+type portfolioStateType = {power: string};
+
+export const PortfolioState = createContext<portfolioStateType | any>(undefined);
 
 
 const router = createBrowserRouter([
@@ -21,9 +26,13 @@ const router = createBrowserRouter([
 
 const App: React.FC = () => {
 
+  const [appState, setAppState] = useState<portfolioStateType>({ power: 'off' });
+
   return (
     <>
-      <RouterProvider router={router}/>
+      <PortfolioState.Provider value={[appState, setAppState]}>
+        <RouterProvider router={router}/>
+      </PortfolioState.Provider>
     </>
   );
 };
