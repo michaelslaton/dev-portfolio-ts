@@ -80,6 +80,8 @@
   padding: 1rem;
   display: flex;
   justify-content: center;
+}
+.phone-buttons__container.phone-off {
   align-items: center;
 }
 
@@ -89,7 +91,36 @@
   background: none;
   cursor: pointer;
   font-size: 5rem;
+  aspect-ratio: 1/1;
+  height: fit-content;
 }
 .phone-buttons__power-button:hover {
   color: var(--ren-purple);
+}
+
+.phone-buttons__grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  gap: .8rem;
+}
+
+.phone-button__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.phone-button__icon {
+  aspect-ratio: 1/1;
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+.phone-button__name {
+  all: unset;
+  margin-top: .3rem;
+  font-size: .9rem;
 }

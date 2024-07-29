@@ -3,10 +3,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { PortfolioState } from '../../App';
 import './navphone.css';
+import PhoneButton from './components/PhoneButton';
+import phoneButtonType from '../../types/phoneButton.type';
 
 const Navphone: React.FC = () => {
   const [appState, setAppState] = useContext(PortfolioState);
   const [ phoneState, setPhoneState ] = useState<string>('main');
+
+  const phoneButtons: phoneButtonType[] = [
+    {
+      id: 1,
+      name: 'Projects',
+      color: '#FFFFFF',
+    },
+    {
+      id: 2,
+      name: "Calendar",
+      color: '#00ff15',
+    },
+    {
+      id: 3,
+      name: "Stuff",
+      color: '#ff0000',
+    },
+    {
+      id: 4,
+      name: "Stuff",
+      color: '#7700ff',
+    },
+    {
+      id: 5,
+      name: "Stuff",
+      color: '#d0ff00',
+    }
+  ];
 
   if (appState.power !== 'on') return (
     <div className='phone-container phone-off'>
@@ -15,7 +45,7 @@ const Navphone: React.FC = () => {
         <div className='phone-top__middle-bar'/>
         <div/>
       </div>
-      <div className='phone-buttons__container'>
+      <div className='phone-buttons__container phone-off'>
         <button
           className='phone-buttons__power-button'
           onClick={()=> setAppState({...appState , power: 'on'})}>
@@ -45,7 +75,13 @@ const Navphone: React.FC = () => {
         </div>
       </div>
       <div className='phone-buttons__container'>
-
+        <div className="phone-buttons__grid">
+          {phoneButtons.map((button)=>(
+            <div key={button.id} className='phone-buttons__cel'>
+              <PhoneButton data={button}/>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -55,6 +91,9 @@ const Navphone: React.FC = () => {
         <div className='phone-top__icons'/>
         <div className='phone-top__middle-bar'/>
         <div className='phone-top__icons'/>
+      </div>
+      <div className='phone-buttons__container'>
+
       </div>
       <div
         className='phone-tools__bottom'
