@@ -1,4 +1,4 @@
-import { faBatteryThreeQuarters, faWifi, faSignal, faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { faBatteryThreeQuarters, faWifi, faSignal, faPowerOff, faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { PortfolioState } from '../../App';
@@ -14,27 +14,37 @@ const Navphone: React.FC = () => {
     {
       id: 1,
       name: 'Projects',
-      color: '#FFFFFF',
+      iconColor: '#FFFFFF',
+      fontColor: 'black',
+      symbol: faDiagramProject,
     },
     {
       id: 2,
       name: "Calendar",
-      color: '#00ff15',
+      iconColor: '#00ff15',
+      fontColor: 'black',
+      symbol: faDiagramProject,
     },
     {
       id: 3,
       name: "Stuff",
-      color: '#ff0000',
+      iconColor: '#ff0000',
+      fontColor: 'white',
+      symbol: faDiagramProject,
     },
     {
       id: 4,
       name: "Stuff",
-      color: '#7700ff',
+      iconColor: '#7700ff',
+      fontColor: 'white',
+      symbol: faDiagramProject,
     },
     {
       id: 5,
       name: "Stuff",
-      color: '#d0ff00',
+      iconColor: '#d0ff00',
+      fontColor: 'black',
+      symbol: faDiagramProject,
     }
   ];
 
