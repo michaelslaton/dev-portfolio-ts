@@ -1,4 +1,11 @@
-import { faBatteryThreeQuarters, faWifi, faSignal, faPowerOff, faDiagramProject } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faBatteryThreeQuarters,
+  faWifi,
+  faSignal,
+  faPowerOff,
+  faDiagramProject,
+  faHome,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { PortfolioState } from '../../App';
@@ -10,43 +17,52 @@ const Navphone: React.FC = () => {
   const [appState, setAppState] = useContext(PortfolioState);
   const [ phoneState, setPhoneState ] = useState<string>('main');
 
-  const phoneButtons: phoneButtonType[] = [
-    {
-      id: 1,
-      name: 'Projects',
-      iconColor: '#FFFFFF',
-      fontColor: 'black',
-      symbol: faDiagramProject,
-    },
-    {
-      id: 2,
-      name: "Calendar",
-      iconColor: '#00ff15',
-      fontColor: 'black',
-      symbol: faDiagramProject,
-    },
-    {
-      id: 3,
-      name: "Stuff",
-      iconColor: '#ff0000',
-      fontColor: 'white',
-      symbol: faDiagramProject,
-    },
-    {
-      id: 4,
-      name: "Stuff",
-      iconColor: '#7700ff',
-      fontColor: 'white',
-      symbol: faDiagramProject,
-    },
-    {
-      id: 5,
-      name: "Stuff",
-      iconColor: '#d0ff00',
-      fontColor: 'black',
-      symbol: faDiagramProject,
-    }
-  ];
+  const phoneButtons: { mainButtons: phoneButtonType[], bottomBar: phoneButtonType[] } = {
+    mainButtons: [
+      {
+        id: 1,
+        name: 'Projects',
+        iconColor: '#FFFFFF',
+        fontColor: 'black',
+        symbol: faDiagramProject,
+        url: '/projects',
+      },
+      {
+        id: 2,
+        name: "Stuff",
+        iconColor: '#ff0000',
+        fontColor: 'white',
+        symbol: faDiagramProject,
+        url: '',
+      },
+      {
+        id: 3,
+        name: "Stuff",
+        iconColor: '#7700ff',
+        fontColor: 'white',
+        symbol: faDiagramProject,
+        url: '',
+      },
+      {
+        id: 4,
+        name: "Stuff",
+        iconColor: '#d0ff00',
+        fontColor: 'black',
+        symbol: faDiagramProject,
+        url: '',
+      }
+    ],
+    bottomBar: [
+      {
+        id: 1,
+        name: 'Home',
+        iconColor: '#FFFFFF',
+        fontColor: 'black',
+        symbol: faHome,
+        url: '/',
+      },
+    ]
+  };
 
   if (appState.power !== 'on') return (
     <div className='phone-container phone-off'>
@@ -86,12 +102,19 @@ const Navphone: React.FC = () => {
       </div>
       <div className='phone-buttons__container'>
         <div className="phone-buttons__grid">
-          {phoneButtons.map((button)=>(
+          {phoneButtons.mainButtons.map((button)=>(
             <div key={button.id} className='phone-buttons__cel'>
-              <PhoneButton data={button}/>
+              <PhoneButton data={button} position='main'/>
             </div>
           ))}
         </div>
+        <div className='phone-buttons__bottom-bar'>
+            {phoneButtons.bottomBar.map((button)=>(
+              <div key={button.id} className='phone-buttons__cel'>
+                <PhoneButton data={button} position='bottom'/>
+              </div>
+            ))}
+          </div>
       </div>
     </div>
   );

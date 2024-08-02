@@ -75,15 +75,26 @@
 }
 
 .phone-buttons__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 .phone-buttons__container.phone-off {
-  align-items: center;
+  justify-content: center;
+}
+
+.phone-buttons__bottom-bar {
+  box-sizing: border-box;
+  width: 95%;
+  bottom: 0;
+  background-color: rgba(17, 12, 61, 0.85);
+  border-radius: 1rem;
+  margin: .5rem auto;
+  padding: .4rem 0;
 }
 
 .phone-buttons__power-button {
@@ -104,14 +115,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: fit-content;
-  gap: .8rem;
+  gap: .2rem;
+  padding: 1rem;
 }
 
 .phone-button__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: .5rem;
   cursor: pointer;
 }
 
