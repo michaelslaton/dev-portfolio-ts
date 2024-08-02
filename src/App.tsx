@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import Error404 from "./utils/errors/error404/Error404";
 import RouteError from "./utils/errors/route-error/RouteError";
 import { createContext, useState } from "react";
+import Projects from "./layout/projects/Projects";
 
 type portfolioStateType = {power: string};
 
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
     element: <Layout/>,
     errorElement: <RouteError/>,
     children: [
+      {
+        path: '/projects',
+        element: <Projects/>,
+        errorElement: <RouteError/>,
+      },
       {
         path: '*',
         element: <Error404/>,

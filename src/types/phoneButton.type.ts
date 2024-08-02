@@ -6,6 +6,7 @@ type phoneButtonType = {
   iconColor: string;
   fontColor: string;
   symbol: IconDefinition;
+  url: string;
 };
 
 export default phoneButtonType;
