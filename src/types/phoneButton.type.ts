@@ -1,11 +1,13 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition as IconDefinitionSolid } from "@fortawesome/fontawesome-free-solid";
 
 type phoneButtonType = {
   id: number;
   name: string;
   iconColor: string;
   fontColor: string;
-  symbol: IconDefinition;
+  linkType: string;
+  symbol: IconDefinition | IconDefinitionSolid;
   url: string;
 };
 

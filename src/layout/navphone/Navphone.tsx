@@ -1,15 +1,14 @@
-import { 
+import { faPowerOff,
   faBatteryThreeQuarters,
   faWifi,
-  faSignal,
-  faPowerOff,
-} from '@fortawesome/free-solid-svg-icons';
+  faSignal, } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { PortfolioState } from '../../App';
 import PhoneButton from './components/PhoneButton';
 import phoneButtonsData from '../../data/phoneButtonsData';
 import './navphone.css';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const Navphone: React.FC = () => {
   const [appState, setAppState] = useContext(PortfolioState);
@@ -26,11 +25,11 @@ const Navphone: React.FC = () => {
         <button
           className='phone-buttons__power-button'
           onClick={()=> setAppState({...appState , power: 'on'})}>
-            <FontAwesomeIcon data-testid='phone power' icon={faPowerOff}/>
+            <FontAwesomeIcon data-testid='phone power' icon={faPowerOff as IconProp}/>
         </button>
       </div>
     </div>
-  )
+  );
   else if (phoneState === 'main') return (
     <div className='phone-container phone-main'>
       <div className='phone-top'>
@@ -46,9 +45,9 @@ const Navphone: React.FC = () => {
           className='phone-top__icons'
           onClick={()=> setPhoneState('tools')}
         >
-          <FontAwesomeIcon data-testid='phone signal' icon={faSignal}/>
-          <FontAwesomeIcon data-testid='phone wifi' icon={faWifi}/>
-          <FontAwesomeIcon data-testid='phone battery' className="phone-top__battery" icon={faBatteryThreeQuarters}/>
+          <FontAwesomeIcon data-testid='phone signal' icon={faSignal as IconProp}/>
+          <FontAwesomeIcon data-testid='phone wifi' icon={faWifi as IconProp}/>
+          <FontAwesomeIcon data-testid='phone battery' className="phone-top__battery" icon={faBatteryThreeQuarters as IconProp}/>
         </div>
       </div>
       <div className='phone-buttons__container'>
@@ -86,7 +85,7 @@ const Navphone: React.FC = () => {
         <div className='phone-tools__bottom-bar'/>
       </div>
     </div>
-  )
+  );
 };
 
 export default Navphone;
