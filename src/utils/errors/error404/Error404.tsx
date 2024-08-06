@@ -5,28 +5,30 @@ const Error404: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='error404__wrapper'>
-      <div className='error404__title-wrapper'>
-        <div className='error404__title'>
-          404
+    <div className='error404__container'>
+      <div className='error404__wrapper'>
+        <div className='error404__title-wrapper'>
+          <div className='error404__title'>
+            404
+          </div>
+          <div className='error404__text'>
+            Not Found
+          </div>
         </div>
-        <div className='error404__text'>
-          Not Found
+        <div className='error404__links-wrapper'>
+          <button
+            className='error404-link'
+            onClick={() => navigate('/')}
+          >
+            Go Home
+          </button>
+          <button
+            className='error404-link'
+            onClick={() => navigate(-1)}
+          >
+            Go Back
+          </button>
         </div>
-      </div>
-      <div className='error404__links-wrapper'>
-        <button
-          className='error404-link'
-          onClick={() => navigate('/')}
-        >
-          Go Home
-        </button>
-        <button
-          className='error404-link'
-          onClick={() => navigate(-1)}
-        >
-          Go Back
-        </button>
       </div>
     </div>
   );
