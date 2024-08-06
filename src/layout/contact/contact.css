@@ -1,0 +1,15 @@
+.contact-response-wrapper {
+  width: 100%;
+  height: 1px;
+}
+
+.contact__form {
+}
+
+.contact__form > label{
+  display: block;
+}
+
+.contact__form-submit {
+  display: block;
+}

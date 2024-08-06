@@ -1,14 +1,12 @@
 .phone-container {
   aspect-ratio: 141/289;
-  position: absolute;
-  left: 3rem;
-  top: 50%;
-  /* height: 75%; */
+  box-sizing: border-box;
+  position: relative;
   width: 20rem;
-  transform: translate(0, -50%);
+  transform: translate(0, 1px);
   border: .6rem solid black;
   border-radius: 1.5rem;
-  background-size: cover;
+  background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;
   box-shadow: 1rem 1rem .3rem #13121d;
@@ -94,7 +92,7 @@
   background-color: rgba(17, 12, 61, 0.85);
   border-radius: 1rem;
   margin: .5rem auto;
-  padding: .4rem 0;
+  padding: .4rem .3rem;
   display: flex;
   justify-content: space-around;
 }
@@ -130,7 +128,7 @@
 
 .phone-button__icon {
   aspect-ratio: 1/1;
-  width: 4rem;
+  width: 3.5rem;
   height: 100%;
   border-radius: 1rem;
   display: flex;

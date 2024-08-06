@@ -53,16 +53,12 @@ const Navphone: React.FC = () => {
       <div className='phone-buttons__container'>
         <div className="phone-buttons__grid">
           {phoneButtonsData.mainButtons.map((button)=>(
-            <div key={button.id} className='phone-buttons__cel'>
-              <PhoneButton data={button} position='main'/>
-            </div>
+            <PhoneButton key={button.id} data={button} position='main'/>
           ))}
         </div>
         <div className='phone-buttons__bottom-bar'>
             {phoneButtonsData.bottomBar.map((button)=>(
-              <div key={button.id} className='phone-buttons__cel'>
-                <PhoneButton data={button} position='bottom'/>
-              </div>
+              <PhoneButton key={button.id} data={button} position='bottom'/>
             ))}
           </div>
       </div>
