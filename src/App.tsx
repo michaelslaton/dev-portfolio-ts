@@ -43,7 +43,6 @@ const router = createBrowserRouter([
 ])
 
 const App: React.FC = () => {
-
   const [appState, setAppState] = useState<portfolioStateType>({ power: 'off' });
 
   return (

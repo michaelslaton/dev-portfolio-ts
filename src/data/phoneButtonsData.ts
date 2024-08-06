@@ -34,7 +34,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
   ],
   bottomBar: [
     {
-      id: 1,
+      id: 4,
       name: 'Home',
       iconColor: '#8d00ff',
       fontColor: 'white',
@@ -43,7 +43,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'local',
     },
     {
-      id: 2,
+      id: 5,
       name: 'GitHub',
       iconColor: '#24292f',
       fontColor: 'white',
@@ -52,7 +52,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 3,
+      id: 6,
       name: 'LinkedIn',
       iconColor: '#0275b4',
       fontColor: 'white',
@@ -61,7 +61,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 3,
+      id: 7,
       name: 'LinkedIn',
       iconColor: '#0275b4',
       fontColor: 'white',
