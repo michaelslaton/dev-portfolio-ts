@@ -1,4 +1,4 @@
-import { faHome, faProjectDiagram } from '@fortawesome/fontawesome-free-solid';
+import { faHome, faProjectDiagram, faCog, faEnvelope } from '@fortawesome/fontawesome-free-solid';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import phoneButtonType from "../types/phoneButton.type";
 
@@ -7,7 +7,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     {
       id: 1,
       name: 'Projects',
-      iconColor: '#FFFFFF',
+      iconColor: '#f5c84c',
       fontColor: 'black',
       symbol: faProjectDiagram,
       url: '/projects',
@@ -16,18 +16,18 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     {
       id: 2,
       name: 'Skills',
-      iconColor: '#FFFFFF',
-      fontColor: 'black',
-      symbol: faProjectDiagram,
+      iconColor: '#61c1e9',
+      fontColor: 'white',
+      symbol: faCog,
       url: '/skills',
       linkType: 'local',
     },
     {
       id: 3,
       name: 'Contact',
-      iconColor: '#FFFFFF',
-      fontColor: 'black',
-      symbol: faProjectDiagram,
+      iconColor: '#d20001',
+      fontColor: 'white',
+      symbol: faEnvelope,
       url: '/contact',
       linkType: 'local',
     },
@@ -37,7 +37,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       id: 1,
       name: 'Home',
       iconColor: '#8d00ff',
-      fontColor: 'black',
+      fontColor: 'white',
       symbol: faHome,
       url: '/',
       linkType: 'local',
@@ -57,7 +57,16 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       iconColor: '#0275b4',
       fontColor: 'white',
       symbol: faLinkedin,
-      url: '/',
+      url: 'https://www.linkedin.com/in/michaelslatondev/',
+      linkType: 'external',
+    },
+    {
+      id: 3,
+      name: 'LinkedIn',
+      iconColor: '#0275b4',
+      fontColor: 'white',
+      symbol: faLinkedin,
+      url: 'https://www.linkedin.com/in/michaelslatondev/',
       linkType: 'external',
     },
   ]

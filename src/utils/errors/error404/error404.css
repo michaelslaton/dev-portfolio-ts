@@ -1,6 +1,15 @@
-.error404__wrapper {
+.error404__container {
   width: 100%;
-  margin: 10rem auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error404__wrapper {
+  /* width: 100%; */
+  margin-bottom: 10rem;
+  height: fit-content;
 }
 
 .error404__title-wrapper {

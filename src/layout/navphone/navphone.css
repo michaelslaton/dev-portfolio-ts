@@ -133,16 +133,15 @@
   width: 4rem;
   height: 100%;
   border-radius: 1rem;
-  transition: scale 100ms ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  transition: transform 100ms ease-in-out;
 }
 
 .phone-button__icon:hover {
-  scale: 1.1;
-  transition: scale 100ms ease-in-out;
+  transform: scale(1.1);
 }
 
 .phone-button__name {
