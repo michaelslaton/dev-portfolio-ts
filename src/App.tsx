@@ -4,7 +4,7 @@ import Error404 from "./utils/errors/error404/Error404";
 import RouteError from "./utils/errors/route-error/RouteError";
 import { createContext, useState } from "react";
 import Projects from "./layout/projects/Projects";
-import Skills from "./layout/skills/Skills";
+import SkillsDisplay from "./layout/skills/SkillsDisplay";
 import Contact from "./layout/contact/Contact";
 
 type portfolioStateType = {power: string};
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/skills',
-        element: <Skills/>,
+        element: <SkillsDisplay/>,
         errorElement: <RouteError/>,
       },
       {

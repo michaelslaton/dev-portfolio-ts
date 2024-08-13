@@ -1,7 +1,8 @@
 type SkillType = {
   id: number;
   name: string;
-  img: string;
+  iconimg: string;
+  iconcolor: string;
   learned: boolean;
   category: string;
   abbr?: string;
