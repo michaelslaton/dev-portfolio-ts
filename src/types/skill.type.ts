@@ -2,7 +2,7 @@ type SkillType = {
   id: number;
   name: string;
   iconimg: string;
-  iconcolor: string;
+  iconColor: string;
   learned: boolean;
   category: string;
   abbr?: string;

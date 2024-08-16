@@ -1,0 +1,31 @@
+.skills-list__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.skill__wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 5rem;
+}
+
+.skill__icon {
+  aspect-ratio: 1/1;
+  width: 4rem;
+  margin: 0 auto;
+  border-radius: var(--border-radius-icon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__icon-image {
+  width: 2.5rem;
+}
+
+.skill__icon-title {
+  all: unset;
+  margin-top: .4rem;
+}

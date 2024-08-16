@@ -1,12 +1,14 @@
 import {default as skillsList} from '../../data/skills';
-import Skill from './Skill';
+import Skill from './components/Skill';
 import './skills.css';
 
 const SkillsDisplay: React.FC = () => {
   
   return (
-    <div>
-      {skillsList.map((skill)=>(<Skill data={skill}/>))}      
+    <div className='content__wrapper'>
+      <div className='skills-list__wrapper'>
+        {skillsList.map((skill)=>(<Skill data={skill}/>))}      
+      </div>
     </div>
   );
 };
