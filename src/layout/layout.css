@@ -7,6 +7,7 @@
   --font-color-bright: #ffffff;
   --ren-purple: #8d00ff;
   /* Values */
+  --border-radius-icon: 1rem;
 }
 
 body {
@@ -80,6 +81,10 @@ img {
 .content__screen {
   box-sizing: border-box;
   padding: 0 2rem;
+}
+
+.content__wrapper {
+  width: 100%;
 }
 
 @keyframes contentGradient {
