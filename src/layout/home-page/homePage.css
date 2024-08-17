@@ -1,0 +1,17 @@
+.home-page__skills {
+  width: 100%;
+}
+
+.home-page__skills-list {
+  display: flex;
+}
+
+.home-page__shills-list--more {
+  all: unset;
+  position: relative;
+  right: 1;
+  align-self: end;
+  font-size: .8rem;
+  font-style: italic;
+  margin-left: .5rem;
+}

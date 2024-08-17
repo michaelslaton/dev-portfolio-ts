@@ -126,22 +126,6 @@
   cursor: pointer;
 }
 
-.phone-button__icon {
-  aspect-ratio: 1/1;
-  width: 3.5rem;
-  height: 100%;
-  border-radius: var(--border-radius-icon);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  transition: transform 100ms ease-in-out;
-}
-
-.phone-button__icon:hover {
-  transform: scale(1.1);
-}
-
 .phone-button__name {
   all: unset;
   margin-top: .3rem;
