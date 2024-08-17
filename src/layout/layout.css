@@ -16,6 +16,11 @@ body {
   margin: 0;
 }
 
+abbr {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
 img {
   border-style: none;
 }
