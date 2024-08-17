@@ -18,7 +18,12 @@ const Skill:React.FC<SkillProps> = ({ data }) =>{
       <p
         className='skill__icon-title'
       >
-        {data.name}
+        {
+          data.abbr ? 
+          <abbr title={data.abbr}>{data.name}</abbr>
+            :
+          <>{data.name}</>
+        }
       </p>
     </div>
   );
