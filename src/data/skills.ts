@@ -29,6 +29,7 @@ const skills: SkillType[] = [
     iconColor: '#d74737',
     learned: true,
     category: 'other',
+    homePage: false,
   },
   { 
     id: 2,
@@ -37,6 +38,7 @@ const skills: SkillType[] = [
     iconColor: '#673ab7',
     learned: true,
     category: 'front-end',
+    homePage: false,
   },
   { 
     id: 3,
@@ -46,6 +48,7 @@ const skills: SkillType[] = [
     learned: true,
     category: 'front-end',
     abbr: 'Cascading Style Sheets',
+    homePage: true,
   },
   { 
     id: 4,
@@ -54,6 +57,7 @@ const skills: SkillType[] = [
     iconColor: '#90c53f',
     learned: true,
     category: 'back-end',
+    homePage: true,
   },
   { 
     id: 5,
@@ -62,6 +66,7 @@ const skills: SkillType[] = [
     iconColor: '#24292f',
     learned: true,
     category: 'version-control',
+    homePage: false,
   },
   { 
     id: 6,
@@ -70,6 +75,7 @@ const skills: SkillType[] = [
     iconColor: '#24292f',
     learned: true,
     category: 'version-control',
+    homePage: false,
   },
   { 
     id: 7,
@@ -78,6 +84,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'other',
+    homePage: false,
   },
   { 
     id: 8,
@@ -86,7 +93,8 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
-    abbr: 'HyperText Markup Language'
+    abbr: 'HyperText Markup Language',
+    homePage: true,
   },
   { 
     id: 9,
@@ -95,6 +103,7 @@ const skills: SkillType[] = [
     iconColor: '#ffd600',
     learned: true,
     category: 'front-end, back-end, language',
+    homePage: true,
   },
   { 
     id: 10,
@@ -103,6 +112,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    homePage: false,
   },
   { 
     id: 11,
@@ -111,6 +121,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'testing',
+    homePage: false,
   },
   { 
     id: 12,
@@ -120,6 +131,7 @@ const skills: SkillType[] = [
     learned: true,
     category: 'other',
     abbr: 'Node Package Manager',
+    homePage: false,
   },
   { 
     id: 13,
@@ -128,6 +140,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    homePage: false,
   },
   { 
     id: 14,
@@ -136,6 +149,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
+    homePage: true,
   },
   { 
     id: 15,
@@ -144,7 +158,8 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
-    abbr: 'Representational State Transfer'
+    abbr: 'Representational State Transfer',
+    homePage: false,
   },
   { 
     id: 16,
@@ -153,6 +168,7 @@ const skills: SkillType[] = [
     iconColor: 'black',
     learned: true,
     category: 'other',
+    homePage: false,
   },
   { 
     id: 17,
@@ -161,6 +177,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
+    homePage: false,
   },
   { 
     id: 19,
@@ -169,6 +186,7 @@ const skills: SkillType[] = [
     iconColor: '#3178c6',
     learned: true,
     category: 'front-end, back-end, language',
+    homePage: true,
   },
   { 
     id: 20,
@@ -177,6 +195,7 @@ const skills: SkillType[] = [
     iconColor: '#039be5',
     learned: true,
     category: 'other',
+    homePage: false,
   },
   { 
     id: 21,
@@ -185,6 +204,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    homePage: true,
   },
   { 
     id: 22,
@@ -193,6 +213,7 @@ const skills: SkillType[] = [
     iconColor: 'black',
     learned: true,
     category: 'testing',
+    homePage: false,
   },
   { 
     id: 23,
@@ -201,6 +222,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: false,
     category: 'testing',
+    homePage: false,
   },
 ];
 

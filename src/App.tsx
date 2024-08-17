@@ -6,8 +6,9 @@ import { createContext, useState } from "react";
 import Projects from "./layout/projects/Projects";
 import SkillsDisplay from "./layout/skills/SkillsDisplay";
 import Contact from "./layout/contact/Contact";
+import HomePage from "./layout/home-page/HomePage";
 
-type portfolioStateType = {power: string};
+type portfolioStateType = {power: boolean};
 
 export const PortfolioState = createContext<portfolioStateType | any>(undefined);
 
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
     element: <Layout/>,
     errorElement: <RouteError/>,
     children: [
+      {
+        path: '/',
+        element: <HomePage/>,
+        errorElement: <RouteError/>,
+      },
       {
         path: '/projects',
         element: <Projects/>,
@@ -43,7 +49,7 @@ const router = createBrowserRouter([
 ])
 
 const App: React.FC = () => {
-  const [appState, setAppState] = useState<portfolioStateType>({ power: 'off' });
+  const [appState, setAppState] = useState<portfolioStateType>({ power: false });
 
   return (
     <>

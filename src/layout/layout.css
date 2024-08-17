@@ -70,6 +70,7 @@ img {
   animation: contentGradient 15s ease infinite;
   box-shadow: 0 0 1.3rem #120227;
   margin: auto;
+  padding: 0 1rem;
 }
 .content-off {
   box-sizing:border-box;
@@ -90,6 +91,30 @@ img {
 
 .content__wrapper {
   width: 100%;
+}
+
+.icon {
+  aspect-ratio: 1/1;
+  width: 3.5rem;
+  border-radius: var(--border-radius-icon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: transform 100ms ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.divider {
+  width: 90%;
+  background-color: #8d00ff;
+  height: .2rem;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 @keyframes contentGradient {

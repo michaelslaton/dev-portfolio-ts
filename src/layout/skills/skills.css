@@ -10,16 +10,18 @@
   text-align: center;
   width: 5rem;
   font-size: .8rem;
+  cursor: pointer;
+}
+
+.skills-list__title {
+  all: inherit;
+  margin-block: 0;
+  font-size: 1.6rem;
+  margin: 1rem 0;
 }
 
 .skill__icon {
-  aspect-ratio: 1/1;
-  width: 4rem;
   margin: 0 auto;
-  border-radius: var(--border-radius-icon);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .skill__icon-image {

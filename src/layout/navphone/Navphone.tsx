@@ -14,7 +14,7 @@ const Navphone: React.FC = () => {
   const [appState, setAppState] = useContext(PortfolioState);
   const [ phoneState, setPhoneState ] = useState<string>('main');
 
-  if (appState.power !== 'on') return (
+  if (!appState.power) return (
     <div className='phone-container phone-off'>
       <div className='phone-top'>
         <div/>
@@ -24,7 +24,7 @@ const Navphone: React.FC = () => {
       <div className='phone-buttons__container phone-off'>
         <button
           className='phone-buttons__power-button'
-          onClick={()=> setAppState({...appState , power: 'on'})}>
+          onClick={()=> setAppState({...appState , power: true})}>
             <FontAwesomeIcon data-testid='phone power' icon={faPowerOff as IconProp}/>
         </button>
       </div>

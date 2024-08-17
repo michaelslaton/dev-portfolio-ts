@@ -6,6 +6,7 @@ type SkillType = {
   learned: boolean;
   category: string;
   abbr?: string;
+  homePage: boolean;
 };
 
 export default SkillType;

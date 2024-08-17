@@ -9,7 +9,7 @@ const Layout: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(appState.power === 'off') navigate('/');
+    if(!appState.power) navigate('/');
   },[]);
 
   return (
@@ -18,11 +18,11 @@ const Layout: React.FC = () => {
         <div className="nav-container">
           <Navphone/>
         </div>
-        <div className={`${appState.power === 'on' ? 'content' : `content-off`}`}>
+        <div className={`${appState.power ? 'content' : `content-off`}`}>
           <Outlet/>
         </div>
       </div>
-      {appState.power === 'on' &&
+      {appState.power &&
         <>
           <div data-testid='bg' className='bg'/>
           <div data-testid='bg2' className='bg bg2'/>
