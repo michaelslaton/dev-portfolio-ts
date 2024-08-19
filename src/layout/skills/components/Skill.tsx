@@ -9,7 +9,11 @@ const Skill:React.FC<SkillProps> = ({ data }) =>{
 
   return (
     <abbr title={data.abbr}>
-      <div className='skill__wrapper'>
+      <a
+        className='skill__wrapper'
+        href={`https://www.google.com/search?q=${data.name}`}
+        target='_blank'
+      >
         <div 
           className='icon skill__icon'
           style={{ backgroundColor: `${data.iconColor}` }}
@@ -21,7 +25,7 @@ const Skill:React.FC<SkillProps> = ({ data }) =>{
         >
           <>{data.name}</>
         </p>
-      </div>
+      </a>
     </abbr>
   );
 };

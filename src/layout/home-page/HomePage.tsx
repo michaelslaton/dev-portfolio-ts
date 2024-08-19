@@ -3,9 +3,11 @@ import { PortfolioState } from "../../App";
 import {default as skillsList} from '../../data/skills';
 import Skill from "../skills/components/Skill";
 import './homePage.css';
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const [appState] = useContext(PortfolioState);
+  const navigate: NavigateFunction = useNavigate();
 
   if(!appState.power) return (
     <>
@@ -26,7 +28,10 @@ const HomePage: React.FC = () => {
             );
           })}
         </div>
-        <div className='home-page__shills-list--more'>
+        <div
+          onClick={()=> navigate('/skills')}
+          className='home-page__shills-list--more'
+        >
           See More...
         </div>
       </div>

@@ -4,20 +4,21 @@
   gap: .5rem;
 }
 
+.skills-list__title {
+  all: inherit;
+  margin-block: 0;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
 .skill__wrapper {
+  all: inherit;
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 5rem;
   font-size: .8rem;
   cursor: pointer;
-}
-
-.skills-list__title {
-  all: inherit;
-  margin-block: 0;
-  font-size: 1.6rem;
-  margin: 1rem 0;
 }
 
 .skill__icon {
