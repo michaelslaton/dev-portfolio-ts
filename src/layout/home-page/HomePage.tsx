@@ -16,8 +16,15 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      Home
+      <div className='center'>
+        <h1 className='page-title'>
+          Home
+        </h1>
+      </div>
+      <div className="divider"/>
+
       <div className='home-page__skills'>
+        
         <h3>
           Skills Summary
         </h3>
@@ -34,6 +41,7 @@ const HomePage: React.FC = () => {
         >
           See More...
         </div>
+
       </div>
     </>
   );

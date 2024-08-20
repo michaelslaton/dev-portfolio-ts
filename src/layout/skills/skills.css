@@ -1,14 +1,32 @@
-.skills-list__wrapper {
+.skills__display {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.skills__skill-group {
+  
 }
 
 .skills-list__title {
   all: inherit;
   margin-block: 0;
   font-size: 1.5rem;
-  margin: 1rem 0;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+.skills-list__wrapper {
+  aspect-ratio: 2.2/1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--content-bg-dark);
+  width: 25rem;
+  border-radius: var(--border-radius);
+  padding: .5rem;
 }
 
 .skill__wrapper {
@@ -17,7 +35,6 @@
   flex-direction: column;
   text-align: center;
   width: 5rem;
-  font-size: .8rem;
   cursor: pointer;
 }
 
@@ -32,4 +49,5 @@
 .skill__icon-title {
   all: unset;
   margin-top: .4rem;
+  font-size: .85rem;
 }

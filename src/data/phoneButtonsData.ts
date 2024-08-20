@@ -1,4 +1,4 @@
-import { faHome, faProjectDiagram, faCog, faEnvelope } from '@fortawesome/fontawesome-free-solid';
+import { faHome, faProjectDiagram, faCog, faEnvelope, faGlobe } from '@fortawesome/fontawesome-free-solid';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import phoneButtonType from "../types/phoneButton.type";
 
@@ -62,11 +62,11 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     },
     {
       id: 7,
-      name: 'LinkedIn',
-      iconColor: '#0275b4',
-      fontColor: 'white',
-      symbol: faLinkedin,
-      url: 'https://www.linkedin.com/in/michaelslatondev/',
+      name: 'Browser',
+      iconColor: 'white',
+      fontColor: '#07bbd3',
+      symbol: faGlobe,
+      url: 'https://www.google.com/',
       linkType: 'external',
     },
   ]
