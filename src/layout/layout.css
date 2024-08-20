@@ -7,6 +7,7 @@
   --font-color-bright: #ffffff;
   --ren-purple: #8d00ff;
   /* Values */
+  --border-radius: 1rem;
   --border-radius-icon: 1rem;
 }
 
@@ -67,10 +68,13 @@ img {
   width: 75%;
   height: 90vh;
   background: linear-gradient(-60deg, var(--content-bg-dark), var(--content-bg-light), #1d144b);
-  animation: contentGradient 15s ease infinite;
+  /* animation: contentGradient 15s ease infinite; */
   box-shadow: 0 0 1.3rem #120227;
   margin: auto;
   padding: 0 1rem;
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 .content-off {
   box-sizing:border-box;
@@ -87,10 +91,19 @@ img {
 .content__screen {
   box-sizing: border-box;
   padding: 0 2rem;
+  width: 100%;
 }
 
-.content__wrapper {
+.center {
+  display: flex;
+  justify-content: center;
   width: 100%;
+}
+
+.page-title {
+  all: inherit;
+  font-size: 3rem;
+  margin-top: 1rem;
 }
 
 .icon {
@@ -109,12 +122,12 @@ img {
 }
 
 .divider {
-  width: 90%;
+  width: 95%;
   background-color: #8d00ff;
   height: .2rem;
   border-radius: 25px;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: .5rem;
 }
 
 @keyframes contentGradient {

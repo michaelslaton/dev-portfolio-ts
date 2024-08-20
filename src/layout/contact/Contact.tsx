@@ -26,6 +26,13 @@ const Contact: React.FC = () => {
 
   return (
     <div className='content__screen'>
+      <div className='center'>
+        <h1 className='page-title'>
+          Contact
+        </h1>
+      </div>
+      <div className="divider"/>
+
       <div className='contact-response-wrapper'>
         {responseDisplay()}
       </div>
