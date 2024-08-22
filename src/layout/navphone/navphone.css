@@ -107,7 +107,7 @@
   height: fit-content;
 }
 .phone-buttons__power-button:hover {
-  color: var(--ren-purple);
+  color: var(--purple);
 }
 
 .phone-buttons__grid {

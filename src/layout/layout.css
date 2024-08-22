@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "sf-regular";
+  src: url("../assets/fonts/SF-Pro-Text-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sf-thin";
+  src: url("../assets/fonts/SF-Pro-Display-Thin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sf-ultra-light";
+  src: url("../assets/fonts/SF-Pro-Display-Ultralight.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
   --backdrop: #000000;
@@ -5,7 +26,13 @@
   --content-bg-light: #1c163b;
   --content-bg-dark: #11101a;
   --font-color-bright: #ffffff;
-  --ren-purple: #8d00ff;
+  --purple: #8d00ff;
+  --purple-dark: #6900BA;
+  --purple-darker: #51008F;
+  --pink: #F600FF;
+  --blue: #3600FF;
+  --sky-blue: #00B9FF;
+
   /* Values */
   --border-radius: 1rem;
   --border-radius-icon: 1rem;
@@ -15,6 +42,7 @@ body {
   background-color: var(--backdrop);
   color: var(--font-color-bright);
   margin: 0;
+  font-family: 'sf-regular', sans-serif;
 }
 
 abbr {
@@ -28,7 +56,7 @@ img {
 
 .bg {
   animation: slide 2s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, var(--ren-purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
+  background-image: linear-gradient(-60deg, var(--purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
   background-color: black;
   bottom: 0;
   left: -50%;
@@ -61,25 +89,19 @@ img {
 
 .content {
   box-sizing:border-box;
-  background-color: var(--content-background);
+  background: rgba(27, 24, 71, 0.7);
   border-radius: .5rem;
-  border-bottom: .14rem solid rgb(174, 0, 255);
-  border-right: .14rem solid rgb(174, 0, 255);
   width: 75%;
   height: 90vh;
-  background: linear-gradient(-60deg, var(--content-bg-dark), var(--content-bg-light), #1d144b);
-  /* animation: contentGradient 15s ease infinite; */
   box-shadow: 0 0 1.3rem #120227;
   margin: auto;
-  padding: 0 1rem;
   overflow: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
 .content-off {
   box-sizing:border-box;
-  background-color: var(--content-background);
-  width: 70%;
+  width: 75%;
   height: 90vh;
   margin: auto;
   border-radius: .5rem;
@@ -90,7 +112,6 @@ img {
 
 .content__screen {
   box-sizing: border-box;
-  padding: 0 2rem;
   width: 100%;
 }
 
@@ -122,15 +143,15 @@ img {
 }
 
 .divider {
-  width: 95%;
-  background-color: #8d00ff;
-  height: .2rem;
-  border-radius: 25px;
-  margin: 0 auto;
+  width: 100%;
+  height: .5rem;
   margin-top: .5rem;
+  background: linear-gradient(-45deg, var(--pink), var(--purple), var(--blue), var(--sky-blue));
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 
-@keyframes contentGradient {
+@keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
