@@ -6,7 +6,9 @@ const Projects: React.FC = () => {
     <div className='content__screen'>
       <div className='center'>
         <h1 className='page-title'>
-          Projects
+          <div className="reveal">
+            Projects  
+          </div>
         </h1>
       </div>
       <div className="divider"/>
