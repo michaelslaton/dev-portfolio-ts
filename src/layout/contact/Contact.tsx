@@ -28,7 +28,9 @@ const Contact: React.FC = () => {
     <div className='content__screen'>
       <div className='center'>
         <h1 className='page-title'>
-          Contact
+          <div className="reveal">
+            Contact
+          </div>
         </h1>
       </div>
       <div className="divider"/>
