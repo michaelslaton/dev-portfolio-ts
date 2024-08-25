@@ -4,6 +4,7 @@ import {default as skillsList} from '../../data/skills';
 import Skill from "../skills/components/Skill";
 import './homePage.css';
 import { NavigateFunction, useNavigate } from "react-router-dom";
+import Divider from "../components/divider/Divider";
 
 const HomePage: React.FC = () => {
   const [appState] = useContext(PortfolioState);
@@ -23,7 +24,7 @@ const HomePage: React.FC = () => {
           </div>
         </h1>
       </div>
-      <div className="divider"/>
+      <Divider/>
 
       <div className='home-page__skills'>
         

@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import emailjs from 'emailjs-com';
 import './contact.css';
+import Divider from '../components/divider/Divider';
 
 const Contact: React.FC = () => {
 
@@ -33,7 +34,7 @@ const Contact: React.FC = () => {
           </div>
         </h1>
       </div>
-      <div className="divider"/>
+      <Divider/>
 
       <div className='contact-response-wrapper'>
         {responseDisplay()}
