@@ -1,0 +1,48 @@
+.divider-wrapper {
+  width: 100%;
+  height: .5rem;
+  margin-top: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-crust {
+  height: 100%;
+	animation: divider-animation .3s ease-in forwards;
+  animation-delay: .4s;
+}
+
+.divider-filling {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, var(--pink), var(--purple), var(--blue), var(--sky-blue));
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes divider-animation {
+  0%  {
+    width: 0%;
+    border-radius: 25px;
+  }
+  70% {
+    border-radius: 25px;
+  }
+  100% {
+    width: 100%;
+    border-radius: 0px;
+  }
+}

@@ -7,6 +7,7 @@ import Projects from "./layout/projects/Projects";
 import SkillsDisplay from "./layout/skills/SkillsDisplay";
 import Contact from "./layout/contact/Contact";
 import HomePage from "./layout/home-page/HomePage";
+import About from "./layout/about/About";
 
 type portfolioStateType = {power: boolean};
 
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact/>,
+        errorElement: <RouteError/>,
+      },
+      {
+        path: '/about',
+        element: <About/>,
         errorElement: <RouteError/>,
       },
       {

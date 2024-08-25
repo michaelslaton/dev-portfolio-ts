@@ -1,20 +1,23 @@
 import Divider from '../components/divider/Divider';
-import './projects.css';
+import './about.css';
 
-const Projects: React.FC = () => {
+const About: React.FC = () => {
 
   return (
     <div className='content__screen'>
       <div className='center'>
         <h1 className='page-title'>
           <div className="reveal">
-            Projects  
+            About
           </div>
         </h1>
       </div>
       <Divider/>
+
+
+      
     </div>
   );
 };
 
-export default Projects;
+export default About;

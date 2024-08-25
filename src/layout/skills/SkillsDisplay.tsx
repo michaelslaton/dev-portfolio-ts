@@ -1,4 +1,5 @@
 import {default as skillsList} from '../../data/skills';
+import Divider from '../components/divider/Divider';
 import Skill from './components/Skill';
 import './skills.css';
 
@@ -14,7 +15,7 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </h1>
       </div>
-      <div className="divider"/>
+      <Divider/>
 
       <div className='skills__display'>
         <section className="skills__skill-group">

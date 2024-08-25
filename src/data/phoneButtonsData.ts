@@ -1,4 +1,4 @@
-import { faHome, faProjectDiagram, faCog, faEnvelope, faGlobe } from '@fortawesome/fontawesome-free-solid';
+import { faHome, faProjectDiagram, faCog, faEnvelope, faGlobe, faInfoCircle } from '@fortawesome/fontawesome-free-solid';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import phoneButtonType from "../types/phoneButton.type";
 
@@ -24,6 +24,15 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     },
     {
       id: 3,
+      name: 'About',
+      iconColor: '#8d00ff',
+      fontColor: 'white',
+      symbol: faInfoCircle,
+      url: '/about',
+      linkType: 'local',
+    },
+    {
+      id: 4,
       name: 'Contact',
       iconColor: '#d20001',
       fontColor: 'white',
@@ -34,7 +43,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
   ],
   bottomBar: [
     {
-      id: 4,
+      id: 5,
       name: 'Home',
       iconColor: '#8d00ff',
       fontColor: 'white',
@@ -43,7 +52,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'local',
     },
     {
-      id: 5,
+      id: 6,
       name: 'GitHub',
       iconColor: '#24292f',
       fontColor: 'white',
@@ -52,7 +61,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 6,
+      id: 7,
       name: 'LinkedIn',
       iconColor: '#0275b4',
       fontColor: 'white',
@@ -61,7 +70,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 7,
+      id: 8,
       name: 'Browser',
       iconColor: 'white',
       fontColor: '#07bbd3',
