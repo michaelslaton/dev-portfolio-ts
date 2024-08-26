@@ -40,22 +40,43 @@ const Contact: React.FC = () => {
         {responseDisplay()}
       </div>
 
-      <form
-        className='contact__form'
-        onSubmit={(e) => sendEmail(e)}
-      >
-        
-        <label>Name</label>
-        <input className='contact__input' type='text' name='user_name' required/>
+      <div className="contact__form-wrapper">
+        <form
+          className='contact__form'
+          onSubmit={(e) => sendEmail(e)}
+        >
+          <label>Name</label>
+          <input
+            className='contact__input'
+            type='text'
+            name='user_name'
+            required
+          />
 
-        <label>Email</label>
-        <input className='contact__input' type='email' name='user_email' required/>
+          <label>Email</label>
+          <input
+            className='contact__input'
+            type='email'
+            name='user_email'
+            required
+          />
 
-        <label>Message</label>
-        <textarea className='contact__input' name='message' rows={8} required/>
+          <label>Message</label>
+          <textarea
+            className='contact__input'
+            name='message'
+            rows={8}
+            required
+          />
 
-        <button className='contact__form-submit' type='submit'>Send</button>
-      </form>
+          <button
+            className='contact__form-submit'
+            type='submit'
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
