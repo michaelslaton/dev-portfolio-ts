@@ -9,10 +9,8 @@ const SkillsDisplay: React.FC = () => {
     <div className='content__screen'>
 
       <div className='center'>
-        <h1 className='page-title'>
-          <div className="reveal">
+        <h1 className='page-title reveal'>
             Skills
-          </div>
         </h1>
       </div>
       <Divider/>

@@ -9,7 +9,10 @@ import Contact from "./layout/contact/Contact";
 import HomePage from "./layout/home-page/HomePage";
 import About from "./layout/about/About";
 
-type portfolioStateType = {power: boolean};
+type portfolioStateType = {
+  power: boolean,
+  theme: string;
+};
 
 export const PortfolioState = createContext<portfolioStateType | any>(undefined);
 
@@ -55,7 +58,10 @@ const router = createBrowserRouter([
 ])
 
 const App: React.FC = () => {
-  const [appState, setAppState] = useState<portfolioStateType>({ power: false });
+  const [appState, setAppState] = useState<portfolioStateType>({ 
+    power: false,
+    theme: 'dark',
+  });
 
   return (
     <>

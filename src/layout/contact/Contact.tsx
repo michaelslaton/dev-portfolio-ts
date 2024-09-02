@@ -28,10 +28,8 @@ const Contact: React.FC = () => {
   return (
     <div className='content__screen'>
       <div className='center'>
-        <h1 className='page-title'>
-          <div className="reveal">
+        <h1 className='page-title reveal'>
             Contact
-          </div>
         </h1>
       </div>
       <Divider/>
@@ -77,6 +75,7 @@ const Contact: React.FC = () => {
           </button>
         </form>
       </div>
+
     </div>
   );
 };

@@ -6,10 +6,8 @@ const About: React.FC = () => {
   return (
     <div className='content__screen'>
       <div className='center'>
-        <h1 className='page-title'>
-          <div className="reveal">
+        <h1 className='page-title reveal'>
             About
-          </div>
         </h1>
       </div>
       <Divider/>
