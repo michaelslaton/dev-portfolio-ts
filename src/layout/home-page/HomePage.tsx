@@ -18,10 +18,8 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div className='center'>
-        <h1 className='page-title'>
-          <div className="reveal">
+        <h1 className='page-title reveal'>
           Home
-          </div>
         </h1>
       </div>
       <Divider/>

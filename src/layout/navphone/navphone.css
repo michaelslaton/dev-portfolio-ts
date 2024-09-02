@@ -9,7 +9,7 @@
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;
-  box-shadow: 1rem 1rem .3rem #13121d;
+  box-shadow: var(--phone-shadow);
 }
 .phone-container.phone-main {
   background-image: url(../../assets/imgs/phone/phoneBg.jpg);
@@ -37,11 +37,14 @@
 
 .phone-top__icons {
   width: 30%;
-  color: var(--font-color-bright);
+  color: white;
   font-size: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: inherit;
+}
+.phone-top__icons.right {
   cursor: pointer;
 }
 
@@ -130,4 +133,25 @@
   all: unset;
   margin-top: .3rem;
   font-size: .9rem;
+  color: white;
+}
+
+.theme-button {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: .2s all ease-in-out;
+}
+
+.theme-button.dark {
+  background-color: rgba(255, 255, 255, 0.329);
+  color: white;
+}
+.theme-button.light {
+  background-color: rgb(255, 255, 255);
+  color: rgb(42, 39, 255);
 }

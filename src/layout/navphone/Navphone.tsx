@@ -1,7 +1,9 @@
 import { faPowerOff,
   faBatteryThreeQuarters,
   faWifi,
-  faSignal, } from '@fortawesome/fontawesome-free-solid';
+  faSignal,
+  faLightbulb
+ } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { PortfolioState } from '../../App';
@@ -14,6 +16,20 @@ const Navphone: React.FC = () => {
   const [appState, setAppState] = useContext(PortfolioState);
   const [ phoneState, setPhoneState ] = useState<string>('main');
 
+ const loadTheme = () => {
+  const root = document.querySelector(':root');
+  const theme = appState.theme;
+  if(theme === 'dark') {
+    root?.setAttribute('color-scheme', 'light');
+    setAppState({ ...appState , theme: 'light' });
+  } else {
+    root?.setAttribute('color-scheme', 'dark');
+    setAppState({ ...appState , theme: 'dark' });
+  };
+  return;
+ }
+
+//  Off State -------------------------------------->
   if (!appState.power) return (
     <div className='phone-container phone-off'>
       <div className='phone-top'>
@@ -30,6 +46,8 @@ const Navphone: React.FC = () => {
       </div>
     </div>
   );
+
+// On State -------------------------------------->
   else if (phoneState === 'main') return (
     <div className='phone-container phone-main'>
       <div className='phone-top'>
@@ -42,7 +60,7 @@ const Navphone: React.FC = () => {
         </div>
         <div className='phone-top__middle-bar'/>
         <div
-          className='phone-top__icons'
+          className='phone-top__icons right'
           onClick={()=> setPhoneState('tools')}
         >
           <FontAwesomeIcon data-testid='phone signal' icon={faSignal as IconProp}/>
@@ -64,6 +82,8 @@ const Navphone: React.FC = () => {
       </div>
     </div>
   );
+
+// Tools State -------------------------------------->
   else if (phoneState === 'tools') return (
     <div className='phone-container phone-tools'>
       <div className='phone-top'>
@@ -72,6 +92,12 @@ const Navphone: React.FC = () => {
         <div className='phone-top__icons'/>
       </div>
       <div className='phone-buttons__container'>
+        <button
+          className={`theme-button ${appState.theme === 'dark' ? 'dark' : 'light'}`}
+          onClick={()=> loadTheme()}
+        >
+          <FontAwesomeIcon data-testid='phone power' icon={faLightbulb as IconProp}/>
+        </button>
 
       </div>
       <div
