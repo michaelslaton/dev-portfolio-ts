@@ -1,9 +1,14 @@
 import {default as skillsList} from '../../data/skills';
 import Divider from '../components/divider/Divider';
 import Skill from './components/Skill';
+import { useInView } from 'react-intersection-observer';
 import './skills.css';
+import { useState } from 'react';
 
 const SkillsDisplay: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref: languageRef, inView: visible } = useInView();
+  if(visible && isVisible !== true) setIsVisible(true);
   
   return (
     <div className='content__screen'>
@@ -15,12 +20,12 @@ const SkillsDisplay: React.FC = () => {
       </div>
       <Divider/>
 
-      <div className='skills__display'>
-        <section className="skills__skill-group">
-          <h3 className='skills-list__title'>
+      <div className='skills__display' ref={languageRef}>
+        <section className='skills__skill-group'>
+          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
             Language
           </h3>
-          <div className='skills-list__wrapper'>
+          <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
             { skillsList.map((skill)=> {
               if(skill.category.includes('language')) return (
                 <Skill key={skill.id} data={skill}/>
@@ -29,11 +34,11 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
         
-        <section className="skills__skill-group">
-          <h3 className='skills-list__title'>
+        <section className='skills__skill-group'>
+          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
             Front-End
           </h3>
-          <div className='skills-list__wrapper'>
+          <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
             { skillsList.map((skill)=> {
               if(skill.category.includes('front-end')) return (
                 <Skill key={skill.id} data={skill}/>
@@ -42,11 +47,11 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className="skills__skill-group">
-          <h3 className='skills-list__title'>
+        <section className='skills__skill-group'>
+          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
             Back-End
           </h3>
-          <div className='skills-list__wrapper'>
+          <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
             { skillsList.map((skill)=> {
               if(skill.category.includes('back-end')) return (
                 <Skill key={skill.id} data={skill}/>
@@ -55,11 +60,11 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className="skills__skill-group">
-          <h3 className='skills-list__title'>
+        <section className='skills__skill-group'>
+          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
             Version Control
           </h3>
-          <div className='skills-list__wrapper'>
+          <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
             { skillsList.map((skill)=> {
               if(skill.category.includes('version-control')) return (
                 <Skill key={skill.id} data={skill}/>
@@ -68,11 +73,11 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className="skills__skill-group">
-          <h3 className='skills-list__title'>
+        <section className='skills__skill-group'>
+          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
             Testing
           </h3>
-          <div className='skills-list__wrapper'>
+          <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
             { skillsList.map((skill)=> {
               if(skill.category.includes('testing')) return (
                 <Skill key={skill.id} data={skill}/>
@@ -81,11 +86,11 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className="skills__skill-group">
-          <h3 className='skills-list__title'>
+        <section className='skills__skill-group'>
+          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
             Other
           </h3>
-          <div className='skills-list__wrapper'>
+          <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
             { skillsList.map((skill)=> {
               if(skill.category.includes('other')) return (
                 <Skill key={skill.id} data={skill}/>

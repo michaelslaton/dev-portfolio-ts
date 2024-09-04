@@ -19,6 +19,7 @@
 }
 .phone-container.phone-off {
   background-color: var(--content-bg-dark);
+  color: #888888
 }
 
 .phone-top {

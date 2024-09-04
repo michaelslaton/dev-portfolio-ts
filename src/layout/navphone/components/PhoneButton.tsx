@@ -7,9 +7,10 @@ import '../navphone.css';
 type phoneButtonProps = {
   data: phoneButtonType;
   position: string;
+  setPhoneState?: Function;
 }
 
-const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
+const PhoneButton: React.FC<phoneButtonProps> = ({ data, position, setPhoneState }) => {
   const navigate: NavigateFunction = useNavigate();
 
   return (
@@ -17,7 +18,10 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
       { data.linkType === 'local' ?
         <div
           className='phone-button__container'
-          onClick={()=> navigate(data.url)}
+          onClick={()=>{
+            if(data.url === '') setPhoneState!('tools');
+            else navigate(data.url);
+          }}
         >
           <div
             className='icon'

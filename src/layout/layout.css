@@ -27,6 +27,8 @@
   --divider-background: linear-gradient(-45deg, var(--pink), var(--purple), var(--blue), var(--sky-blue));
   --phone-shadow: 1rem 1rem .3rem rgba(0, 0, 0, .5);
   --backdrops-sliders: linear-gradient(-60deg, var(--purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
+  --input-border: 1px solid transparent;
+  --input-background: #6900BA;
   --sliders: #130338;
   --content-bg-light: #1c163b;
   --content-bg-dark: #11101a;
@@ -200,6 +202,27 @@ img {
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.7) inset;
   z-index: -1;
 } */
+
+.slide-out {
+  transform: translateX(4%) !important;
+  opacity: 0 !important;
+}
+.slide-in {
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
+  transition: all .6s ease-in-out !important;
+  transition-delay: .5s !important;
+}
+.slide-down {
+  transform: translatey(4%) !important;
+  opacity: 0 !important;
+}
+.slide-up {
+  transform: translatey(0%) !important;
+  opacity: 1 !important;
+  transition: all .6s ease-in-out !important;
+  transition-delay: 1s !important;
+}
 
 @keyframes phase-in {
   to {
