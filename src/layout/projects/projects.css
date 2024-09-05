@@ -1,0 +1,32 @@
+.projects-display__container {
+  display: flex;
+}
+
+.projects__list {
+  width: fit-content;
+  padding: 1rem;
+}
+.projects__list-item {
+  padding: .5rem 2rem;
+  padding-left: 1rem;
+  text-wrap: nowrap;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--purple-dark) 50%, rgba(2,45,82,0) 100%);
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+.projects__list-item:is(:hover,:focus){
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.projects__list-item.selected {
+  background: linear-gradient(90deg, var(--purple) 50%, rgba(2,45,82,0) 100%);
+}
+
+.projects__selected {
+  width: 100%;
+  margin-left: 2rem;
+}
