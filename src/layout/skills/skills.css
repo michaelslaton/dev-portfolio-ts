@@ -7,10 +7,6 @@
   margin-top: 1rem;
 }
 
-.skills__skill-group {
-  
-}
-
 .skills-list__title {
   all: inherit;
   margin-block: 0;
@@ -25,8 +21,9 @@
   flex-wrap: wrap;
   background-color: var(--content-bg-dark);
   width: 25rem;
+  gap: .5rem;
   border-radius: var(--border-radius);
-  padding: .5rem;
+  padding: .7rem;
 }
 
 .skill__wrapper {
@@ -34,7 +31,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 5rem;
+  width: 5.5rem;
   cursor: pointer;
 }
 

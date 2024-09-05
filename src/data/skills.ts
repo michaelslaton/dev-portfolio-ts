@@ -24,7 +24,7 @@ import SkillType from '../types/skill.type';
 const skills: SkillType[] = [
   { 
     id: 1,
-    name: 'Adobe Creative Suite',
+    name: 'Adobe CS',
     iconimg: adobe,
     iconColor: '#d74737',
     learned: true,

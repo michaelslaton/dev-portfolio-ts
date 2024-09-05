@@ -21,8 +21,8 @@ const SkillsDisplay: React.FC = () => {
       <Divider/>
 
       <div className='skills__display' ref={languageRef}>
-        <section className='skills__skill-group'>
-          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
+        <section>
+          <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Language
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
@@ -34,8 +34,8 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
         
-        <section className='skills__skill-group'>
-          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
+        <section>
+          <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Front-End
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
@@ -47,8 +47,8 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className='skills__skill-group'>
-          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
+        <section>
+          <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Back-End
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
@@ -60,8 +60,8 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className='skills__skill-group'>
-          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
+        <section>
+          <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Version Control
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
@@ -73,8 +73,8 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className='skills__skill-group'>
-          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
+        <section>
+          <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Testing
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
@@ -86,8 +86,8 @@ const SkillsDisplay: React.FC = () => {
           </div>
         </section>
 
-        <section className='skills__skill-group'>
-          <h3 className={`skills-list__title slide-out ${isVisible ? 'slide-in' : ''}`}>
+        <section>
+          <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Other
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>

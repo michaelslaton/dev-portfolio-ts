@@ -119,7 +119,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: fit-content;
-  gap: .2rem;
+  gap: .7rem .2rem;
   padding: 1rem;
 }
 
