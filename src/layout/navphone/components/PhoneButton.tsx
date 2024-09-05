@@ -19,7 +19,7 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position, setPhoneState
         <div
           className='phone-button__container'
           onClick={()=>{
-            if(data.url === '') setPhoneState!('tools');
+            if(data.name === 'Controls') setPhoneState!('tools');
             else navigate(data.url);
           }}
         >
