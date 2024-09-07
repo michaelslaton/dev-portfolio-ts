@@ -11,7 +11,7 @@ const Skill:React.FC<SkillProps> = ({ data }) =>{
     <abbr title={data.abbr}>
       <a
         className='skill__wrapper'
-        href={`https://www.google.com/search?q=${data.name}`}
+        href={data.url}
         target='_blank'
       >
         <div 

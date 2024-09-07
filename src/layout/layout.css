@@ -198,7 +198,7 @@ img {
 .slide-in {
   transform: translateX(0%) !important;
   opacity: 1 !important;
-  transition: all .6s ease-in-out !important;
+  transition: opacity .6s ease-in-out, transform .6s ease-in-out !important;
   transition-delay: .5s !important;
 }
 .slide-down {
@@ -208,7 +208,8 @@ img {
 .slide-up {
   transform: translatey(0%) !important;
   opacity: 1 !important;
-  transition: all .6s ease-in-out !important;
+  /* transition: all .6s ease-in-out !important; */
+  transition: opacity .6s ease-in-out, transform .6s ease-in-out !important;
   transition-delay: 1s !important;
 }
 

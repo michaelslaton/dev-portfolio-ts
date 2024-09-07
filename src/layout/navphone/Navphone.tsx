@@ -39,7 +39,7 @@ const Navphone: React.FC = () => {
       </div>
       <div className='phone-buttons__container phone-off'>
         <button
-          className='phone-buttons__power-button'
+          className='power-button'
           onClick={()=> setAppState({...appState , power: true})}>
             <FontAwesomeIcon data-testid='phone power' icon={faPowerOff as IconProp}/>
         </button>
@@ -101,12 +101,36 @@ const Navphone: React.FC = () => {
         <div className='phone-top__icons'/>
       </div>
       <div className='phone-buttons__container'>
-        <button
-          className={`theme-button ${appState.theme === 'dark' ? 'dark' : 'light'}`}
-          onClick={()=> loadTheme()}
-        >
-          <FontAwesomeIcon data-testid='phone power' icon={faLightbulb as IconProp}/>
-        </button>
+        
+        <div className='phone-tools__grids-wrapper'>
+          <div className="phone-tools__grid-4-4">
+
+          <div className="phone-tools__grid-item">
+              <button
+                className={`theme-button ${appState.theme === 'dark' ? 'dark' : 'light'}`}
+                onClick={()=> loadTheme()}
+              >
+                <FontAwesomeIcon data-testid='phone power' icon={faLightbulb as IconProp}/>
+              </button>
+            </div>
+            <div className="phone-tools__grid-item">
+              <button>#</button>
+            </div>
+            <div className="phone-tools__grid-item">
+              <button>#</button>
+            </div>
+            <div className="phone-tools__grid-item">
+              <button>#</button>
+            </div>
+            <div className="phone-tools__grid-item">
+              <button>#</button>
+            </div>
+            <div className="phone-tools__grid-item">
+              <button>#</button>
+            </div>
+
+          </div>
+        </div>
 
       </div>
       <div

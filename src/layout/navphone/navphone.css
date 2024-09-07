@@ -57,25 +57,6 @@
   font-size: 1.2rem;
 }
 
-.phone-tools__bottom {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  bottom: 0;
-  width: 100%;
-  height: 3rem;
-  cursor: pointer;
-}
-.phone-tools__bottom-bar {
-  background-color: white;
-  height: .3rem;
-  width: 30%;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  border-radius: 10%;
-}
-
 .phone-buttons__container {
   display: flex;
   flex-direction: column;
@@ -101,26 +82,56 @@
   justify-content: space-around;
 }
 
-.phone-buttons__power-button {
-  color: white;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  font-size: 5rem;
-  aspect-ratio: 1/1;
-  height: fit-content;
-}
-.phone-buttons__power-button:hover {
-  color: var(--purple);
-}
-
 .phone-buttons__grid {
   margin-top: 1.3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   height: fit-content;
-  gap: .7rem .2rem;
+  gap: .7rem .6rem;
   padding: 1rem;
+  margin: 0 auto;
+}
+
+.phone-tools__grids-wrapper {
+  width: 100%;
+}
+.phone-tools__grid-4-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  margin: 0 auto;
+  width: fit-content;
+  gap: .6rem;
+}
+
+.phone-tools__grid-item > button {
+  border-radius: var(--border-radius);
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background-color: rgb(88, 88, 88);
+}
+
+.phone-tools__bottom {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+}
+.phone-tools__bottom-bar {
+  background-color: white;
+  height: .3rem;
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 10%;
 }
 
 .phone-button__container {
@@ -137,22 +148,36 @@
   color: white;
 }
 
-.theme-button {
-  width: 50px;
-  height: 50px;
-  border-radius: var(--border-radius);
-  border: none;
+.power-button {
+  color: #3b2e49;
+  border: 0;
+  background: none;
   cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: .2s all ease-in-out;
+  font-size: 5rem;
+  animation: power-button-pulse .8s ease-in-out infinite alternate;
+}
+.power-button:hover {
+  color: var(--purple);
+  transition: color ease-in-out;
+  animation: none;
 }
 
+.theme-button {
+  transition: .2s all ease-in-out;
+}
 .theme-button.dark {
-  background-color: rgba(255, 255, 255, 0.329);
   color: white;
 }
 .theme-button.light {
   background-color: rgb(255, 255, 255);
   color: rgb(42, 39, 255);
+}
+
+@keyframes power-button-pulse {
+  0% {
+    color: var(--purple);
+  }
+  100% {
+    color: #3b2e49;
+  }
 }
