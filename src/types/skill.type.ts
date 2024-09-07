@@ -5,6 +5,7 @@ type SkillType = {
   iconColor: string;
   learned: boolean;
   category: string;
+  url: string;
   abbr?: string;
   homePage: boolean;
 };

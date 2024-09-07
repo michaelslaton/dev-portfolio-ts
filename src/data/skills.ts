@@ -29,6 +29,7 @@ const skills: SkillType[] = [
     iconColor: '#d74737',
     learned: true,
     category: 'other',
+    url: 'https://www.adobe.com/',
     homePage: false,
   },
   { 
@@ -38,6 +39,7 @@ const skills: SkillType[] = [
     iconColor: '#673ab7',
     learned: true,
     category: 'front-end',
+    url: 'https://getbootstrap.com/',
     homePage: false,
   },
   { 
@@ -47,6 +49,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
+    url: 'https://www.w3.org/Style/CSS/',
     abbr: 'Cascading Style Sheets',
     homePage: true,
   },
@@ -57,6 +60,7 @@ const skills: SkillType[] = [
     iconColor: '#90c53f',
     learned: true,
     category: 'back-end',
+    url: 'https://expressjs.com/',
     homePage: true,
   },
   { 
@@ -66,6 +70,7 @@ const skills: SkillType[] = [
     iconColor: '#24292f',
     learned: true,
     category: 'version-control',
+    url: 'https://git-scm.com/',
     homePage: false,
   },
   { 
@@ -75,6 +80,7 @@ const skills: SkillType[] = [
     iconColor: '#24292f',
     learned: true,
     category: 'version-control',
+    url: 'https://www.github.com/',
     homePage: false,
   },
   { 
@@ -84,6 +90,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'other',
+    url: 'https://www.heroku.com/',
     homePage: false,
   },
   { 
@@ -93,6 +100,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
+    url: 'https://www.w3.org/html/',
     abbr: 'HyperText Markup Language',
     homePage: true,
   },
@@ -103,6 +111,7 @@ const skills: SkillType[] = [
     iconColor: '#ffd600',
     learned: true,
     category: 'front-end, back-end, language',
+    url: 'https://www.javascript.com/',
     homePage: true,
   },
   { 
@@ -112,6 +121,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    url: 'https://knexjs.org/',
     homePage: false,
   },
   { 
@@ -121,6 +131,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'testing',
+    url: 'https://mochajs.org/',
     homePage: false,
   },
   { 
@@ -130,6 +141,7 @@ const skills: SkillType[] = [
     iconColor: '#380000',
     learned: true,
     category: 'other',
+    url: 'https://www.npmjs.com/',
     abbr: 'Node Package Manager',
     homePage: false,
   },
@@ -140,6 +152,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    url: 'https://www.postgresql.org/',
     homePage: false,
   },
   { 
@@ -149,6 +162,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
+    url: 'https://react.dev/',
     homePage: true,
   },
   { 
@@ -158,6 +172,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    url: 'https://restfulapi.net/',
     abbr: 'Representational State Transfer',
     homePage: false,
   },
@@ -168,6 +183,7 @@ const skills: SkillType[] = [
     iconColor: 'black',
     learned: true,
     category: 'other',
+    url: 'https://vercel.com/',
     homePage: false,
   },
   { 
@@ -177,6 +193,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'front-end',
+    url: 'https://redux.js.org/',
     homePage: false,
   },
   { 
@@ -186,6 +203,7 @@ const skills: SkillType[] = [
     iconColor: '#3178c6',
     learned: true,
     category: 'front-end, back-end, language',
+    url: 'https://www.typescriptlang.org/',
     homePage: true,
   },
   { 
@@ -195,6 +213,7 @@ const skills: SkillType[] = [
     iconColor: '#039be5',
     learned: true,
     category: 'other',
+    url: 'https://firebase.google.com/',
     homePage: false,
   },
   { 
@@ -204,6 +223,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: true,
     category: 'back-end',
+    url: 'https://nodejs.org/',
     homePage: true,
   },
   { 
@@ -213,6 +233,7 @@ const skills: SkillType[] = [
     iconColor: 'black',
     learned: true,
     category: 'testing',
+    url: 'https://jestjs.io/',
     homePage: false,
   },
   { 
@@ -222,6 +243,7 @@ const skills: SkillType[] = [
     iconColor: 'white',
     learned: false,
     category: 'testing',
+    url: 'https://vitest.dev/',
     homePage: false,
   },
 ];
