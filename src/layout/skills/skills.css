@@ -19,7 +19,7 @@
   aspect-ratio: 2.2/1;
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--content-bg-dark);
+  background-color: var(--content-bg);
   width: 25rem;
   gap: .5rem;
   border-radius: var(--border-radius);

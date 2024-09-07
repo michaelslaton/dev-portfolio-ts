@@ -3,6 +3,7 @@ import projectData from '../../data/projectData';
 import './projects.css';
 import { useState } from 'react';
 import ProjectType from '../../types/project.type';
+import Project from './components/Project';
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
@@ -27,9 +28,9 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className='projects__selected'>
-          <img src={selectedProject?.img}/>
-        </div>
+        { selectedProject &&
+          <Project data={selectedProject}/>
+        }
       </div>
 
     </div>

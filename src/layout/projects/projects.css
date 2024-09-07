@@ -15,7 +15,7 @@
   border-left: 2px solid transparent;
   border-bottom: 2px solid transparent;
   margin-bottom: .5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .projects__list-item:is(:hover,:focus){
   border-left: 2px solid white;
@@ -26,7 +26,31 @@
   background: linear-gradient(90deg, var(--purple) 50%, rgba(2,45,82,0) 100%);
 }
 
-.projects__selected {
+.project {
   width: 100%;
-  margin-left: 2rem;
+  padding: 1rem;
+  border: 1.5px solid black;
+  border-radius: var(--border-radius);
+  background-color: var(--content-bg);
+  margin: 1rem;
+}
+
+.project__header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.project__hero-img {
+  display: block;
+  border-radius: var(--border-radius);
+  width: 25rem;
+}
+.project__header-info {
+  margin-left: .5rem;
+  text-wrap: wrap;
+}
+.project__header-info > h2 {
+  all: inherit;
+  margin: 0;
+  font-size: 2rem;
 }
