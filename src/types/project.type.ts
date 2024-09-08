@@ -5,7 +5,7 @@ type ProjectType = {
   img: string;
   type: string;
   description: string;
-  tech: string[];
+  tech: number[];
   demo?: string;
   code: string,
   codeb?: string;

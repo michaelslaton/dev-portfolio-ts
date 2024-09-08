@@ -1,4 +1,4 @@
-import {default as skillsList} from '../../data/skills';
+import {default as skillsList} from '../../data/skillsData';
 import Divider from '../components/divider/Divider';
 import Skill from './components/Skill';
 import { useInView } from 'react-intersection-observer';
