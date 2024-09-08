@@ -21,6 +21,7 @@ const Projects: React.FC = () => {
         <div className='projects__list'>
           {projectData.map((project)=>(
             <div
+              key={project.id}
               onClick={()=> setSelectedProject(project)}
               className={`projects__list-item ${project.id === selectedProject?.id ? 'selected' : ''}`}
             >

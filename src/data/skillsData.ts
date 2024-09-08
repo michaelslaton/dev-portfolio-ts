@@ -21,7 +21,7 @@ import typescript from '../assets/imgs/skillsIcons/typescript.png';
 import vitest from '../assets/imgs/skillsIcons/vitest.png';
 import SkillType from '../types/skill.type';
 
-const skills: SkillType[] = [
+const skillsData: SkillType[] = [
   { 
     id: 1,
     name: 'Adobe CS',
@@ -248,4 +248,4 @@ const skills: SkillType[] = [
   },
 ];
 
-export default skills ;
+export default skillsData ;

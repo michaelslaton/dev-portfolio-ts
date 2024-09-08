@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { PortfolioState } from "../../App";
-import {default as skillsList} from '../../data/skills';
+import {default as skillsList} from '../../data/skillsData';
 import Skill from "../skills/components/Skill";
 import './homePage.css';
 import { NavigateFunction, useNavigate } from "react-router-dom";

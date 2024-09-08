@@ -27,7 +27,7 @@
   --divider-background: linear-gradient(-45deg, var(--pink), var(--purple), var(--blue), var(--sky-blue));
   --phone-shadow: 1rem 1rem .3rem rgba(0, 0, 0, .5);
   --backdrops-sliders: linear-gradient(-60deg, var(--purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
-  --input-border: 1px solid transparent;
+  --input-border-color: #ffffff;
   --input-background: #6900BA;
   --sliders: #130338;
   --content-screen-bg: rgba(27, 24, 71, .6);
@@ -47,7 +47,7 @@
 [color-scheme='light'] {
   --font-color: #333333;
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
-  --input-border: 1px solid rgba(0, 0, 0, .5);
+  --input-border-color: #000000;
   --input-background: #e2d1ee;
   --content-bg: #9c97c7;
   --content-screen-bg: rgba(202, 202, 202, .6);
@@ -62,7 +62,7 @@
 [color-scheme='dark'] {
   --font-color: #ffffff;
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
-  --input-border: 1px solid transparent;
+  --input-border-color: #ffffff;
   --input-background: #6900BA;
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);

@@ -16,6 +16,7 @@
   border-bottom: 2px solid transparent;
   margin-bottom: .5rem;
   font-size: 1.2rem;
+  color: #ffffff;
 }
 .projects__list-item:is(:hover,:focus){
   border-left: 2px solid white;
@@ -29,7 +30,7 @@
 .project {
   width: 100%;
   padding: 1rem;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--content-bg);
   border-radius: var(--border-radius);
   background-color: var(--content-bg);
   margin: 1rem;
@@ -46,11 +47,52 @@
   width: 25rem;
 }
 .project__header-info {
-  margin-left: .5rem;
+  margin-left: 1rem;
   text-wrap: wrap;
 }
 .project__header-info > h2 {
   all: inherit;
   margin: 0;
   font-size: 2rem;
+  color: #ffffff;
+  border-bottom: 1px solid var(--purple);
+}
+
+.project__skills-list {
+  width: 80%;
+}
+.project__skills-item {
+  text-decoration: none;
+  display:  inline-block;
+  margin-right: 1em;
+  margin-bottom: .7rem;
+  background-color: var(--purple);
+  padding: .2em .5rem;
+  border-radius: 5px;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+.project__skills-item:is(:active, :hover){
+  border-color: #ffffff;
+}
+
+.project__code-buttons {
+  margin-top: .6rem;
+}
+.project__code-buttons-item {
+  text-decoration: none;
+  color: #000000;
+  padding: .2em .8rem;
+  text-transform: uppercase;
+  margin-right: 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  background-color: #000000;
+  border-color: var(--purple);
+  color: var(--purple);
+}
+.project__code-buttons-item:is(:hover, :active){
+  background-color: #ffffff;
+  border-color: #000000;
+  color: #000000;
 }
