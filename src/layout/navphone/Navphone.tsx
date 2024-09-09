@@ -65,11 +65,11 @@ const Navphone: React.FC = () => {
         >
           <FontAwesomeIcon data-testid='phone signal' icon={faSignal as IconProp}/>
           <FontAwesomeIcon data-testid='phone wifi' icon={faWifi as IconProp}/>
-          <FontAwesomeIcon data-testid='phone battery' className="phone-top__battery" icon={faBatteryThreeQuarters as IconProp}/>
+          <FontAwesomeIcon data-testid='phone battery' className='phone-top__battery' icon={faBatteryThreeQuarters as IconProp}/>
         </div>
       </div>
       <div className='phone-buttons__container'>
-        <div className="phone-buttons__grid">
+        <div className='phone-buttons__grid'>
           {phoneButtonsData.mainButtons.map((button)=>(
             <PhoneButton
               key={button.id}
@@ -103,9 +103,9 @@ const Navphone: React.FC = () => {
       <div className='phone-buttons__container'>
         
         <div className='phone-tools__grids-wrapper'>
-          <div className="phone-tools__grid-4-4">
+          <div className='phone-tools__grid-4-4'>
 
-          <div className="phone-tools__grid-item">
+          <div className='phone-tools__grid-item'>
               <button
                 className={`theme-button ${appState.theme === 'dark' ? 'dark' : 'light'}`}
                 onClick={()=> loadTheme()}
@@ -113,19 +113,19 @@ const Navphone: React.FC = () => {
                 <FontAwesomeIcon data-testid='phone power' icon={faLightbulb as IconProp}/>
               </button>
             </div>
-            <div className="phone-tools__grid-item">
+            <div className='phone-tools__grid-item'>
               <button>#</button>
             </div>
-            <div className="phone-tools__grid-item">
+            <div className='phone-tools__grid-item'>
               <button>#</button>
             </div>
-            <div className="phone-tools__grid-item">
+            <div className='phone-tools__grid-item'>
               <button>#</button>
             </div>
-            <div className="phone-tools__grid-item">
+            <div className='phone-tools__grid-item'>
               <button>#</button>
             </div>
-            <div className="phone-tools__grid-item">
+            <div className='phone-tools__grid-item'>
               <button>#</button>
             </div>
 

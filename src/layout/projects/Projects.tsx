@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
       </div>
       <Divider/>
 
-      <div className="projects-display__container">
+      <div className='projects-display__container'>
         <div className='projects__list'>
           {projectData.map((project)=>(
             <div

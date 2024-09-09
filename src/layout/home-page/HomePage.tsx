@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { PortfolioState } from "../../App";
+import { useContext } from 'react';
+import { PortfolioState } from '../../App';
 import {default as skillsList} from '../../data/skillsData';
-import Skill from "../skills/components/Skill";
+import Skill from '../skills/components/Skill';
 import './homePage.css';
-import { NavigateFunction, useNavigate } from "react-router-dom";
-import Divider from "../components/divider/Divider";
+import { NavigateFunction, useNavigate } from 'react-router-dom';
+import Divider from '../components/divider/Divider';
 
 const HomePage: React.FC = () => {
   const [appState] = useContext(PortfolioState);

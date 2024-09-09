@@ -14,8 +14,8 @@ const Layout: React.FC = () => {
 
   return (
     <>
-      <div className="main-screen">
-        <div className="nav-container">
+      <div className='main-screen'>
+        <div className='nav-container'>
           <Navphone/>
         </div>
         <div className={`${appState.power ? 'content' : `content-off`}`}>

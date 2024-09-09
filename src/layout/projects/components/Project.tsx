@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
 
   return (
     <div className='project'>
-      <div className="project__header">
+      <div className='project__header'>
         <img
           src={data.img}
           className='project__hero-img'
@@ -29,7 +29,7 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
 
           <p>{data.description}</p>
 
-          <div className="project__skills-list">
+          <div className='project__skills-list'>
             {projectSkills.map((skill)=>(
               <a
                 key={skill.id}
@@ -42,7 +42,7 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
             ))}
           </div>
 
-          <div className="project__code-buttons">
+          <div className='project__code-buttons'>
             { data.codeb ?
               <>
                 <a
