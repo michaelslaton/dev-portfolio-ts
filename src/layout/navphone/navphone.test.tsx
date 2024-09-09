@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import Navphone from "./Navphone";
+import { render, screen } from '@testing-library/react';
+import Navphone from './Navphone';
 
 describe('Navphone', ()=>{
   it('renders all elements properly',()=>{

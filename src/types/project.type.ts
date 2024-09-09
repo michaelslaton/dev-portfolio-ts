@@ -6,6 +6,7 @@ type ProjectType = {
   type: string;
   description: string;
   tech: number[];
+  screenShots: string[];
   demo?: string;
   code: string,
   codeb?: string;

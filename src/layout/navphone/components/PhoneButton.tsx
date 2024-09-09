@@ -38,7 +38,7 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position, setPhoneState
         :
         <a
           href={data.url}
-          target="_blank"
+          target='_blank'
           className='phone-button__container'
         >
           <div

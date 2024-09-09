@@ -1,5 +1,5 @@
-import { render, screen } from "../utils/test-utils/test-utils";
-import Layout from "./Layout";
+import { render, screen } from '../utils/test-utils/test-utils';
+import Layout from './Layout';
 
 describe('Layout', ()=>{
   it('renders all elements properly', ()=>{

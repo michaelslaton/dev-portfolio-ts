@@ -1,6 +1,6 @@
 import { faHome, faProjectDiagram, faCog, faEnvelope, faGlobe, faInfoCircle, faBook } from '@fortawesome/fontawesome-free-solid';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import phoneButtonType from "../types/phoneButton.type";
+import phoneButtonType from '../types/phoneButton.type';
 
 const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButtonType[] } = {
   mainButtons: [

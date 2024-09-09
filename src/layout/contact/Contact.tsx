@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
         {responseDisplay()}
       </div>
 
-      <div className="contact__form-wrapper">
+      <div className='contact__form-wrapper'>
         <form
           className='contact__form'
           onSubmit={(e) => sendEmail(e)}
