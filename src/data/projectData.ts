@@ -12,8 +12,8 @@ const projectData: ProjectType[] = [
     img: devPortfolio,
     type: '(Full-Stack)',
     description: 'Remember to add this later Mike.',
-    tech: [9, 14, 20, 17, 8, 3, 21,],
-    screenShots: [],
+    tech: [19, 9, 14, 20, 17, 8, 3, 21,],
+    screenShots: [ devPortfolio, devPortfolio, devPortfolio, devPortfolio, devPortfolio ],
     code: 'https://github.com/michaelslaton/remazon',
   },
   {
