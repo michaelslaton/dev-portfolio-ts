@@ -29,16 +29,16 @@
 
 .project {
   width: 100%;
-  padding: 1rem;
-  border: 1.5px solid var(--content-bg);
-  border-radius: var(--border-radius);
-  background-color: var(--content-bg);
   margin: 1rem;
 }
 
 .project__header {
   display: grid;
   grid-template-columns: max-content 1fr;
+  padding: 1rem;
+  border: 1.5px solid var(--content-bg);
+  border-radius: var(--border-radius);
+  background-color: var(--content-bg);
 }
 
 .project__hero-img {
@@ -95,4 +95,26 @@
   background-color: #ffffff;
   border-color: #000000;
   color: #000000;
+}
+
+.project__screenshots {
+  display: flex;
+  margin-top: .7rem;
+  gap: .5rem;
+  padding: 1rem;
+  border: 1.5px solid var(--content-bg);
+  border-radius: var(--border-radius);
+  background-color: var(--content-bg);
+  flex-wrap: wrap;
+}
+.project__screenshots-item {
+  display: block;
+  border-radius: var(--border-radius);
+  width: 20rem;
+  scale: .95;
+  cursor: pointer;
+}
+.project__screenshots-item:is(:hover, :active) {
+  scale: 1;
+  transition: scale .1s ease-in-out;
 }
