@@ -2,10 +2,13 @@ import { faPowerOff,
   faBatteryThreeQuarters,
   faWifi,
   faSignal,
-  faLightbulb
+  faLightbulb,
+  faClock,
+  faCalculator,
+  faCamera,
  } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { PortfolioState } from '../../App';
 import PhoneButton from './components/PhoneButton';
 import phoneButtonsData from '../../data/phoneButtonsData';
@@ -13,8 +16,7 @@ import './navphone.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const Navphone: React.FC = () => {
-  const [appState, setAppState] = useContext(PortfolioState);
-  const [ phoneState, setPhoneState ] = useState<string>('main');
+  const [ appState, setAppState ] = useContext(PortfolioState);
 
  const loadTheme = () => {
   const root = document.querySelector(':root');
@@ -40,7 +42,7 @@ const Navphone: React.FC = () => {
       <div className='phone-buttons__container phone-off'>
         <button
           className='power-button'
-          onClick={()=> setAppState({...appState , power: true})}>
+          onClick={()=> setAppState({ ...appState , power: true})}>
             <FontAwesomeIcon data-testid='phone power' icon={faPowerOff as IconProp}/>
         </button>
       </div>
@@ -48,7 +50,7 @@ const Navphone: React.FC = () => {
   );
 
 // On State -------------------------------------->
-  else if (phoneState === 'main') return (
+  else if (appState.screen === 'main') return (
     <div className='phone-container phone-main'>
       <div className='phone-top'>
         <div className='phone-top__icons'>
@@ -61,7 +63,7 @@ const Navphone: React.FC = () => {
         <div className='phone-top__middle-bar'/>
         <div
           className='phone-top__icons right'
-          onClick={()=> setPhoneState('tools')}
+          onClick={()=> setAppState({ ...appState , screen: 'tools' })}
         >
           <FontAwesomeIcon data-testid='phone signal' icon={faSignal as IconProp}/>
           <FontAwesomeIcon data-testid='phone wifi' icon={faWifi as IconProp}/>
@@ -75,7 +77,6 @@ const Navphone: React.FC = () => {
               key={button.id}
               data={button}
               position='main'
-              setPhoneState={setPhoneState}
             />
           ))}
         </div>
@@ -93,7 +94,7 @@ const Navphone: React.FC = () => {
   );
 
 // Tools State -------------------------------------->
-  else if (phoneState === 'tools') return (
+  else if (appState.screen === 'tools') return (
     <div className='phone-container phone-tools'>
       <div className='phone-top'>
         <div className='phone-top__icons'/>
@@ -105,29 +106,37 @@ const Navphone: React.FC = () => {
         <div className='phone-tools__grids-wrapper'>
           <div className='phone-tools__grid-4-4'>
 
-          <div className='phone-tools__grid-item'>
               <button
-                className={`theme-button ${appState.theme === 'dark' ? 'dark' : 'light'}`}
+                className={`phone-tools__grid-item theme-button ${appState.theme === 'dark' ? '' : 'light'}`}
                 onClick={()=> loadTheme()}
               >
-                <FontAwesomeIcon data-testid='phone power' icon={faLightbulb as IconProp}/>
+                <FontAwesomeIcon
+                  icon={faLightbulb as IconProp}
+                />
               </button>
-            </div>
-            <div className='phone-tools__grid-item'>
-              <button>#</button>
-            </div>
-            <div className='phone-tools__grid-item'>
-              <button>#</button>
-            </div>
-            <div className='phone-tools__grid-item'>
-              <button>#</button>
-            </div>
-            <div className='phone-tools__grid-item'>
-              <button>#</button>
-            </div>
-            <div className='phone-tools__grid-item'>
-              <button>#</button>
-            </div>
+              <button className='phone-tools__grid-item'>
+                <FontAwesomeIcon
+                  icon={faClock as IconProp}
+                />
+              </button>
+              <button className='phone-tools__grid-item'>
+                <FontAwesomeIcon
+                  icon={faCalculator as IconProp}
+                />
+              </button>
+              <button className='phone-tools__grid-item'>
+                <FontAwesomeIcon
+                  icon={faCamera as IconProp}
+                />
+              </button>
+              <button
+                className={`phone-tools__grid-item ${appState.lowPower ? 'low-power' : ''}`}
+                onClick={()=> setAppState({...appState, lowPower: !appState.lowPower})}
+              >
+                <FontAwesomeIcon
+                  icon={faBatteryThreeQuarters as IconProp}
+                />
+              </button>
 
           </div>
         </div>
@@ -135,7 +144,7 @@ const Navphone: React.FC = () => {
       </div>
       <div
         className='phone-tools__bottom'
-        onClick={()=> setPhoneState('main')}
+        onClick={()=> setAppState({ ...appState, screen: 'main' })}
       >
         <div className='phone-tools__bottom-bar'/>
       </div>

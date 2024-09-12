@@ -15,7 +15,6 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
     console.log(foundSkill)
     projectSkills.push(foundSkill!);
   }
-  console.log(projectSkills)
 
   return (
     <div className='project'>
@@ -82,18 +81,17 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
 
         </div>
       </div>
-      <div className='project__screenshots'>
         { data.screenShots.length ?
-          data.screenShots.map((image)=> (
-            <div>
-              <img className='project__screenshots-item' src={image}/>
-            </div>
-          ))
+          <div className='project__screenshots'>
+            { data.screenShots.map((image)=> (
+              <div>
+                <img className='project__screenshots-item' src={image}/>
+              </div>
+            ))}
+          </div>
           :
-          <>
-          </>
+          <></>
         }
-      </div>
     </div>
   );
 };

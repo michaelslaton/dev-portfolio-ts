@@ -27,7 +27,8 @@
   --divider-background: linear-gradient(-45deg, var(--pink), var(--purple), var(--blue), var(--sky-blue));
   --phone-shadow: 1rem 1rem .3rem rgba(0, 0, 0, .5);
   --backdrops-sliders: linear-gradient(-60deg, var(--purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
-  --input-border-color: #ffffff;
+  --input-border-color: black;
+  --input-highlight-border-color: white;
   --input-background: #6900BA;
   --sliders: #130338;
   --content-screen-bg: rgba(27, 24, 71, .6);
@@ -38,6 +39,8 @@
   --pink: #F600FF;
   --blue: #3600FF;
   --sky-blue: #00B9FF;
+  --list-item-bg: #552a8b;
+  --list-item-bg-light: var(--purple);
 
   /* Values */
   --border-radius: 1rem;
@@ -45,9 +48,11 @@
 
 /* Themes */
 [color-scheme='light'] {
-  --font-color: #333333;
+  --font-color: #382847;
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
+  --divider-background: linear-gradient(-45deg,white, rgb(0, 0, 0));
   --input-border-color: #000000;
+  --input-highlight-border-color: var(--purple);
   --input-background: #e2d1ee;
   --content-bg: #9c97c7;
   --content-screen-bg: rgba(202, 202, 202, .6);
@@ -57,16 +62,24 @@
   rgb(186, 167, 197) 56%,
   rgb(139, 107, 175) 10%
   );
+
+  --list-item-bg-light: #491881;
+  --list-item-bg: #6d4e9f;
 }
 
 [color-scheme='dark'] {
   --font-color: #ffffff;
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
-  --input-border-color: #ffffff;
+  --divider-background: linear-gradient(-45deg, var(--pink), var(--purple), var(--blue), var(--sky-blue));
+  --input-border-color: black;
+  --input-highlight-border-color: white;
   --input-background: #6900BA;
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
   --backdrops-sliders: linear-gradient(-60deg, var(--purple) 0%, rgba(68,0,122,1) 39%, rgba(31,0,56,1) 56%, rgba(0,0,0,1) 10%);
+  
+  --list-item-bg: #4e1b8d;
+  --list-item-bg-light: var(--purple);
 }
 /*  */
 
@@ -75,6 +88,15 @@ body {
   color: var(--font-color);
   margin: 0;
   font-family: 'sf-regular', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li, figcaption {
+  text-wrap: pretty;
+  max-width: 65ch;
 }
 
 abbr {

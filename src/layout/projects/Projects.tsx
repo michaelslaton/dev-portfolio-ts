@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
             >
               {project.name}
             </div>
-          ))}
+          )).reverse()}
         </div>
         { selectedProject &&
           <Project data={selectedProject}/>

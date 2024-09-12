@@ -67,12 +67,14 @@ const Contact: React.FC = () => {
             required
           />
 
-          <button
-            className='contact__form-submit'
-            type='submit'
-          >
-            Send
-          </button>
+          <div className="contact__form--buttons-wrapper">
+            <button
+              className='contact__form-submit'
+              type='submit'
+            >
+              Send
+            </button>
+          </div>
         </form>
       </div>
 

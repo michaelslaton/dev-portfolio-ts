@@ -3,7 +3,6 @@ type SkillType = {
   name: string;
   iconimg: string;
   iconColor: string;
-  learned: boolean;
   category: string;
   url: string;
   abbr?: string;

@@ -8,6 +8,7 @@ import { useState } from 'react';
 const SkillsDisplay: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref: languageRef, inView: visible } = useInView();
+  const sortedSkillsList = skillsList.sort((a,b)=>{ return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;});
   if(visible && isVisible !== true) setIsVisible(true);
   
   return (
@@ -26,7 +27,7 @@ const SkillsDisplay: React.FC = () => {
             Language
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
-            { skillsList.map((skill)=> {
+            { sortedSkillsList.map((skill)=> {
               if(skill.category.includes('language')) return (
                 <Skill key={skill.id} data={skill}/>
               );
@@ -39,7 +40,7 @@ const SkillsDisplay: React.FC = () => {
             Front-End
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
-            { skillsList.map((skill)=> {
+            { sortedSkillsList.map((skill)=> {
               if(skill.category.includes('front-end')) return (
                 <Skill key={skill.id} data={skill}/>
               );
@@ -52,7 +53,7 @@ const SkillsDisplay: React.FC = () => {
             Back-End
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
-            { skillsList.map((skill)=> {
+            { sortedSkillsList.map((skill)=> {
               if(skill.category.includes('back-end')) return (
                 <Skill key={skill.id} data={skill}/>
               );
@@ -65,7 +66,7 @@ const SkillsDisplay: React.FC = () => {
             Version Control
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
-            { skillsList.map((skill)=> {
+            { sortedSkillsList.map((skill)=> {
               if(skill.category.includes('version-control')) return (
                 <Skill key={skill.id} data={skill}/>
               );
@@ -78,7 +79,7 @@ const SkillsDisplay: React.FC = () => {
             Testing
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
-            { skillsList.map((skill)=> {
+            { sortedSkillsList.map((skill)=> {
               if(skill.category.includes('testing')) return (
                 <Skill key={skill.id} data={skill}/>
               );
@@ -91,7 +92,7 @@ const SkillsDisplay: React.FC = () => {
             Other
           </h3>
           <div className={`skills-list__wrapper slide-down ${isVisible ? 'slide-up' : ''}`}>
-            { skillsList.map((skill)=> {
+            { sortedSkillsList.map((skill)=> {
               if(skill.category.includes('other')) return (
                 <Skill key={skill.id} data={skill}/>
               );

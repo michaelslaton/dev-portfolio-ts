@@ -11,7 +11,7 @@
   padding-left: 1rem;
   text-wrap: nowrap;
   cursor: pointer;
-  background: linear-gradient(90deg, var(--purple-dark) 50%, rgba(2,45,82,0) 100%);
+  background: linear-gradient(90deg, var(--list-item-bg) 50%, rgba(2,45,82,0) 100%);
   border-left: 2px solid transparent;
   border-bottom: 2px solid transparent;
   margin-bottom: .5rem;
@@ -24,7 +24,7 @@
 }
 
 .projects__list-item.selected {
-  background: linear-gradient(90deg, var(--purple) 50%, rgba(2,45,82,0) 100%);
+  background: linear-gradient(90deg, var(--list-item-bg-light) 50%, rgba(2,45,82,0) 100%);
 }
 
 .project {
@@ -55,7 +55,7 @@
   margin: 0;
   font-size: 2rem;
   color: #ffffff;
-  border-bottom: 1px solid var(--purple);
+  border-bottom: 1px solid #552a8b;
 }
 
 .project__skills-list {
@@ -66,7 +66,7 @@
   display:  inline-block;
   margin-right: 1em;
   margin-bottom: .7rem;
-  background-color: var(--purple);
+  background-color: #552a8b;
   padding: .2em .5rem;
   border-radius: 5px;
   color: #ffffff;
@@ -88,8 +88,8 @@
   border-radius: var(--border-radius);
   border: 1px solid transparent;
   background-color: #000000;
-  border-color: var(--purple);
-  color: var(--purple);
+  border-color: #552a8b;
+  color: #9c97c7;
 }
 .project__code-buttons-item:is(:hover, :active){
   background-color: #ffffff;
