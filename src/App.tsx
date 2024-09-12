@@ -12,6 +12,8 @@ import About from './layout/about/About';
 type portfolioStateType = {
   power: boolean,
   theme: string;
+  screen: string;
+  lowPower: boolean;
 };
 
 export const PortfolioState = createContext<portfolioStateType | any>(undefined);
@@ -61,6 +63,8 @@ const App: React.FC = () => {
   const [appState, setAppState] = useState<portfolioStateType>({ 
     power: false,
     theme: 'dark',
+    screen: 'main',
+    lowPower: false,
   });
 
   return (

@@ -3,15 +3,18 @@ import { NavigateFunction, useNavigate } from 'react-router-dom';
 import phoneButtonType from '../../../types/phoneButton.type';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import '../navphone.css';
+import { useContext } from 'react';
+import { PortfolioState } from '../../../App';
 
 type phoneButtonProps = {
   data: phoneButtonType;
   position: string;
-  setPhoneState?: Function;
+  setAppState?: Function;
 }
 
-const PhoneButton: React.FC<phoneButtonProps> = ({ data, position, setPhoneState }) => {
+const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
   const navigate: NavigateFunction = useNavigate();
+  const [ appState, setAppState ] = useContext(PortfolioState);
 
   return (
     <>
@@ -19,7 +22,7 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position, setPhoneState
         <div
           className='phone-button__container'
           onClick={()=>{
-            if(data.name === 'Controls') setPhoneState!('tools');
+            if(data.name === 'Controls') setAppState!({ ...appState, screen: 'tools' });
             else navigate(data.url);
           }}
         >

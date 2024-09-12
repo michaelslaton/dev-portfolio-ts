@@ -103,7 +103,8 @@
   gap: .6rem;
 }
 
-.phone-tools__grid-item > button {
+.phone-tools__grid-item {
+  display: block;
   border-radius: var(--border-radius);
   width: 100%;
   min-height: 60px;
@@ -112,7 +113,10 @@
   cursor: pointer;
   display: grid;
   place-items: center;
-  background-color: rgb(88, 88, 88);
+  background-color: rgba(88, 88, 88, .6);
+  font-size: 1.3rem;
+  color: white;
+  transition: .2s all ease-in-out;
 }
 
 .phone-tools__bottom {
@@ -165,12 +169,17 @@
 .theme-button {
   transition: .2s all ease-in-out;
 }
-.theme-button.dark {
+/* .theme-button.dark {
   color: white;
-}
+} */
 .theme-button.light {
   background-color: rgb(255, 255, 255);
   color: rgb(42, 39, 255);
+}
+
+.low-power {
+  background-color: white;
+  color: rgb(255, 187, 0);
 }
 
 @keyframes power-button-pulse {
