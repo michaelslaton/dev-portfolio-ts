@@ -66,7 +66,7 @@
   display:  inline-block;
   margin-right: 1em;
   margin-bottom: .7rem;
-  background-color: #552a8b;
+  background-color: var(--list-item-bg-light);
   padding: .2em .5rem;
   border-radius: 5px;
   color: #ffffff;
@@ -100,7 +100,7 @@
 .project__screenshots {
   display: flex;
   margin-top: .7rem;
-  gap: .5rem;
+  gap: 1rem;
   padding: 1rem;
   border: 1.5px solid var(--content-bg);
   border-radius: var(--border-radius);
@@ -111,10 +111,10 @@
   display: block;
   border-radius: var(--border-radius);
   width: 20rem;
-  scale: .95;
+  scale: 1;
   cursor: pointer;
 }
 .project__screenshots-item:is(:hover, :active) {
-  scale: 1;
+  scale: 1.03;
   transition: scale .1s ease-in-out;
 }
