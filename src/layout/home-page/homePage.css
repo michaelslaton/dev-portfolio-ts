@@ -1,17 +1,26 @@
-.home-page__skills {
-  width: 100%;
+.home-page {
+  box-sizing: border-box;
 }
 
+.home-page__skills-list-wrapper {
+  box-sizing: border-box;
+  width: max-content;
+}
 .home-page__skills-list {
   display: flex;
 }
 
-.home-page__shills-list--more {
-  all: unset;
-  position: relative;
-  right: 1;
-  align-self: end;
-  font-size: .8rem;
+.see-more--wrapper {
+  width: 100%;
+  text-align: end;
+}
+.see-more {
+  display: inline;
+  cursor: pointer;
+  font-size: .9rem;
+  width: max-content;
   font-style: italic;
-  margin-left: .5rem;
+}
+.see-more:is(:hover, :focus) {
+  border-bottom: 1px solid white;
 }

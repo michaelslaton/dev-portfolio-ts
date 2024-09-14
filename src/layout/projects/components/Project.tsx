@@ -1,7 +1,9 @@
 import ProjectType from '../../../types/project.type';
 import skillsData from '../../../data/skillsData';
-import '../projects.css';
 import SkillType from '../../../types/skill.type';
+import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import '../projects.css';
 
 type ProjectProps = {
   data: ProjectType;
@@ -9,15 +11,20 @@ type ProjectProps = {
 
 const Project: React.FC<ProjectProps> = ({ data }) => {
   const projectSkills: SkillType[] = [];
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref: visibilityRef, inView: visible } = useInView();
+  if (visible && isVisible !== true) setIsVisible(true);
 
   for(let i=0;i<data.tech.length;i++){
     const foundSkill = skillsData.find((skill)=> skill.id === data.tech[i]);
-    console.log(foundSkill)
-    projectSkills.push(foundSkill!);
-  }
+    if (foundSkill) projectSkills.push(foundSkill!);
+  };
 
   return (
-    <div className='project'>
+    <div
+      className={`project ${isVisible ? 'project__slide-up' : 'project__slide-down'}`}
+      ref={visibilityRef}
+    >
       <div className='project__header'>
         <img
           src={data.img}
@@ -83,9 +90,9 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
       </div>
         { data.screenShots.length ?
           <div className='project__screenshots'>
-            { data.screenShots.map((image)=> (
-              <div>
-                <img className='project__screenshots-item' src={image}/>
+            { data.screenShots.map((image, i)=> (
+              <div key={i}>
+                <img className='project__screenshots-item' src={image} alt="Screenshot"/>
               </div>
             ))}
           </div>

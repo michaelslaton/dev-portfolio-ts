@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const SkillsDisplay: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { ref: languageRef, inView: visible } = useInView();
+  const { ref: visibilityRef, inView: visible } = useInView();
   const sortedSkillsList = skillsList.sort((a,b)=>{ return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;});
   if(visible && isVisible !== true) setIsVisible(true);
   
@@ -21,7 +21,7 @@ const SkillsDisplay: React.FC = () => {
       </div>
       <Divider/>
 
-      <div className='skills__display' ref={languageRef}>
+      <div className='skills__display' ref={visibilityRef}>
         <section>
           <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Language
