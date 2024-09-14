@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   );
 
   return (
-    <>
+    <div className='home-page'>
       <div className='center'>
         <h1 className='page-title reveal'>
           Home
@@ -24,27 +24,24 @@ const HomePage: React.FC = () => {
       </div>
       <Divider/>
 
-      <div className='home-page__skills'>
-        
-        <h3>
-          Skills Summary
-        </h3>
+      <div className='home-page__skills-list-wrapper'>
         <div className='home-page__skills-list'>
           {skillsList.map((skill)=> {
-            if(skill.homePage) return (
-                <Skill key={skill.id} data={skill}/>
-            );
+              if(skill.homePage) return (
+                  <Skill key={skill.id} data={skill}/>
+              );
           })}
         </div>
-        <div
-          onClick={()=> navigate('/skills')}
-          className='home-page__shills-list--more'
-        >
-          See More...
+        <div className='see-more--wrapper'>
+          <div
+            onClick={()=> navigate('/skills')}
+            className='see-more'
+          >
+            See more...
+          </div>
         </div>
-
       </div>
-    </>
+    </div>
   );
 };
 

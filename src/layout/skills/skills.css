@@ -28,12 +28,12 @@
 }
 
 .skill__wrapper {
-  all: inherit;
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 5.5rem;
   cursor: pointer;
+  text-decoration: none ;
 }
 
 .skill__icon {
@@ -45,7 +45,7 @@
 }
 
 .skill__icon-title {
-  all: unset;
   margin-top: .4rem;
   font-size: .85rem;
+  color: var(--font-color);
 }
