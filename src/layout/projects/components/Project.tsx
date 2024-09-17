@@ -7,7 +7,7 @@ import '../projects.css';
 
 type ProjectProps = {
   data: ProjectType;
-}
+};
 
 const Project: React.FC<ProjectProps> = ({ data }) => {
   const projectSkills: SkillType[] = [];
@@ -15,28 +15,30 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
   const { ref: visibilityRef, inView: visible } = useInView();
   if (visible && isVisible !== true) setIsVisible(true);
 
-  for(let i=0;i<data.tech.length;i++){
-    const foundSkill = skillsData.find((skill)=> skill.id === data.tech[i]);
+  for (let i = 0; i < data.tech.length; i++) {
+    const foundSkill = skillsData.find((skill) => skill.id === data.tech[i]);
     if (foundSkill) projectSkills.push(foundSkill!);
-  };
+  }
 
   return (
     <div
-      className={`project ${isVisible ? 'project__slide-up' : 'project__slide-down'}`}
+      className={`project ${
+        isVisible ? 'project__slide-up' : 'project__slide-down'
+      }`}
       ref={visibilityRef}
     >
       <div className='project__header'>
-        <img
-          src={data.img}
-          className='project__hero-img'
-        />
+        <img src={data.img} className='project__hero-img' />
         <div className='project__header-info'>
-          <h2>{data.name}</h2>
+          <div className='project__header--title-wrapper'>
+            <h2>{data.name}</h2>
+            <h3>{data.type}</h3>
+          </div>
 
           <p>{data.description}</p>
 
           <div className='project__skills-list'>
-            {projectSkills.map((skill)=>(
+            {projectSkills.map((skill) => (
               <a
                 key={skill.id}
                 className='project__skills-item'
@@ -49,7 +51,7 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
           </div>
 
           <div className='project__code-buttons'>
-            { data.codeb ?
+            {data.codeb ? (
               <>
                 <a
                   href={data.code}
@@ -66,7 +68,7 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
                   B: Code
                 </a>
               </>
-              :
+            ) : (
               <a
                 href={data.code}
                 className='project__code-buttons-item'
@@ -74,8 +76,8 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
               >
                 Code
               </a>
-            }
-            { data.demo &&
+            )}
+            {data.demo && (
               <a
                 href={data.demo}
                 className='project__code-buttons-item'
@@ -83,22 +85,25 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
               >
                 Demo
               </a>
-            }
+            )}
           </div>
-
         </div>
       </div>
-        { data.screenShots.length ?
-          <div className='project__screenshots'>
-            { data.screenShots.map((image, i)=> (
-              <div key={i}>
-                <img className='project__screenshots-item' src={image} alt="Screenshot"/>
-              </div>
-            ))}
-          </div>
-          :
-          <></>
-        }
+      {data.screenShots.length ? (
+        <div className='project__screenshots'>
+          {data.screenShots.map((image, i) => (
+            <div key={i}>
+              <img
+                className='project__screenshots-item'
+                src={image}
+                alt='Screenshot'
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

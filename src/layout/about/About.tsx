@@ -5,11 +5,9 @@ const About: React.FC = () => {
 
   return (
     <div className='content__screen'>
-      <div className='center'>
-        <h1 className='page-title reveal'>
-            About
-        </h1>
-      </div>
+      <h1 className='page-title reveal'>
+          About
+      </h1>
       <Divider/>
 
 
