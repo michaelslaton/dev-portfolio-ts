@@ -74,12 +74,23 @@
   margin-left: 1rem;
   text-wrap: wrap;
 }
-.project__header-info > h2 {
-  all: inherit;
+
+.project__header--title-wrapper {
+  display: flex;
+  justify-content:space-between;
+  border-bottom: 1px solid #552a8b;
+  align-items: end;
+}
+.project__header--title-wrapper > h2 {
+  all: initial;
   margin: 0;
   font-size: 2rem;
   color: #ffffff;
-  border-bottom: 1px solid #552a8b;
+}
+.project__header--title-wrapper > h3 {
+  all: initial;
+  margin: 0;
+  color: #ffffff;
 }
 
 .project__skills-list {

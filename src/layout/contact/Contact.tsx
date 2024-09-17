@@ -27,55 +27,59 @@ const Contact: React.FC = () => {
 
   return (
     <div className='content__screen'>
-      <div className='center'>
-        <h1 className='page-title reveal'>
-            Contact
-        </h1>
-      </div>
+      <h1 className='page-title reveal'>
+          Contact
+      </h1>
       <Divider/>
 
       <div className='contact-response-wrapper'>
         {responseDisplay()}
       </div>
 
-      <div className='contact__form-wrapper'>
-        <form
-          className='contact__form'
-          onSubmit={(e) => sendEmail(e)}
-        >
-          <label>Name</label>
-          <input
-            className='contact__input'
-            type='text'
-            name='user_name'
-            required
-          />
+      <div className='contact__grid'>
+        <div>
+          <p>Lets work together!</p>
+        </div>
 
-          <label>Email</label>
-          <input
-            className='contact__input'
-            type='email'
-            name='user_email'
-            required
-          />
+        <div className='contact__form-wrapper'>
+          <form
+            className='contact__form'
+            onSubmit={(e) => sendEmail(e)}
+          >
+            <label>Name</label>
+            <input
+              className='contact__input'
+              type='text'
+              name='user_name'
+              required
+            />
 
-          <label>Message</label>
-          <textarea
-            className='contact__input'
-            name='message'
-            rows={8}
-            required
-          />
+            <label>Email</label>
+            <input
+              className='contact__input'
+              type='email'
+              name='user_email'
+              required
+            />
 
-          <div className="contact__form--buttons-wrapper">
-            <button
-              className='contact__form-submit'
-              type='submit'
-            >
-              Send
-            </button>
-          </div>
-        </form>
+            <label>Message</label>
+            <textarea
+              className='contact__input'
+              name='message'
+              rows={8}
+              required
+            />
+
+            <div className='contact__form--buttons-wrapper'>
+              <button
+                className='contact__form-submit'
+                type='submit'
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
 
     </div>

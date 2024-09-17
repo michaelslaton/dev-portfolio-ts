@@ -185,12 +185,6 @@ img {
   width: 100%;
 }
 
-.center {
-  /* display: flex;
-  justify-content: center; */
-  width: 100%;
-}
-
 .page-title {
   width: fit-content !important;
   all: inherit;

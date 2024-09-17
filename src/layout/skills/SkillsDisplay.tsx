@@ -13,12 +13,9 @@ const SkillsDisplay: React.FC = () => {
   
   return (
     <div className='content__screen'>
-
-      <div className='center'>
-        <h1 className='page-title reveal'>
-            Skills
-        </h1>
-      </div>
+      <h1 className='page-title reveal'>
+          Skills
+      </h1>
       <Divider/>
 
       <div className='skills__display' ref={visibilityRef}>

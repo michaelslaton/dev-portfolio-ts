@@ -22,7 +22,6 @@
   flex-wrap: wrap;
   background-color: var(--content-bg);
   width: 25rem;
-  gap: .5rem;
   border-radius: var(--border-radius);
   padding: .7rem;
 }

@@ -4,10 +4,24 @@
 
 .home-page__skills-list-wrapper {
   box-sizing: border-box;
-  width: max-content;
+  width: 25rem;
 }
+.home-page__skills-list-wrapper > h2{
+  all: inherit;
+  margin-block: 0;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  padding: 0;
+  margin-bottom: .2rem;
+}
+
 .home-page__skills-list {
   display: flex;
+  flex-wrap: wrap;
+  background-color: var(--content-bg);
+  border-radius: var(--border-radius);
+  width: 25rem;
+  padding: .7rem;
 }
 
 .see-more--wrapper {
