@@ -1,14 +1,12 @@
 import { useContext } from 'react';
 import { PortfolioState } from '../../App';
-import { default as skillsList } from '../../data/skillsData';
-import Skill from '../skills/components/Skill';
-import './homePage.css';
-import { NavigateFunction, useNavigate } from 'react-router-dom';
 import Divider from '../components/divider/Divider';
+import SkillsSummary from './components/SkillsSummary';
+import './homePage.css';
+import RecentProject from './components/RecentProject';
 
 const HomePage: React.FC = () => {
   const [appState] = useContext(PortfolioState);
-  const navigate: NavigateFunction = useNavigate();
 
   if (!appState.power) return <></>;
 
@@ -17,19 +15,10 @@ const HomePage: React.FC = () => {
       <h1 className='page-title reveal'>Home</h1>
       <Divider />
 
-      <div className='home-page__skills-list-wrapper'>
-        <h2>Skills Summary</h2>
-        <div className='home-page__skills-list'>
-          {skillsList.map((skill) => {
-            if (skill.homePage) return <Skill key={skill.id} data={skill} />;
-          })}
-        </div>
-        <div className='see-more--wrapper'>
-          <div onClick={() => navigate('/skills')} className='see-more'>
-            See more...
-          </div>
-        </div>
-      </div>
+      <section className='widgets-wrapper'>
+        <SkillsSummary/>
+        <RecentProject/>
+      </section>
     </div>
   );
 };
