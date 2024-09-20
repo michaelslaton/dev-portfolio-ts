@@ -2,8 +2,8 @@ import {default as skillsList} from '../../data/skillsData';
 import Divider from '../components/divider/Divider';
 import Skill from './components/Skill';
 import { useInView } from 'react-intersection-observer';
-import './skills.css';
 import { useState } from 'react';
+import './skills.css';
 
 const SkillsDisplay: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +18,10 @@ const SkillsDisplay: React.FC = () => {
       </h1>
       <Divider/>
 
-      <div className='skills__display' ref={visibilityRef}>
+      <div
+        ref={visibilityRef}
+        className='skills__display'
+      >
         <section>
           <h3 className={`skills-list__title ${isVisible ? 'slide-in' : 'slide-out'}`}>
             Language

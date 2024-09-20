@@ -3,8 +3,10 @@
 }
 
 .widgets-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 2rem;
+  place-items: center;
 }
 
 .widget-title {
@@ -33,24 +35,24 @@
 
 .skills-summary__wrapper {
   box-sizing: border-box;
-  width: 25rem;
+  width: 100%;
 }
 .skills-summary__list {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--content-bg);
   border-radius: var(--border-radius);
-  width: 25rem;
-  height: 13rem;
+  width: 100%;
+  aspect-ratio: 1.76/1;
   align-items: center;
 }
 
 .recent-project__wrapper {
   box-sizing: border-box;
-  width: 25rem;
+  width: 100%;
 }
 .recent-project__img {
+  aspect-ratio: 1.76/1;
   border-radius: var(--border-radius);
-  height: 13rem;
-  width: 25rem;
+  width: 100%;
 }

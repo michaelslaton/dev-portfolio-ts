@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import { PortfolioState } from '../../App';
 import Divider from '../components/divider/Divider';
 import SkillsSummary from './components/SkillsSummary';
-import './homePage.css';
 import RecentProject from './components/RecentProject';
+import './homePage.css';
 
 const HomePage: React.FC = () => {
   const [appState] = useContext(PortfolioState);
@@ -18,6 +18,7 @@ const HomePage: React.FC = () => {
       <section className='widgets-wrapper'>
         <SkillsSummary/>
         <RecentProject/>
+        <SkillsSummary/>
       </section>
     </div>
   );
