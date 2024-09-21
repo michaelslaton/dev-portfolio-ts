@@ -7,6 +7,7 @@
   grid-template-columns: repeat(3,1fr);
   gap: 2rem;
   place-items: center;
+  padding: 1rem 2rem;
 }
 
 .widget-title {
@@ -51,8 +52,44 @@
   box-sizing: border-box;
   width: 100%;
 }
+.recent-project__title {
+  margin: 0;
+}
+
+.recent-project__img--overlay > p {
+  margin: .6rem 0;
+}
+
+.recent-project__img--wrapper {
+  aspect-ratio: 1.76/1;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
 .recent-project__img {
   aspect-ratio: 1.76/1;
-  border-radius: var(--border-radius);
   width: 100%;
+}
+.recent-project__img--overlay {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  opacity: 0;
+  transition: .2s ease-in-out;
+  padding: 1rem;
+}
+.recent-project__img--overlay:hover {
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+.recent-project__skills-list {
+
+}
+.recent-project__skills-list--item {
+  display: inline;
 }

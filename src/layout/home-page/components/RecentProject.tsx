@@ -5,6 +5,8 @@ import '../homePage.css';
 import ProjectType from '../../../types/project.type';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import SkillType from '../../../types/skill.type';
+import skillsData from '../../../data/skillsData';
 
 const RecentProject: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
@@ -12,6 +14,12 @@ const RecentProject: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   if(visible && isVisible !== true) setIsVisible(true);
+  const projectSkills: SkillType[] = [];
+
+  for (let i = 0; i < mostRecentProject!.tech.length; i++) {
+    const foundSkill = skillsData.find((skill) => skill.id === mostRecentProject!.tech[i]);
+    if (foundSkill) projectSkills.push(foundSkill!);
+  }
 
   return (
     <div
@@ -24,7 +32,20 @@ const RecentProject: React.FC = () => {
         Recent Project
       </h2>
 
-      <div className={`${isVisible ? 'slide-up' : 'slide-down'}`}>
+      <div className={`recent-project__img--wrapper ${isVisible ? 'slide-up' : 'slide-down'}`}>
+
+        <div className='recent-project__img--overlay'>
+          <h3 className='recent-project__title'>{mostRecentProject!.name}</h3>
+          <p>{mostRecentProject!.description}</p>
+          <section className='recent-project__skills-list'>
+            Tech: {projectSkills.map((skill) => (
+              <div className='recent-project__skills-list--item'>
+                {`${skill.name}, `}
+              </div>
+            ))}
+          </section>
+        </div>
+
         <img
           src={mostRecentProject?.img}
           className='recent-project__img'
