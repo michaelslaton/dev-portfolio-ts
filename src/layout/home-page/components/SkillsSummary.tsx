@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const SkillsSummary: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   if(visible && isVisible !== true) setIsVisible(true);
 

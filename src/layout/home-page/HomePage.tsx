@@ -8,7 +8,7 @@ import './homePage.css';
 const HomePage: React.FC = () => {
   const [appState] = useContext(PortfolioState);
 
-  if (!appState.power) return <></>;
+  if (!appState.power) return ( <></> );
 
   return (
     <div className='home-page'>

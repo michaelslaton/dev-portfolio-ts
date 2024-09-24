@@ -6,7 +6,7 @@ import { useState } from 'react';
 import './skills.css';
 
 const SkillsDisplay: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   const sortedSkillsList = skillsList.sort((a,b)=>{ return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;});
   if(visible && isVisible !== true) setIsVisible(true);

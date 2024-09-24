@@ -9,7 +9,7 @@ import Contact from './layout/contact/Contact';
 import HomePage from './layout/home-page/HomePage';
 import About from './layout/about/About';
 
-type portfolioStateType = {
+export type portfolioStateType = {
   power: boolean,
   theme: string;
   screen: string;

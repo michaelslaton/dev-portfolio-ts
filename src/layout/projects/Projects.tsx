@@ -8,10 +8,10 @@ import './projects.css';
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   if (visible && isVisible !== true) setIsVisible(true);
-  const formattedProjectList = [...projectData].reverse();
+  const formattedProjectList: ProjectType[] = [...projectData].reverse();
 
   return (
     <div className='content__screen'>
