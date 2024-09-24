@@ -11,14 +11,14 @@ type ProjectProps = {
 
 const Project: React.FC<ProjectProps> = ({ data }) => {
   const projectSkills: SkillType[] = [];
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   if (visible && isVisible !== true) setIsVisible(true);
 
   for (let i = 0; i < data.tech.length; i++) {
-    const foundSkill = skillsData.find((skill) => skill.id === data.tech[i]);
+    const foundSkill: SkillType | undefined = skillsData.find((skill) => skill.id === data.tech[i]);
     if (foundSkill) projectSkills.push(foundSkill!);
-  }
+  };
 
   return (
     <div

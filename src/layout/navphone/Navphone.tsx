@@ -12,15 +12,15 @@ import { useContext } from 'react';
 import { PortfolioState } from '../../App';
 import PhoneButton from './components/PhoneButton';
 import phoneButtonsData from '../../data/phoneButtonsData';
-import './navphone.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import './navphone.css';
 
 const Navphone: React.FC = () => {
   const [ appState, setAppState ] = useContext(PortfolioState);
 
- const loadTheme = () => {
-  const root = document.querySelector(':root');
-  const theme = appState.theme;
+ const loadTheme = (): void => {
+  const root: Element | null = document.querySelector(':root');
+  const theme: String = appState.theme;
   if(theme === 'dark') {
     root?.setAttribute('color-scheme', 'light');
     setAppState({ ...appState , theme: 'light' });
@@ -29,7 +29,7 @@ const Navphone: React.FC = () => {
     setAppState({ ...appState , theme: 'dark' });
   };
   return;
- }
+ };
 
 //  Off State -------------------------------------->
   if (!appState.power) return (

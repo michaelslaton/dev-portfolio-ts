@@ -11,7 +11,7 @@ import skillsData from '../../../data/skillsData';
 const RecentProject: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
   const mostRecentProject: ProjectType | undefined = [...projectData].pop();
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   if(visible && isVisible !== true) setIsVisible(true);
   const projectSkills: SkillType[] = [];
@@ -19,7 +19,7 @@ const RecentProject: React.FC = () => {
   for (let i = 0; i < mostRecentProject!.tech.length; i++) {
     const foundSkill = skillsData.find((skill) => skill.id === mostRecentProject!.tech[i]);
     if (foundSkill) projectSkills.push(foundSkill!);
-  }
+  };
 
   return (
     <div
@@ -33,7 +33,6 @@ const RecentProject: React.FC = () => {
       </h2>
 
       <div className={`recent-project__img--wrapper ${isVisible ? 'slide-up' : 'slide-down'}`}>
-
         <div className='recent-project__img--overlay'>
           <h3 className='recent-project__title'>{mostRecentProject!.name}</h3>
           <p>{mostRecentProject!.description}</p>

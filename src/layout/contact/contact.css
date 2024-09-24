@@ -1,6 +1,6 @@
 .contact__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .5fr 1.5fr;
   width: 60%;
   place-items: center;
   margin: 0 auto;

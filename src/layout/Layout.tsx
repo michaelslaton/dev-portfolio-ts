@@ -1,12 +1,12 @@
-import { Outlet, useNavigate } from 'react-router-dom';
+import { NavigateFunction, Outlet, useNavigate } from 'react-router-dom';
 import Navphone from './navphone/Navphone';
 import { PortfolioState } from '../App';
-import './layout.css';
 import { useContext, useEffect } from 'react';
+import './layout.css';
 
 const Layout: React.FC = () => {
   const [ appState ] = useContext(PortfolioState);
-  const navigate = useNavigate();
+  const navigate: NavigateFunction = useNavigate();
 
   useEffect(()=>{
     if(!appState.power) navigate('/');

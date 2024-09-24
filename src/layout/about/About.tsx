@@ -10,8 +10,6 @@ const About: React.FC = () => {
       </h1>
       <Divider/>
 
-
-      
     </div>
   );
 };

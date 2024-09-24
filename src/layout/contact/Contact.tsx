@@ -1,13 +1,12 @@
 import { FormEvent, useState } from 'react';
 import emailjs from 'emailjs-com';
-import './contact.css';
 import Divider from '../components/divider/Divider';
+import './contact.css';
 
 const Contact: React.FC = () => {
+  const [response, setResponse] = useState<string>('unsent');
 
-  const [response, setResponse] = useState('unsent');
-
-  function sendEmail(e: FormEvent<HTMLFormElement>){
+  const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     emailjs.sendForm('service_nzb16q8', 'template_sdcvvpi', e.currentTarget, 'CwuWBhkep40JC8Sn0')
@@ -19,11 +18,11 @@ const Contact: React.FC = () => {
       e.currentTarget.reset();
   };
 
-  function responseDisplay(){
+  const responseDisplay = (): JSX.Element => {
     if ( response === 'error' ) return ( <div className='response response__error'>An error Occured</div> );
     else if ( response === 'sent' ) return ( <div className='response response__sent'>Message Sent</div> );
-    else return ( '' );
-  }
+    else return ( <></> );
+  };
 
   return (
     <div className='content__screen'>
