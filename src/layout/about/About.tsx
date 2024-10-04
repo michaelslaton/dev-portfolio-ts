@@ -1,4 +1,5 @@
 import Divider from '../components/divider/Divider';
+import mike from '../../assets/imgs/mike.jpg';
 import './about.css';
 
 const About: React.FC = () => {
@@ -9,6 +10,22 @@ const About: React.FC = () => {
           About
       </h1>
       <Divider/>
+
+      <div>
+        <div className='about__header-grid'>
+          
+          <img
+            src={mike}
+            className='about__profile-picture'
+            alt='Mike Photo'
+          />
+
+          <div>
+            
+          </div>
+
+        </div>
+      </div>
 
     </div>
   );
