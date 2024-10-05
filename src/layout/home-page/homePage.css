@@ -81,6 +81,7 @@
   opacity: 0;
   transition: .2s ease-in-out;
   padding: 1rem;
+  color: white;
 }
 .recent-project__img--overlay:hover {
   opacity: 1;
