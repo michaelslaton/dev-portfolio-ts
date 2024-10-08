@@ -3,6 +3,7 @@ import Navphone from './navphone/Navphone';
 import { PortfolioState } from '../App';
 import { useContext, useEffect } from 'react';
 import './layout.css';
+import PhoneMenuButton from './components/phone-menu-button/PhoneMenuButton';
 
 const Layout: React.FC = () => {
   const [ appState ] = useContext(PortfolioState);
@@ -14,8 +15,9 @@ const Layout: React.FC = () => {
 
   return (
     <>
+      <PhoneMenuButton/>
       <div className='main-screen'>
-        <div className='nav-container'>
+        <div className={`nav-container ${appState.showPhone || !appState.power ? 'show' : 'no-show'}`}>
           <Navphone/>
         </div>
         <div className={`${appState.power ? 'content' : `content-off`}`}>

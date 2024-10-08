@@ -4,8 +4,8 @@
 
 .widgets-wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 2rem;
+  /* grid-template-columns: repeat(3,1fr); */
+  /* gap: 2rem; */
   place-items: center;
   padding: 1rem 2rem;
 }
@@ -93,4 +93,49 @@
 }
 .recent-project__skills-list--item {
   display: inline;
+}
+
+/* 320 */
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 810px){ 
+}
+
+@media (min-width: 1280px){
+  .widgets-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    place-items: center;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1366px){
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
 }
