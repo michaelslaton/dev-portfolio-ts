@@ -14,6 +14,7 @@ export type portfolioStateType = {
   theme: string;
   screen: string;
   lowPower: boolean;
+  showPhone: boolean;
 };
 
 export const PortfolioState = createContext<portfolioStateType | any>(undefined);
@@ -65,6 +66,7 @@ const App: React.FC = () => {
     theme: 'dark',
     screen: 'main',
     lowPower: false,
+    showPhone: false,
   });
 
   return (

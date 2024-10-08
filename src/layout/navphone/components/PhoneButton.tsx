@@ -24,6 +24,10 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
           onClick={()=>{
             if(data.name === 'Controls') setAppState!({ ...appState, screen: 'tools' });
             else navigate(data.url);
+            setAppState({
+              ...appState,
+              showPhone: false,
+            })
           }}
         >
           <div

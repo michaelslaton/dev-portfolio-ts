@@ -1,15 +1,12 @@
 .phone-container {
-  aspect-ratio: 141/289;
   box-sizing: border-box;
-  position: relative;
-  width: 20rem;
-  transform: translate(0, 1px);
-  border: .6rem solid black;
-  border-radius: 1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;
-  box-shadow: var(--phone-shadow);
+  z-index: 20;
 }
 .phone-container.phone-main {
   background-image: url(../../assets/imgs/phone/phoneBg.jpg);
@@ -19,13 +16,11 @@
 }
 .phone-container.phone-off {
   background-color: var(--content-bg);
-  color: #888888
+  color: #888888;
 }
 
 .phone-top {
-  height: 1.8rem;
-  display: flex;
-  justify-content: space-between;
+  display: none;
 }
 
 .phone-top__middle-bar {
@@ -63,7 +58,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: 95vh;
   position: relative;
 }
 .phone-buttons__container.phone-off {
@@ -76,13 +71,14 @@
   bottom: 0;
   background-color: rgba(17, 12, 61, 0.85);
   border-radius: 1rem;
-  margin: .5rem auto;
+  margin: 0 auto;
   padding: .4rem .3rem;
   display: flex;
   justify-content: space-around;
 }
 
 .phone-buttons__grid {
+  box-sizing: border-box;
   margin-top: 1.3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -192,4 +188,75 @@
   100% {
     color: #3b2e49;
   }
+}
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 810px){ 
+}
+
+@media (min-width: 1280px){
+  .phone-container {
+    aspect-ratio: 141/289;
+    box-sizing: border-box;
+    position: relative;
+    width: 20rem;
+    height: auto;
+    transform: translate(0, 1px);
+    border: .6rem solid black;
+    border-radius: 1.5rem;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    box-shadow: var(--phone-shadow);
+  }
+
+  .phone-top {
+    height: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .phone-buttons__container {
+    height: 100%;
+  }
+  .phone-buttons__bottom-bar {
+    box-sizing: border-box;
+    width: 95%;
+    bottom: 0;
+    background-color: rgba(17, 12, 61, 0.85);
+    border-radius: 1rem;
+    margin: .5rem auto;
+    padding: .4rem .3rem;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1366px){
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
 }

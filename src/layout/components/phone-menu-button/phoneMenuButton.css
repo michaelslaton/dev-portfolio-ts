@@ -1,0 +1,52 @@
+.phone-menu-button {
+  aspect-ratio: 1/1;
+  width: 2.5rem;
+  position: fixed;
+  top: 1rem; /* distance from bottom */
+  left: 1rem;  /* distance from right */
+  z-index: 10;
+  border: none;
+  border-radius: 6px;
+}
+.phone-menu-button.no-power {
+  display: none;
+}
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 810px){ 
+}
+
+@media (min-width: 1280px){
+  .phone-menu-button {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px){
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
+}
