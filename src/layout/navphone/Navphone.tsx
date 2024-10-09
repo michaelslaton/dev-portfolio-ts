@@ -131,7 +131,7 @@ const Navphone: React.FC = () => {
               </button>
               <button
                 className={`phone-tools__grid-item ${appState.lowPower ? 'low-power' : ''}`}
-                onClick={()=> setAppState({...appState, lowPower: !appState.lowPower})}
+                onClick={()=> setAppState({...appState, lowPower: !appState.lowPower })}
               >
                 <FontAwesomeIcon
                   icon={faBatteryThreeQuarters as IconProp}

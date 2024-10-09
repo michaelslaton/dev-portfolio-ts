@@ -200,11 +200,11 @@ img {
 }
 
 .page-title {
-  width: fit-content !important;
+  width: 100%;
   all: inherit;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-top: 1rem;
-  margin-left: 5rem;
+  margin-left: 4rem;
   font-family: "alien-encounters-italic";
 }
 
@@ -222,19 +222,8 @@ img {
 }
 
 .reveal {
-  color: transparent;
-  background: var(--reveal-background), var(--reveal-background);
-  background-size: 0 100%;
-  padding: 0 2rem;
-  transform: translatex(-2rem);
-  border-radius: 25px;
-  -webkit-background-clip: padding-box,text;
-          background-clip: padding-box,text;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  animation: 
-  phase-in .3s .2s both,
-  phase-out .3s .5s both;
+  color: white;
+  animation: fade-in .8s ease-in;
 }
 
 .slide-out {
@@ -257,6 +246,15 @@ img {
   /* transition: all .6s ease-in-out !important; */
   transition: opacity .6s ease-in-out, transform .6s ease-in-out !important;
   transition-delay: 1s !important;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes phase-in {
@@ -318,6 +316,32 @@ img {
     overflow-y: auto;
     scroll-behavior: smooth;
     backdrop-filter: blur(30px);
+  }
+  
+  .page-title {
+    width: fit-content !important;
+    all: inherit;
+    font-size: 3rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    font-family: "alien-encounters-italic";
+  }
+
+  .reveal {
+    color: transparent;
+    background: var(--reveal-background), var(--reveal-background);
+    background-size: 0 100%;
+    padding: 0 2rem;
+    transform: translatex(-2rem);
+    border-radius: 25px;
+    -webkit-background-clip: padding-box,text;
+            background-clip: padding-box,text;
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+    animation: 
+    phase-in .3s .2s both,
+    phase-out .3s .5s both;
   }
 }
 
