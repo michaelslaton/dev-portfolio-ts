@@ -2,8 +2,8 @@
   aspect-ratio: 1/1;
   width: 2.5rem;
   position: fixed;
-  top: 1rem; /* distance from bottom */
-  left: 1rem;  /* distance from right */
+  top: .5rem;
+  left: .5rem;
   z-index: 10;
   border: none;
   border-radius: 6px;
