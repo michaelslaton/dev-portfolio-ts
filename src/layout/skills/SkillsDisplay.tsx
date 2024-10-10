@@ -13,9 +13,11 @@ const SkillsDisplay: React.FC = () => {
   
   return (
     <div className='content__screen'>
-      <h1 className='page-title reveal'>
-          Skills
-      </h1>
+      <div className='page-title__wrapper'>
+        <h1 className='page-title reveal'>
+            Skills
+        </h1>
+      </div>
       <Divider/>
 
       <div

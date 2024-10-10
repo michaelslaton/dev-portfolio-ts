@@ -26,9 +26,11 @@ const Contact: React.FC = () => {
 
   return (
     <div className='content__screen'>
-      <h1 className='page-title reveal'>
-          Contact
-      </h1>
+      <div className='page-title__wrapper'>
+        <h1 className='page-title reveal'>
+            Contact
+        </h1>
+      </div>
       <Divider/>
 
       <div className='contact-response-wrapper'>

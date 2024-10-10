@@ -199,12 +199,16 @@ img {
   width: 100%;
 }
 
+.page-title__wrapper {
+  box-sizing: border-box;
+  padding-left: 2rem;
+  width: 100%;
+}
 .page-title {
   width: 100%;
   all: inherit;
   font-size: 2.5rem;
   margin-top: 1rem;
-  margin-left: 4rem;
   font-family: "alien-encounters-italic";
 }
 
@@ -318,6 +322,11 @@ img {
     backdrop-filter: blur(30px);
   }
   
+  .page-title__wrapper {
+    box-sizing: border-box;
+    padding-left: 0;
+    width: 100%;
+  }
   .page-title {
     width: fit-content !important;
     all: inherit;

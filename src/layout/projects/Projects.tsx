@@ -15,7 +15,11 @@ const Projects: React.FC = () => {
 
   return (
     <div className='content__screen'>
-      <h1 className='page-title reveal'>Projects</h1>
+      <div className='page-title__wrapper'>
+        <h1 className='page-title reveal'>
+          Projects
+        </h1>
+      </div>
       <Divider />
 
       <div className='projects-display__container'>

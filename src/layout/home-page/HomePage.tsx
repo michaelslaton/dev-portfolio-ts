@@ -12,7 +12,11 @@ const HomePage: React.FC = () => {
 
   return (
     <div className='home-page'>
-      <h1 className='page-title reveal'>Home</h1>
+      <div className='page-title__wrapper'>
+        <h1 className='page-title reveal'>
+          Home
+        </h1>
+      </div>
       <Divider />
 
       <section className='widgets-wrapper'>
