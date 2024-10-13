@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 5.5rem;
+  width: 4.5rem;
   cursor: pointer;
   text-decoration: none ;
 }
@@ -47,4 +47,45 @@
   margin-top: .4rem;
   font-size: .85rem;
   color: var(--font-color);
+}
+
+/* 320 */
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 810px){ 
+}
+
+@media (min-width: 1280px){
+  .skill__wrapper {
+    width: 5.5rem;
+  }
+}
+
+@media (min-width: 1366px){
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
 }

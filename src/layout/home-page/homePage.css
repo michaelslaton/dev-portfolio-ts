@@ -3,18 +3,15 @@
 }
 
 .widgets-wrapper {
-  display: grid;
-  /* grid-template-columns: repeat(3,1fr); */
-  /* gap: 2rem; */
   place-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem .5rem;
 }
 
 .widget-title {
   all: inherit;
   margin-block: 0;
   font-size: 1.5rem;
-  margin-left: 1rem;
+  margin-left: .5rem;
   padding: 0;
   margin-bottom: .2rem;
 }
@@ -113,6 +110,9 @@
 }
 
 @media (min-width: 1280px){
+  .widget-title {
+    margin-left: 1rem;
+  }
   .widgets-wrapper {
     display: grid;
     grid-template-columns: repeat(3,1fr);
