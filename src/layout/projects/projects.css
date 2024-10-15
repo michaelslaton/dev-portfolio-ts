@@ -10,8 +10,8 @@
 }
 
 .projects__list-item {
-  padding: 0.5rem 2rem;
-  padding-left: 1rem;
+  padding: 0.3rem 2rem;
+  padding-left: .7rem;
   text-wrap: nowrap;
   cursor: pointer;
   background: linear-gradient(
@@ -21,7 +21,7 @@
   );
   border-left: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   font-size: 1.2rem;
   color: #ffffff;
 }
@@ -35,6 +35,12 @@
     var(--list-item-bg-light) 50%,
     rgba(2, 45, 82, 0) 100%
   );
+}
+.projects__list-item.show {
+  display: block;
+}
+.projects__list-item.no-show {
+  display: none;
 }
 .projects__list-item__slide-up {
   transform: translate(0%, 0);
@@ -207,6 +213,18 @@
   }
   .project__header--title-wrapper > h2 {
     font-size: 2rem;
+  }
+
+  .projects__list-item {
+    padding: 0.5rem 2rem;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .projects__list-item.show {
+    display: block;
+  }
+  .projects__list-item.no-show {
+    display: block;
   }
 
   .project__skills-list {

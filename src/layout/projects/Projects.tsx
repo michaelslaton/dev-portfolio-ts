@@ -6,8 +6,16 @@ import Project from './components/Project';
 import { useInView } from 'react-intersection-observer';
 import './projects.css';
 
+type ProjectStateType = {
+  selectedProject: ProjectType | null;
+  showItems: boolean;
+};
+
 const Projects: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
+  const [ projectState, setProjectState ] = useState<ProjectStateType>({
+    selectedProject: null,
+    showItems: true,
+  });
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
   if (visible && isVisible !== true) setIsVisible(true);
@@ -28,11 +36,15 @@ const Projects: React.FC = () => {
             .map((project,i) => (
               <div
                 key={project.id}
-                onClick={() => setSelectedProject(project)}
+                onClick={() => setProjectState({
+                  showItems: !projectState.showItems,
+                  selectedProject: project,
+                })}
                 style={{transitionDelay: `${i * 50}ms`}}
                 className={`projects__list-item 
-                  ${project.id === selectedProject?.id ? 'selected' : ''}
+                  ${project.id === projectState.selectedProject?.id ? 'selected' : ''}
                   ${isVisible ? 'projects__list-item__slide-up' : 'projects__list-item__slide-down'}
+                  ${projectState.showItems || projectState.selectedProject?.id === project.id ? 'show' : 'no-show'}
                   `}
               >
                 {project.name}
@@ -40,7 +52,7 @@ const Projects: React.FC = () => {
             ))}
         </div>
         <div></div>
-        {selectedProject && <Project data={selectedProject} />}
+        {projectState.selectedProject && <Project data={projectState.selectedProject} />}
       </div>
     </div>
   );
