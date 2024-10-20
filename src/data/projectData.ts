@@ -2,7 +2,6 @@ import resApp from '../assets/imgs/projectImages/restaurantApp.jpg';
 import weLoveMovies from '../assets/imgs/projectImages/weLoveMovies.jpg';
 import notflix from '../assets/imgs/projectImages/notflixr.jpg';
 // import devPortfolio from '../assets/imgs/projectImages/devPortfolio.jpg';
-import remazon from '../assets/imgs/projectImages/remazon.jpg';
 import ProjectType from '../types/project.type';
 
 const projectData: ProjectType[] = [
@@ -40,17 +39,6 @@ const projectData: ProjectType[] = [
     screenShots: [],
     code: 'https://github.com/GolamHossain9355/notflix-front',
     codeb: 'https://github.com/GolamHossain9355/notflix-back',
-  },
-  {
-    id: 4,
-    show: false,
-    name: 'Remazon Prime',
-    img: remazon,
-    type: '( Full-Stack )',
-    description: 'A web application for managing a Discord community, allowing users to create and display events on a calendar, track points for friendly competition, and enabling community leaders to communicate directly via messages of the day and notifications.',
-    tech: [19, 9, 14, 20, 17, 8, 3, 21, 4, 10, 13,],
-    screenShots: [],
-    code: 'https://github.com/michaelslaton/remazon',
   },
 ];
 
