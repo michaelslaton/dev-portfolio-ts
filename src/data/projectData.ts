@@ -7,7 +7,6 @@ import ProjectType from '../types/project.type';
 const projectData: ProjectType[] = [
   {
     id: 1,
-    show: true,
     name: 'Reservations Application',
     img: resApp,
     type: '( Full-Stack )',
@@ -19,7 +18,6 @@ const projectData: ProjectType[] = [
   },
   {
     id: 2,
-    show: true,
     name: 'We Love Movies',
     img: weLoveMovies,
     type: '( Back-End )',
@@ -30,7 +28,6 @@ const projectData: ProjectType[] = [
   },
   {
     id: 3,
-    show: true,
     name: 'Notflix',
     img: notflix,
     type: '( Full-Stack )',

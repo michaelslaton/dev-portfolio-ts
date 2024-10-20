@@ -1,8 +1,10 @@
-type ProjectType = {
+type ExperienceType = {
   id: number;
   name: string;
+  role: string;
+  startDate: Date;
+  endDate?: Date;
   img: string;
-  type: string;
   description: string;
   tech: number[];
   screenShots: string[];
@@ -11,4 +13,4 @@ type ProjectType = {
   codeb?: string;
 };
 
-export default ProjectType;
+export default ExperienceType;
