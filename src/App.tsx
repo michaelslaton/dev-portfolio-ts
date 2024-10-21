@@ -8,6 +8,7 @@ import SkillsDisplay from './layout/skills/SkillsDisplay';
 import Contact from './layout/contact/Contact';
 import HomePage from './layout/home-page/HomePage';
 import About from './layout/about/About';
+import ExperienceDisplay from './layout/experience/ExperienceDisplay';
 
 export type portfolioStateType = {
   power: boolean,
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects/>,
+        errorElement: <RouteError/>,
+      },
+      {
+        path: '/experience',
+        element: <ExperienceDisplay/>,
         errorElement: <RouteError/>,
       },
       {
