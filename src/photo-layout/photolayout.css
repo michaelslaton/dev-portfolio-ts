@@ -1,0 +1,83 @@
+:root {
+  /* Colors */
+  --photo-backdrop: #000000;
+
+  /* Values */
+}
+
+/* Themes */
+[color-scheme='light'] {
+  --photo-backdrop: #ffffff;
+}
+
+[color-scheme='dark'] {
+  --photo-backdrop: #000000;
+}
+/*  */
+
+body {
+  background-color: var(--backdrop);
+  color: var(--font-color);
+  margin: 0;
+  font-family: 'sf-regular', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li, figcaption {
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+abbr {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+img {
+  border-style: none;
+}
+
+.photo__main-screen {
+  background-color: var(--photo-backdrop);
+}
+
+/* 320 */
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 810px){ 
+}
+
+@media (min-width: 1280px){
+}
+
+@media (min-width: 1366px){
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
+}
