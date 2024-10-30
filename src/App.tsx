@@ -3,7 +3,7 @@ import Layout from './layout/Layout';
 import Error404 from './utils/errors/error404/Error404';
 import RouteError from './utils/errors/route-error/RouteError';
 import { createContext, useState } from 'react';
-import Projects from './layout/projects/Projects';
+import Projects from './layout/projects/ProjectsDisplay';
 import SkillsDisplay from './layout/skills/SkillsDisplay';
 import Contact from './layout/contact/Contact';
 import HomePage from './layout/home-page/HomePage';

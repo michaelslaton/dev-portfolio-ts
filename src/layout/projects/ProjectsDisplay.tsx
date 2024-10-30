@@ -11,7 +11,7 @@ type ProjectStateType = {
   showItems: boolean;
 };
 
-const Projects: React.FC = () => {
+const ProjectsDisplay: React.FC = () => {
   const [ projectState, setProjectState ] = useState<ProjectStateType>({
     selectedProject: null,
     showItems: true,
@@ -51,11 +51,12 @@ const Projects: React.FC = () => {
               </div>
             ))}
         </div>
-        <div></div>
+        
         {projectState.selectedProject && <Project data={projectState.selectedProject} />}
+        
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default ProjectsDisplay;
