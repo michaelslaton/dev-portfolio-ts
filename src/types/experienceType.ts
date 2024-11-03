@@ -4,9 +4,11 @@ type ExperienceType = {
   role: string;
   startDate: Date;
   endDate?: Date;
-  img: string;
+  employmentType?: string;
   description: string;
+  bulletPoints?: string[];
   tech: number[];
+  img: string;
   screenShots: string[];
   demo?: string;
   code: string,
