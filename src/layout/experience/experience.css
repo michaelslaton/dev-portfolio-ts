@@ -10,11 +10,13 @@
 }
 
 .experience-list__wrapper {
+  box-sizing: border-box;
   display: block;
 }
 
 .experience__wrapper {
   display: block;
+  margin: 1rem;
 }
 
 .experience__main-block {
@@ -23,6 +25,9 @@
   grid-template-columns: max-content 1fr;
   padding: 1rem;
   width: 100%;
+  /* padding: .5rem; */
+  background-color: var(--content-bg);
+  border-radius: var(--border-radius);
 }
 
 .experience__img {
@@ -32,6 +37,7 @@
 }
 
 .experience__header {
+  box-sizing: border-box;
   width: 100%;
   padding: 0 .5rem;
 }
@@ -60,6 +66,11 @@
   font-size: 1.2rem;
 }
 
+.experience__dates {
+  width: 100%;
+  font-size: .8rem;
+}
+
 .experience__description {
   padding-top: .5rem;
 }
@@ -73,6 +84,10 @@
 
 .experience__bullet-point {
   padding-bottom: .5rem;
+}
+
+.experience__bullet-point--arrow {
+  color: var(--purple);
 }
 
 /* 320 */
