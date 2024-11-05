@@ -7,6 +7,50 @@
   margin-top: 1rem;
 }
 
+.skills__menu--wrapper {
+  width: 100%;
+}
+.skills__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem .5rem;
+  background-color: var(--content-bg);
+  width: 10rem;
+  height: 1rem;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.skills__menu--highlight {
+  position: absolute;
+  background: var(--purple);
+  margin: auto 0;
+  width: 2rem;
+  height: 1rem;
+  border-radius: var(--border-radius);
+  transform: translateX(-50%); /* Consistent transform */
+  transition: left .5s ease-in-out;
+  padding: .2rem .3rem;
+}
+
+.skills__menu--highlight.left {
+  left: 10%;
+}
+
+.skills__menu--highlight.center {
+  left: 50%;
+}
+
+.skills__menu--highlight.right {
+  left: 90%;
+}
+.skills__menu--item {
+  cursor: pointer;
+  z-index: 2;
+}
+
 .skills-list__title {
   all: inherit;
   margin-block: 0;

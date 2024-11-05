@@ -3,10 +3,14 @@ import Divider from '../components/divider/Divider';
 import Skill from './components/Skill';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import { faList } from '@fortawesome/fontawesome-free-solid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import './skills.css';
 
 const SkillsDisplay: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [ menuSelected, setMenuSelected ] = useState<number>(1);
   const { ref: visibilityRef, inView: visible } = useInView();
   const sortedSkillsList = skillsList.sort((a,b)=>{ return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;});
   if(visible && isVisible !== true) setIsVisible(true);
@@ -19,6 +23,30 @@ const SkillsDisplay: React.FC = () => {
         </h1>
       </div>
       <Divider/>
+
+      <div className='skills__menu--wrapper'>
+        <div className='skills__menu'>
+          <span
+            className='skills__menu--item'
+            onClick={()=> setMenuSelected(1)}
+          >
+            <FontAwesomeIcon icon={faList as IconProp}/>
+          </span>
+          <span
+            className='skills__menu--item'
+            onClick={()=> setMenuSelected(2)}
+          >
+            <FontAwesomeIcon icon={faList as IconProp}/>
+          </span>
+          <span
+            className='skills__menu--item'
+            onClick={()=> setMenuSelected(3)}
+          >
+            <FontAwesomeIcon icon={faList as IconProp}/>
+          </span>
+          <div className={`skills__menu--highlight ${menuSelected === 1 && 'left'} ${menuSelected === 2 && 'center'} ${menuSelected === 3 && 'right'}`}/>
+        </div>
+      </div>
 
       <div
         ref={visibilityRef}
