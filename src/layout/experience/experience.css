@@ -6,12 +6,7 @@
   box-sizing: border-box;
   height: max-content;
   min-width: fit-content;
-  padding-top: .5rem;
-}
-
-.experience-list__wrapper {
-  box-sizing: border-box;
-  display: block;
+  padding-top: 1rem;
 }
 
 .experience__wrapper {
@@ -25,7 +20,6 @@
   grid-template-columns: max-content 1fr;
   padding: 1rem;
   width: 100%;
-  /* padding: .5rem; */
   background-color: var(--content-bg);
   border-radius: var(--border-radius);
 }

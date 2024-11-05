@@ -32,7 +32,7 @@ const ExperienceDisplay: React.FC = () => {
 
       <div className='experience-display__container'>
         <div
-          className='experience-list__wrapper'
+          className='experience__list'
           ref={visibilityRef}
         >
           { formattedExperienceList.map((experience,i)=>(
