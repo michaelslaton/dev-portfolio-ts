@@ -75,9 +75,9 @@
 
 .project__header--title-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   border-bottom: 1px solid #552a8b;
+  align-items: end;
 }
 .project__header--title-wrapper > h2 {
   all: initial;
@@ -206,7 +206,6 @@
 
   .project__header--title-wrapper {
     display: flex;
-    flex-direction: auto;
     justify-content:space-between;
     border-bottom: 1px solid #552a8b;
     align-items: end;
