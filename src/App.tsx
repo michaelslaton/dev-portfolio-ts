@@ -7,7 +7,6 @@ import Projects from './layout/projects/ProjectsDisplay';
 import SkillsDisplay from './layout/skills/SkillsDisplay';
 import Contact from './layout/contact/Contact';
 import HomePage from './layout/home-page/HomePage';
-import About from './layout/about/About';
 import ExperienceDisplay from './layout/experience/ExperienceDisplay';
 import PhotoLayout from './photo-layout/PhotoLayout';
 
@@ -51,11 +50,6 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact/>,
-        errorElement: <RouteError/>,
-      },
-      {
-        path: '/about',
-        element: <About/>,
         errorElement: <RouteError/>,
       },
       {

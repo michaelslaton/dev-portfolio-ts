@@ -2,6 +2,48 @@
   box-sizing: border-box;
 }
 
+.home-page__profile-img--wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.home-page__profile-img {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
+  width: 20rem;
+  margin: 1rem;
+  border-left: 5px solid var(--purple);
+  border-right: 5px solid var(--purple);
+  z-index: 10;
+}
+
+.home-page__profile-img--back-line {
+  background: var(--purple);
+  position: absolute;
+  left: 10rem;
+  z-index: -5;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.home-page__profile-img--back-line.one {
+  top: 40%;
+  width: 60%;
+  height: .3rem;
+}
+.home-page__profile-img--back-line.two {
+  top: 50%;
+  width: 50%;
+  height: .2rem;
+
+}
+.home-page__profile-img--back-line.three {
+  top: 60%;
+  width: 40%;
+  height: .1rem;
+}
+
 .widgets-wrapper {
   place-items: center;
   padding: 1rem .5rem;
@@ -85,9 +127,9 @@
   transition: .3s ease-in-out;
 }
 
-.recent-project__skills-list {
+/* .recent-project__skills-list {
 
-}
+} */
 .recent-project__skills-list--item {
   display: inline;
 }
