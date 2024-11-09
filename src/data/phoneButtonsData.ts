@@ -1,4 +1,4 @@
-import { faHome, faProjectDiagram, faCog, faEnvelope, faGlobe, faInfoCircle, faBook, faChalkboard } from '@fortawesome/fontawesome-free-solid';
+import { faHome, faProjectDiagram, faCog, faEnvelope, faGlobe, faBook, faChalkboard } from '@fortawesome/fontawesome-free-solid';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import phoneButtonType from '../types/phoneButton.type';
 
@@ -33,15 +33,6 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     },
     {
       id: 4,
-      name: 'About',
-      iconColor: '#8d00ff',
-      fontColor: 'white',
-      symbol: faInfoCircle,
-      url: '/about',
-      linkType: 'local',
-    },
-    {
-      id: 5,
       name: 'Contact',
       iconColor: '#d20001',
       fontColor: 'white',
@@ -50,7 +41,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'local',
     },
     {
-      id: 6,
+      id: 5,
       name: 'Controls',
       iconColor: '#888888',
       fontColor: 'black',
@@ -61,7 +52,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
   ],
   bottomBar: [
     {
-      id: 7,
+      id: 6,
       name: 'Home',
       iconColor: '#8d00ff',
       fontColor: 'white',
@@ -70,7 +61,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'local',
     },
     {
-      id: 9,
+      id: 7,
       name: 'GitHub',
       iconColor: '#24292f',
       fontColor: 'white',
@@ -79,7 +70,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 9,
+      id: 8,
       name: 'LinkedIn',
       iconColor: '#0275b4',
       fontColor: 'white',
@@ -88,7 +79,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 10,
+      id: 9,
       name: 'Browser',
       iconColor: 'white',
       fontColor: '#07bbd3',

@@ -3,6 +3,7 @@ import { PortfolioState } from '../../App';
 import Divider from '../components/divider/Divider';
 import SkillsSummary from './components/SkillsSummary';
 import RecentProject from './components/RecentProject';
+import mike from '../../assets/imgs/mike.jpg';
 import './homePage.css';
 
 const HomePage: React.FC = () => {
@@ -12,12 +13,23 @@ const HomePage: React.FC = () => {
 
   return (
     <div className='home-page'>
-      <div className='page-title__wrapper'>
+      {/* <div className='page-title__wrapper'>
         <h1 className='page-title reveal'>
           Home
         </h1>
       </div>
-      <Divider />
+      <Divider /> */}
+
+      <div className='home-page__profile-img--wrapper'>
+        <img
+          src={mike}
+          alt={`It's Me!`}
+          className='home-page__profile-img'
+        />
+        <div className='home-page__profile-img--back-line one'/>
+        <div className='home-page__profile-img--back-line two'/>
+        <div className='home-page__profile-img--back-line three'/>
+      </div>
 
       <section className='widgets-wrapper'>
         <SkillsSummary/>
