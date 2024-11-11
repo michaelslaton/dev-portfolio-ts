@@ -19,6 +19,16 @@
   z-index: 10;
 }
 
+.home-page__profile-img--wrapper > h1 {
+  all: initial;
+  color: var(--font-color);
+  position: absolute;
+  top: 4rem;
+  left: 23rem;
+  font-family: alien-encounters-italic;
+  font-size: 4rem;
+}
+
 .home-page__profile-img--back-line {
   background: var(--purple);
   position: absolute;
@@ -29,18 +39,28 @@
 }
 .home-page__profile-img--back-line.one {
   top: 40%;
-  width: 60%;
-  height: .3rem;
+  width: 60rem;
+  height: .5rem;
 }
 .home-page__profile-img--back-line.two {
   top: 50%;
-  width: 50%;
-  height: .2rem;
+  width: 50rem;
+  height: .4rem;
 
 }
 .home-page__profile-img--back-line.three {
   top: 60%;
-  width: 40%;
+  width: 40rem;
+  height: .3rem;
+}
+.home-page__profile-img--back-line.four {
+  top: 70%;
+  width: 30rem;
+  height: .2rem;
+}
+.home-page__profile-img--back-line.five {
+  top: 80%;
+  width: 20rem;
   height: .1rem;
 }
 
