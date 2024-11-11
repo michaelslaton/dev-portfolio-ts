@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { PortfolioState } from '../../App';
-import Divider from '../components/divider/Divider';
 import SkillsSummary from './components/SkillsSummary';
 import RecentProject from './components/RecentProject';
 import mike from '../../assets/imgs/mike.jpg';
@@ -26,9 +25,12 @@ const HomePage: React.FC = () => {
           alt={`It's Me!`}
           className='home-page__profile-img'
         />
+        <h1>Michael Slaton</h1>
         <div className='home-page__profile-img--back-line one'/>
         <div className='home-page__profile-img--back-line two'/>
         <div className='home-page__profile-img--back-line three'/>
+        <div className='home-page__profile-img--back-line four'/>
+        <div className='home-page__profile-img--back-line five'/>
       </div>
 
       <section className='widgets-wrapper'>
