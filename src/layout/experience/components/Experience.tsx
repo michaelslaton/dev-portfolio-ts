@@ -24,9 +24,9 @@ const Experience: React.FC<ExperienceProps> = ({ data }) => {
 
           <div className='experience__dates'>
             { data.endDate ?
-              <>{`${months[data.startDate.getMonth()]} ${data.startDate.getFullYear()}`} - {`${months[data.endDate.getMonth()]} ${data.endDate.getFullYear()}`}</>
+              <>{`( ${months[data.startDate.getMonth()]} ${data.startDate.getFullYear()}`} - {`${months[data.endDate.getMonth()]} ${data.endDate.getFullYear()} )`}</>
             :
-              <>{`${months[data.startDate.getMonth()]} ${data.startDate.getFullYear()}`} - Current</>
+              <>{`( ${months[data.startDate.getMonth()]} ${data.startDate.getFullYear()}`} - {`Current )`}</>
             }
           </div>
 

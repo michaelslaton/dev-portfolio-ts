@@ -4,8 +4,10 @@
 
 .home-page__profile-img--wrapper {
   box-sizing: border-box;
-  width: 100%;
+  width: 71rem;
   position: relative;
+  margin: 0 auto;
+  animation: home-title-slide-in .3s .1s both;
 }
 
 .home-page__profile-img {
@@ -16,10 +18,15 @@
   margin: 1rem;
   border-left: 5px solid var(--purple);
   border-right: 5px solid var(--purple);
+  box-shadow: 0 0 2rem rgb(141, 0, 255, .5);
   z-index: 10;
+  transition: box-shadow .2s ease-in-out;
+}
+.home-page__profile-img:hover {
+  box-shadow: 0 0 2rem rgb(141, 0, 255, 1);
 }
 
-.home-page__profile-img--wrapper > h1 {
+.home-page__title {
   all: initial;
   color: var(--font-color);
   position: absolute;
@@ -27,6 +34,7 @@
   left: 23rem;
   font-family: alien-encounters-italic;
   font-size: 4rem;
+  animation: home-title-slide-in .3s .3s both;
 }
 
 .home-page__profile-img--back-line {
@@ -62,6 +70,13 @@
   top: 80%;
   width: 20rem;
   height: .1rem;
+}
+
+.home-page__summary {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .widgets-wrapper {
@@ -152,6 +167,20 @@
 } */
 .recent-project__skills-list--item {
   display: inline;
+}
+
+.recent-experience__date {
+  margin: 0;
+  font-size: .9rem;
+}
+
+@keyframes home-title-slide-in {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /* 320 */
