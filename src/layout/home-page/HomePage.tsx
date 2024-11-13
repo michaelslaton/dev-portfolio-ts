@@ -14,6 +14,7 @@ const HomePage: React.FC = () => {
   return (
     <div className='home-page'>
 
+      <h1 className='home-page__title'>Michael Slaton</h1>
       <div className='home-page__profile-img--wrapper'>
         <img
           src={mike}
@@ -21,7 +22,6 @@ const HomePage: React.FC = () => {
           className='home-page__profile-img'
         />
         
-        <h1 className='home-page__title'>Michael Slaton</h1>
 
         <div className='home-page__profile-img--back-line one'/>
         <div className='home-page__profile-img--back-line two'/>

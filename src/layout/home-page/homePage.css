@@ -6,8 +6,9 @@
   box-sizing: border-box;
   width: 71rem;
   position: relative;
-  margin: 0 auto;
+  margin-left: 4rem;
   animation: home-title-slide-in .3s .1s both;
+  text-align: center;
 }
 
 .home-page__profile-img {
@@ -27,14 +28,17 @@
 }
 
 .home-page__title {
+  box-sizing: border-box;
+  text-wrap: nowrap;
   all: initial;
   color: var(--font-color);
   position: absolute;
-  top: 4rem;
-  left: 23rem;
+  top: 5rem;
   font-family: alien-encounters-italic;
   font-size: 4rem;
   animation: home-title-slide-in .3s .3s both;
+  width: 100%;
+  text-align: center;
 }
 
 .home-page__profile-img--back-line {
