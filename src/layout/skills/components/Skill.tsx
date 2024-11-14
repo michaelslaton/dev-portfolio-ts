@@ -20,11 +20,10 @@ const Skill:React.FC<SkillProps> = ({ data }) =>{
           >
           <img className='skill__icon-image' src={data.iconimg}/>
         </div>
-        <p
-          className='skill__icon-title'
-        >
-          <>{data.name}</>
-        </p>
+        
+        <h3 className='skill__icon-title'>
+          {data.name}
+        </h3>
       </a>
     </abbr>
   );
