@@ -5,6 +5,7 @@ import ProjectType from '../../types/project.type';
 import Project from './components/Project';
 import { useInView } from 'react-intersection-observer';
 import './projects.css';
+import { Location, useLocation } from 'react-router-dom';
 
 type ProjectStateType = {
   selectedProject: ProjectType | null;
@@ -12,14 +13,25 @@ type ProjectStateType = {
 };
 
 const ProjectsDisplay: React.FC = () => {
-  const [ projectState, setProjectState ] = useState<ProjectStateType>({
+  const location: Location = useLocation();
+  const queryParams: URLSearchParams = new URLSearchParams(location.search);
+  const id: string | null = queryParams.get("id");
+  const [projectState, setProjectState] = useState<ProjectStateType>({
     selectedProject: null,
     showItems: true,
   });
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
-  if (visible && isVisible !== true) setIsVisible(true);
   const formattedProjectList: ProjectType[] = [...projectData].reverse();
+  
+  if (visible && isVisible !== true) setIsVisible(true);
+
+  if (Number(id) !== 0 && projectState.selectedProject === null) {
+    const foundExperience: ProjectType | undefined = projectData.find(
+      (project) => project.id === Number(id)
+    );
+    if (foundExperience) setProjectState({ ...projectState, selectedProject: foundExperience });
+  };
 
   return (
     <div className='content__screen'>
