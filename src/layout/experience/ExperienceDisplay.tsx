@@ -5,6 +5,7 @@ import ExperienceType from '../../types/experienceType';
 import Experience from './components/Experience';
 import { useInView } from 'react-intersection-observer';
 import './experience.css';
+import { Location, useLocation } from 'react-router-dom';
 
 type ExperienceStateType = {
   selectedExperience: ExperienceType | null;
@@ -12,14 +13,27 @@ type ExperienceStateType = {
 };
 
 const ExperienceDisplay: React.FC = () => {
-  const [ experienceState, setExperienceState ] = useState<ExperienceStateType>({
+  const location: Location = useLocation();
+  const queryParams: URLSearchParams = new URLSearchParams(location.search);
+  const id: string | null = queryParams.get("id");
+  const [experienceState, setExperienceState] = useState<ExperienceStateType>({
     selectedExperience: null,
     showItems: true,
   });
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
+  const formattedExperienceList: ExperienceType[] = [
+    ...experienceData,
+  ].reverse();
+  
   if (visible && isVisible !== true) setIsVisible(true);
-  const formattedExperienceList: ExperienceType[] = [...experienceData].reverse();
+
+  if (Number(id) !== 0 && experienceState.selectedExperience === null) {
+    const foundExperience: ExperienceType | undefined = experienceData.find(
+      (experience) => experience.id === Number(id)
+    );
+    if (foundExperience) setExperienceState({ ...experienceState, selectedExperience: foundExperience });
+  };
 
   return (
     <div className='content__screen'>

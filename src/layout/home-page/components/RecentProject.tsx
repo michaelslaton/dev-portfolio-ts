@@ -13,32 +13,36 @@ const RecentProject: React.FC = () => {
   const mostRecentProject: ProjectType | undefined = [...projectData].pop();
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
-  if(visible && isVisible !== true) setIsVisible(true);
   const projectSkills: SkillType[] = [];
-
+  
+  if (visible && isVisible !== true) setIsVisible(true);
+  
   for (let i = 0; i < mostRecentProject!.tech.length; i++) {
-    const foundSkill = skillsData.find((skill) => skill.id === mostRecentProject!.tech[i]);
+    const foundSkill = skillsData.find(
+      (skill) => skill.id === mostRecentProject!.tech[i]
+    );
     if (foundSkill) projectSkills.push(foundSkill!);
-  };
+  }
 
   return (
-    <div
-      className='recent-project__wrapper'
-      ref={visibilityRef}
-    >
-      <h2
-        className={`widget-title ${isVisible ? 'slide-in' : 'slide-out'}`}
-      >
+    <div className="recent-project__wrapper" ref={visibilityRef}>
+      <h2 className={`widget-title ${isVisible ? "slide-in" : "slide-out"}`}>
         Recent Project
       </h2>
 
-      <div className={`recent-project__img--wrapper ${isVisible ? 'slide-up' : 'slide-down'}`}>
-        <div className='recent-project__img--overlay'>
-          <h3 className='recent-project__title'>{mostRecentProject!.name}</h3>
+      <div
+        className={`recent-project__img--wrapper ${
+          isVisible ? "slide-up" : "slide-down"
+        }`}
+        onClick={() => navigate(`/projects?id=${mostRecentProject?.id}`)}
+      >
+        <div className="recent-project__img--overlay">
+          <h3 className="recent-project__title">{mostRecentProject!.name}</h3>
           <p>{mostRecentProject!.description}</p>
-          <section className='recent-project__skills-list'>
-            Tech: {projectSkills.map((skill) => (
-              <div className='recent-project__skills-list--item'>
+          <section className="recent-project__skills-list">
+            Tech:{" "}
+            {projectSkills.map((skill) => (
+              <div className="recent-project__skills-list--item">
                 {`${skill.name}, `}
               </div>
             ))}
@@ -47,16 +51,15 @@ const RecentProject: React.FC = () => {
 
         <img
           src={mostRecentProject?.img}
-          className='recent-project__img'
-          alt='Most Recent Project'
+          className="recent-project__img"
+          alt="Most Recent Project"
         />
       </div>
 
-      <div className={`see-more--wrapper ${isVisible ? 'slide-in' : 'slide-out'}`}>
-        <div
-          onClick={() => navigate('/projects')}
-          className='see-more'
-        >
+      <div
+        className={`see-more--wrapper ${isVisible ? "slide-in" : "slide-out"}`}
+      >
+        <div onClick={() => navigate("/projects")} className="see-more">
           More Projects...
         </div>
       </div>

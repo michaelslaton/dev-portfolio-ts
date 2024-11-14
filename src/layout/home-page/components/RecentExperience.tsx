@@ -25,7 +25,10 @@ const RecentExperience: React.FC = () => {
         Recent Experience
       </h2>
 
-      <div className={`recent-project__img--wrapper ${isVisible ? 'slide-up' : 'slide-down'}`}>
+      <div
+        className={`recent-project__img--wrapper ${isVisible ? 'slide-up' : 'slide-down'}`}
+        onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
+      >
         <div className='recent-project__img--overlay'>
           <h3 className='recent-project__title'>{mostRecentExperience!.role} at {mostRecentExperience!.name}</h3>
           <h3 className='recent-experience__date'>
