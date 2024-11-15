@@ -45,15 +45,19 @@ const ListView: React.FC = () => {
   return (
     <div className='list-view__wrapper'>
       {thingy.map((thing)=>(
-        <>
-          {thing.letter}
+        <div className='list-view__category'>
+
+          <span>{thing.letter}</span>
+
           <div className='alphabet-divider'/>
+
           <div className='list-view__skills-list'>
             {thing.items.map((skill)=>(
               <Skill data={skill}/>
             ))}
           </div>
-        </>
+          
+        </div>
       ))}
     </div>
   );
