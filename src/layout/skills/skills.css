@@ -67,27 +67,27 @@
   text-align: center;
 }
 
-.list-view__wrapper {
+.skill-display__wrapper {
   padding: 0 1rem;
   height: 47rem;
   overflow-y: scroll;
 }
-.list-view__category {
+.skill-display__category {
   margin-bottom: .5rem;
 }
-.list-view__category > span {
+.skill-display__category > span {
   font-size: 1.5rem;
   font-family: alien-encounters;
   color: var(--purple);
 }
-.list-view__skills-list {
+.skill-display__skills-list {
   display: flex;
   gap: 0 .5rem;
   margin-left: 1rem;
   align-content: end;
   margin-top: .5rem;
 }
-.alphabet-divider {
+.skill-display__divider {
   width: 100%;
   height: 1px;
   background: var(--purple);

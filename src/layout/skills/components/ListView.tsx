@@ -1,21 +1,15 @@
 import {default as skillsList} from '../../../data/skillsData';
 import SkillType from '../../../types/skill.type';
-import '../skills.css';
+import GroupedItem from '../../../types/groupedItemType';
 import Skill from './Skill';
-
-type GroupedItem = {
-  letter: string;
-  items: SkillType[];
-};
-
+import '../skills.css';
 
 const ListView: React.FC = () => {
 
-  const groupItemsByAlphabet = (items: SkillType[]): GroupedItem[] => {
-    // Create a Map to group items by their starting letter
+  const groupItemsByAlphabet = (arr: SkillType[]): GroupedItem[] => {
     const groupedItems = new Map();
   
-    items.forEach((item) => {
+    arr.forEach((item) => {
       const firstLetter = item.name[0].toUpperCase();
 
       if (!groupedItems.has(firstLetter)) {
@@ -25,40 +19,34 @@ const ListView: React.FC = () => {
       groupedItems.get(firstLetter)!.push(item);
     });
   
-    // Convert the Map into an array of objects, sorting each letter group
     const result: GroupedItem[] = [];
-    groupedItems.forEach((items, letter) => {
+    groupedItems.forEach((items, title) => {
       result.push({
-        letter,
+        title,
         items
       });
     });
   
-    // Sort the final array by letter
-    return result.sort((a, b) => a.letter.localeCompare(b.letter));
+    return result.sort((a, b) => a.title.localeCompare(b.title));
   };
 
-  const thingy = groupItemsByAlphabet(skillsList);
-  console.log(thingy)
-
-
   return (
-    <div className='list-view__wrapper'>
-      {thingy.map((thing)=>(
-        <div className='list-view__category'>
+    <div className='skill-display__wrapper'>
+      { groupItemsByAlphabet(skillsList).map((group)=>(
+        <div className='skill-display__category'>
 
-          <span>{thing.letter}</span>
+          <span>{group.title}</span>
 
-          <div className='alphabet-divider'/>
+          <div className='skill-display__divider'/>
 
-          <div className='list-view__skills-list'>
-            {thing.items.map((skill)=>(
+          <div className='skill-display__skills-list'>
+            {group.items.map((skill)=>(
               <Skill data={skill}/>
             ))}
           </div>
           
         </div>
-      ))}
+      )) }
     </div>
   );
 };
