@@ -8,7 +8,7 @@ import ListView from './components/ListView';
 import CategoryView from './components/CateoryView';
 
 const SkillsDisplay: React.FC = () => {
-  const [ menuSelected, setMenuSelected ] = useState<number>(1);
+  const [ menuSelected, setMenuSelected ] = useState<number>(2);
   
   return (
     <div className='content__screen'>

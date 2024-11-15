@@ -6,7 +6,7 @@
   box-sizing: border-box;
   height: max-content;
   min-width: fit-content;
-  padding-top: 1rem;
+  padding-top: .5rem;
 }
 
 .experience__wrapper {
@@ -108,7 +108,6 @@
 
   .experience__list {
     height: 80vh;
-    padding-top: 1rem;
     overflow-y: hidden;
     padding-right: 0.5rem;
   }
