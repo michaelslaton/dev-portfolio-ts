@@ -11,7 +11,7 @@ const CategoryView: React.FC = () => {
     return (
       <div className='skill-display__category'>
 
-        <span>{title}</span>
+        <span className='skill-display__category-title'>{title}</span>
 
         <div className='skill-display__divider'/>
 

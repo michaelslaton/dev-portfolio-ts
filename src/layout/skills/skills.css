@@ -92,6 +92,12 @@
   height: 1px;
   background: var(--purple);
 }
+.skill-display__category-title {
+  color: white !important;
+}
+[color-scheme='light'] .skill-display__category-title {
+  color: var(--purple) !important;
+}
 
 /* 320 */
 

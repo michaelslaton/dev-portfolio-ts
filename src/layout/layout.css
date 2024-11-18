@@ -64,6 +64,22 @@
   --border-radius: 1rem;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .3);
+  border-radius: var(--border-radius);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius);
+  background: var(--purple);
+}
+[color-scheme='light'] ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .5);
+}
+
 /* Themes */
 [color-scheme='light'] {
   --backdrops-sliders: linear-gradient(-60deg,
