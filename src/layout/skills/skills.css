@@ -99,6 +99,14 @@
   color: var(--purple) !important;
 }
 
+.skill-display__fade-out {
+  opacity: 0;
+}
+.skill-display__fade-in {
+  opacity: 1;
+  transition: opacity .6s ease-in-out;
+}
+
 /* 320 */
 
 @media (min-width: 375px){

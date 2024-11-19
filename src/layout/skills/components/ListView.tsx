@@ -3,8 +3,13 @@ import SkillType from '../../../types/skill.type';
 import GroupedItem from '../../../types/groupedItemType';
 import Skill from './Skill';
 import '../skills.css';
+import { useInView } from 'react-intersection-observer';
+import { useState } from 'react';
 
 const ListView: React.FC = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const { ref: visibilityRef, inView: visible } = useInView();
+  if (visible && isVisible !== true) setIsVisible(true);
 
   const groupItemsByAlphabet = (arr: SkillType[]): GroupedItem[] => {
     const groupedItems = new Map();
@@ -31,9 +36,16 @@ const ListView: React.FC = () => {
   };
 
   return (
-    <div className='skill-display__wrapper'>
-      { groupItemsByAlphabet(skillsList).map((group)=>(
-        <div className='skill-display__category'>
+    <div
+      ref={visibilityRef}
+      className='skill-display__wrapper'
+    >
+      { groupItemsByAlphabet(skillsList).map((group,i)=>(
+        <div
+          key={i}
+          style={{transitionDelay: `${i * 50}ms`}}
+          className={`skill-display__category ${isVisible ? 'skill-display__fade-in' : 'skill-display__fade-out'}`}
+        >
 
           <span>{group.title}</span>
 
@@ -41,7 +53,7 @@ const ListView: React.FC = () => {
 
           <div className='skill-display__skills-list'>
             {group.items.map((skill)=>(
-              <Skill data={skill}/>
+              <Skill key={skill.id} data={skill}/>
             ))}
           </div>
           

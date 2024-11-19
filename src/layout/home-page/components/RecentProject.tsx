@@ -42,7 +42,7 @@ const RecentProject: React.FC = () => {
           <section className="recent-project__skills-list">
             Tech:{" "}
             {projectSkills.map((skill) => (
-              <div className="recent-project__skills-list--item">
+              <div key={skill.id} className="recent-project__skills-list--item">
                 {`${skill.name}, `}
               </div>
             ))}
