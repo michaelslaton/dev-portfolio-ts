@@ -1,5 +1,5 @@
-import months from "../../../data/months";
-import ExperienceType from "../../../types/experienceType";
+import months from '../../../data/months';
+import ExperienceType from '../../../types/experienceType';
 import { faAngleRight } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';

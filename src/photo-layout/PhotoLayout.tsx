@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 import './photolayout.css';
-import Navbar from "./navbar/Navbar";
+import Navbar from './navbar/Navbar';
 
 const PhotoLayout: React.FC = () => {
 

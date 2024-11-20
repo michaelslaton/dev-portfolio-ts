@@ -5,6 +5,7 @@ import './contact.css';
 
 const Contact: React.FC = () => {
   const [response, setResponse] = useState<string>('unsent');
+  const [isValid, setIsValid] = useState<boolean | null>(null); // null means not validated yet
 
   const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -22,6 +23,14 @@ const Contact: React.FC = () => {
     if ( response === 'error' ) return ( <div className='response response__error'>An error Occured</div> );
     else if ( response === 'sent' ) return ( <div className='response response__sent'>Message Sent</div> );
     else return ( <></> );
+  };
+
+
+  const validateEmail = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const email = event.target.value;
+    const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+    setIsValid(regex.test(email)); // Set validity based on the regex test
   };
 
   return (
@@ -60,7 +69,9 @@ const Contact: React.FC = () => {
               className='contact__input'
               type='email'
               name='user_email'
+              onChange={validateEmail}
               required
+              style={{ borderColor: isValid === null ? '' : isValid ? '#00ff44' : '#ff0000' }}
             />
 
             <label>Message</label>

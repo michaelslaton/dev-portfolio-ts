@@ -25,24 +25,24 @@ const RecentProject: React.FC = () => {
   }
 
   return (
-    <div className="recent-project__wrapper" ref={visibilityRef}>
-      <h2 className={`widget-title ${isVisible ? "slide-in" : "slide-out"}`}>
+    <div className='recent-project__wrapper' ref={visibilityRef}>
+      <h2 className={`widget-title ${isVisible ? 'slide-in' : 'slide-out'}`}>
         Recent Project
       </h2>
 
       <div
         className={`recent-project__img--wrapper ${
-          isVisible ? "slide-up" : "slide-down"
+          isVisible ? 'slide-up' : 'slide-down'
         }`}
         onClick={() => navigate(`/projects?id=${mostRecentProject?.id}`)}
       >
-        <div className="recent-project__img--overlay">
-          <h3 className="recent-project__title">{mostRecentProject!.name}</h3>
+        <div className='recent-project__img--overlay'>
+          <h3 className='recent-project__title'>{mostRecentProject!.name}</h3>
           <p>{mostRecentProject!.description}</p>
-          <section className="recent-project__skills-list">
-            Tech:{" "}
+          <section className='recent-project__skills-list'>
+            Tech:{' '}
             {projectSkills.map((skill) => (
-              <div key={skill.id} className="recent-project__skills-list--item">
+              <div key={skill.id} className='recent-project__skills-list--item'>
                 {`${skill.name}, `}
               </div>
             ))}
@@ -51,15 +51,15 @@ const RecentProject: React.FC = () => {
 
         <img
           src={mostRecentProject?.img}
-          className="recent-project__img"
-          alt="Most Recent Project"
+          className='recent-project__img'
+          alt='Most Recent Project'
         />
       </div>
 
       <div
-        className={`see-more--wrapper ${isVisible ? "slide-in" : "slide-out"}`}
+        className={`see-more--wrapper ${isVisible ? 'slide-in' : 'slide-out'}`}
       >
-        <div onClick={() => navigate("/projects")} className="see-more">
+        <div onClick={() => navigate('/projects')} className='see-more'>
           More Projects...
         </div>
       </div>
