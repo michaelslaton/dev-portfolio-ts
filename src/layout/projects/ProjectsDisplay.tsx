@@ -15,7 +15,7 @@ type ProjectStateType = {
 const ProjectsDisplay: React.FC = () => {
   const location: Location = useLocation();
   const queryParams: URLSearchParams = new URLSearchParams(location.search);
-  const id: string | null = queryParams.get("id");
+  const id: string | null = queryParams.get('id');
   const [projectState, setProjectState] = useState<ProjectStateType>({
     selectedProject: null,
     showItems: true,
@@ -25,13 +25,15 @@ const ProjectsDisplay: React.FC = () => {
   const formattedProjectList: ProjectType[] = [...projectData].reverse();
   
   if (visible && isVisible !== true) setIsVisible(true);
-
+  
   if (Number(id) !== 0 && projectState.selectedProject === null) {
     const foundExperience: ProjectType | undefined = projectData.find(
       (project) => project.id === Number(id)
     );
     if (foundExperience) setProjectState({ ...projectState, selectedProject: foundExperience });
   };
+  
+  if (formattedProjectList[0] && !projectState.selectedProject && !id) setProjectState({ ...projectState, selectedProject: formattedProjectList[0] });
 
   return (
     <div className='content__screen'>

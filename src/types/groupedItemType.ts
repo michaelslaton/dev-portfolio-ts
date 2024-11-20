@@ -1,4 +1,4 @@
-import SkillType from "./skill.type";
+import SkillType from './skill.type';
 
 type GroupedItem = {
   title: string;

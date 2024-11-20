@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Divider from '../components/divider/Divider';
-import experienceData from '../../data/experienceData';
-import ExperienceType from '../../types/experienceType';
-import Experience from './components/Experience';
-import { useInView } from 'react-intersection-observer';
-import './experience.css';
 import { Location, useLocation } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
+import Divider from '../components/divider/Divider';
+import Experience from './components/Experience';
+import ExperienceType from '../../types/experienceType';
+import experienceData from '../../data/experienceData';
+import './experience.css';
 
 type ExperienceStateType = {
   selectedExperience: ExperienceType | null;
@@ -15,7 +15,7 @@ type ExperienceStateType = {
 const ExperienceDisplay: React.FC = () => {
   const location: Location = useLocation();
   const queryParams: URLSearchParams = new URLSearchParams(location.search);
-  const id: string | null = queryParams.get("id");
+  const id: string | null = queryParams.get('id');
   const [experienceState, setExperienceState] = useState<ExperienceStateType>({
     selectedExperience: null,
     showItems: true,
@@ -27,13 +27,15 @@ const ExperienceDisplay: React.FC = () => {
   ].reverse();
   
   if (visible && isVisible !== true) setIsVisible(true);
-
+  
   if (Number(id) !== 0 && experienceState.selectedExperience === null) {
     const foundExperience: ExperienceType | undefined = experienceData.find(
       (experience) => experience.id === Number(id)
     );
     if (foundExperience) setExperienceState({ ...experienceState, selectedExperience: foundExperience });
   };
+
+  if (formattedExperienceList[0] && !experienceState.selectedExperience && !id) setExperienceState({ ...experienceState, selectedExperience: formattedExperienceList[0] });
 
   return (
     <div className='content__screen'>
