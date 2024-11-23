@@ -15,7 +15,6 @@ const CategoryView: React.FC = () => {
 
     return (
       <div
-        ref={visibilityRef}
         style={{transitionDelay: `${order * 50}ms`}}
         className={`skill-display__category  ${isVisible ? 'skill-display__fade-in' : 'skill-display__fade-out'}`}
       >
@@ -35,7 +34,10 @@ const CategoryView: React.FC = () => {
   };
 
   return (
-    <div className='skill-display__wrapper'>
+    <div
+      className='skill-display__wrapper'
+      ref={visibilityRef}
+    >
       { createCategoryListing('Front-End', skillsList, 1) }
       { createCategoryListing('Back-End', skillsList, 2) }
       { createCategoryListing('Language', skillsList, 3) }
