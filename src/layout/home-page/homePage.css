@@ -4,9 +4,8 @@
 
 .home-page__profile-img--wrapper {
   box-sizing: border-box;
-  width: 71rem;
+  width: 100%;
   position: relative;
-  margin-left: 4rem;
   animation: home-title-slide-in .3s .1s both;
   text-align: center;
 }
@@ -15,8 +14,8 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   display: block;
-  width: 20rem;
-  margin: 1rem;
+  width: 15rem;
+  margin: 1rem auto;
   border-left: 5px solid var(--purple);
   border-right: 5px solid var(--purple);
   box-shadow: 0 0 2rem rgb(141, 0, 255, .5);
@@ -28,59 +27,60 @@
 }
 
 .home-page__title {
+  all: initial;
   box-sizing: border-box;
   text-wrap: nowrap;
-  all: initial;
   color: var(--font-color);
   position: absolute;
-  top: 5rem;
+  top: 13.2rem;
+  background-color: rgba(0, 0, 0, .5);
   font-family: alien-encounters-italic;
-  font-size: 4rem;
+  font-size: 2rem;
   animation: home-title-slide-in .3s .3s both;
   width: 100%;
   text-align: center;
+  z-index: 10;
+  padding-top: 3px;
 }
 
 .home-page__profile-img--back-line {
   background: var(--purple);
   position: absolute;
-  left: 10rem;
   z-index: -5;
-  transform: translateY(-50%);
-  border-radius: 50%;
 }
 .home-page__profile-img--back-line.one {
   top: 40%;
   width: 60rem;
+  width: 100%;
   height: .5rem;
 }
 .home-page__profile-img--back-line.two {
   top: 50%;
-  width: 50rem;
+  width: 100%;
   height: .4rem;
 
 }
 .home-page__profile-img--back-line.three {
   top: 60%;
-  width: 40rem;
+  width: 100%;
   height: .3rem;
 }
 .home-page__profile-img--back-line.four {
   top: 70%;
-  width: 30rem;
+  width: 100%;
   height: .2rem;
 }
 .home-page__profile-img--back-line.five {
   top: 80%;
-  width: 20rem;
+  width: 100%;
   height: .1rem;
 }
 
 .home-page__summary {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
 }
 
 .widgets-wrapper {
@@ -214,6 +214,59 @@
     gap: 2rem;
     place-items: center;
     padding: 1rem 2rem;
+  }
+
+  .home-page__summary {
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-page__title {
+    top: 5rem;
+    font-size: 4rem;
+    padding-top: auto;
+    background-color: transparent;
+  }
+
+  .home-page__profile-img {
+    width: 20rem;
+    margin: 1rem;
+  }
+  .home-page__profile-img--wrapper {
+    width: 71rem;
+    margin-left: 4rem;
+  }
+  .home-page__profile-img--back-line {
+    left: 10rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  .home-page__profile-img--back-line.one {
+    top: 40%;
+    width: 60rem;
+    height: .5rem;
+  }
+  .home-page__profile-img--back-line.two {
+    top: 50%;
+    width: 50rem;
+    height: .4rem;
+  
+  }
+  .home-page__profile-img--back-line.three {
+    top: 60%;
+    width: 40rem;
+    height: .3rem;
+  }
+  .home-page__profile-img--back-line.four {
+    top: 70%;
+    width: 30rem;
+    height: .2rem;
+  }
+  .home-page__profile-img--back-line.five {
+    top: 80%;
+    width: 20rem;
+    height: .1rem;
   }
 }
 
