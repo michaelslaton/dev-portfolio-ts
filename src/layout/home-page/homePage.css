@@ -33,7 +33,7 @@
   color: var(--font-color);
   position: absolute;
   top: 13.2rem;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(30, 14, 49, 0.5);
   font-family: alien-encounters-italic;
   font-size: 2rem;
   animation: home-title-slide-in .3s .3s both;
