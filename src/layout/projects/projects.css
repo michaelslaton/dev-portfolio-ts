@@ -45,12 +45,12 @@
 .projects__list-item__slide-up {
   transform: translate(0%, 0);
   opacity: 1;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity .5s ease-in-out;
 }
 .projects__list-item__slide-down {
-  transform: translate(0, 80vh);
+  transform: translate(-50vh, 0);
   opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity .5s ease-in-out;
 }
 
 .project {
@@ -223,6 +223,13 @@
   }
   .projects__list-item.no-show {
     display: block;
+  }
+  .projects__list-item__slide-up {
+    transform: translate(0%, 0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  .projects__list-item__slide-down {
+    transform: translate(0, 80vh);
   }
 
   .project__skills-list {
