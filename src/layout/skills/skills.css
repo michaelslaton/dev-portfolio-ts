@@ -48,7 +48,7 @@
 
 .skill__wrapper {
   display: grid;
-  grid-template-columns: 4.7rem;
+  grid-template-columns: 4rem;
   cursor: pointer;
   text-decoration: none;
   height: 5.9rem;
@@ -64,8 +64,7 @@
 .skill__icon-title {
   width: 100%;
   all: initial;
-  margin-top: .4rem;
-  font-size: .85rem;
+  font-size: .73rem;
   color: var(--font-color);
   text-align: center;
 }
@@ -130,6 +129,14 @@
 }
 
 @media (min-width: 1280px){
+  .skill__wrapper {
+    grid-template-columns: 4.7rem;
+    height: 5.9rem;
+  }
+  .skill__icon-title {
+    font-size: .85rem;
+  }
+
   .skill-display__wrapper {
     padding: 0 1rem;
   }

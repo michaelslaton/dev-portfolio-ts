@@ -124,6 +124,8 @@
   width: 100%;
   aspect-ratio: 1.76/1;
   align-items: center;
+  padding: .5rem;
+  box-sizing: border-box;
 }
 
 .recent-project__wrapper {
