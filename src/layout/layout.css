@@ -198,6 +198,7 @@ img {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   backdrop-filter: blur(5px);
 }
