@@ -47,7 +47,7 @@ const ListView: React.FC = () => {
           className={`skill-display__category ${isVisible ? 'skill-display__fade-in' : 'skill-display__fade-out'}`}
         >
 
-          <span>{group.title}</span>
+          <span className='skill-display__category-title'>{group.title}</span>
 
           <div className='skill-display__divider'/>
 
