@@ -12,9 +12,11 @@ const HomePage: React.FC = () => {
   if (!appState.power) return ( <></> );
 
   return (
-    <div className='home-page'>
+    <div className='content__screen'>
 
-      <h1 className='home-page__title'>Michael Slaton</h1>
+      <div className="home-page__title-wrapper">
+        <h1 className='home-page__title'>Michael Slaton</h1>
+      </div>
       <div className='home-page__profile-img--wrapper'>
         <img
           src={mike}
