@@ -225,30 +225,36 @@
     grid-template-columns: repeat(2,1fr);
   }
 
-  .home-page__summary {
-    width: 70%;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  .home-page__title-wrapper {
+    top: 13.8rem;
   }
 
+  .home-page__summary {
+    width: 70%;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1366px){
   .home-page__title-wrapper {
     top: 5rem;
     padding-top: auto;
     background-color: transparent;
+    right: -9.5rem;
   }
   .home-page__title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
-  .home-page__profile-img {
-    width: 20rem;
-    margin: 1rem;
-  }
   .home-page__profile-img--wrapper {
     box-sizing: border-box;
     width: 100%;
-    padding-left: 4rem;
-    overflow: hidden;
+    padding-left: 1rem;
+  }
+  .home-page__profile-img {
+    width: 20rem;
+    margin: 1rem;
   }
   .home-page__profile-img--back-line {
     left: 10rem;
@@ -283,16 +289,16 @@
   }
 }
 
-@media (min-width: 1366px){
-  .widgets-wrapper {
-    grid-template-columns: repeat(3,1fr);
+@media (min-width: 1440px){
+  .home-page__profile-img--wrapper {
+    padding-left: 4rem;
   }
 }
 
-@media (min-width: 1440px){
-}
-
 @media (min-width: 1536px){
+  .widgets-wrapper {
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 
 @media (min-width: 1600px){
@@ -302,4 +308,7 @@
 }
 
 @media (min-width: 2560px){
+  .home-page__profile-img--wrapper {
+    margin-left: 32rem;
+  }
 }

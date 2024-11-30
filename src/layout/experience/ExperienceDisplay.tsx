@@ -5,6 +5,9 @@ import Divider from '../components/divider/Divider';
 import Experience from './components/Experience';
 import ExperienceType from '../../types/experienceType';
 import experienceData from '../../data/experienceData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import './experience.css';
 
 type ExperienceStateType = {
@@ -37,6 +40,39 @@ const ExperienceDisplay: React.FC = () => {
 
   if (formattedExperienceList[0] && !experienceState.selectedExperience && !id) setExperienceState({ ...experienceState, selectedExperience: formattedExperienceList[0] });
 
+  const displayExperienceListItems = (listItem: ExperienceType) => {
+
+    if(!experienceState.showItems && experienceState.selectedExperience?.id === listItem.id){
+      return (
+        <>
+          <span className='list-chevron'>
+            <FontAwesomeIcon icon={faAngleRight as IconProp}/>
+          </span>
+          {` ${listItem.name}`}
+        </>
+      );
+    }
+    else if(experienceState.showItems){
+      return (
+        <>
+          <span className='list-chevron'>
+            <FontAwesomeIcon icon={faAngleDown as IconProp}/>
+          </span>
+          {` ${listItem.name}`}
+        </>
+      );
+    }
+    else {
+      return (
+        <>
+          <span className='list-chevron'>
+          </span>
+          {` ${listItem.name}`}
+        </>
+      );
+    };
+  };
+
   return (
     <div className='content__screen'>
       <div className='page-title__wrapper'>
@@ -65,7 +101,7 @@ const ExperienceDisplay: React.FC = () => {
                 ${experienceState.showItems || experienceState.selectedExperience?.id === experience.id ? 'show' : 'no-show'}
                 `}
             >
-              {experience.name}
+              { displayExperienceListItems(experience) }
             </div>
           )) }
         </div>
