@@ -153,6 +153,13 @@
   transition: scale 0.1s ease-in-out;
 }
 
+.list-chevron {
+  aspect-ratio: 1/1;
+  display: inline-block;
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
+
 /* 320 */
 
 @media (min-width: 375px){
@@ -242,6 +249,10 @@
 
   .project__code-buttons-item {
     margin-right: 1em;
+  }
+  
+  .list-chevron {
+    display: none;
   }
 }
 

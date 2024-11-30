@@ -6,6 +6,9 @@ import Project from './components/Project';
 import { useInView } from 'react-intersection-observer';
 import './projects.css';
 import { Location, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type ProjectStateType = {
   selectedProject: ProjectType | null;
@@ -35,6 +38,39 @@ const ProjectsDisplay: React.FC = () => {
   
   if (formattedProjectList[0] && !projectState.selectedProject && !id) setProjectState({ ...projectState, selectedProject: formattedProjectList[0] });
 
+  const displayProjectListItems = (listItem: ProjectType) => {
+
+    if(!projectState.showItems && projectState.selectedProject?.id === listItem.id){
+      return (
+        <>
+          <span className='list-chevron'>
+            <FontAwesomeIcon icon={faAngleRight as IconProp}/>
+          </span>
+          {` ${listItem.name}`}
+        </>
+      );
+    }
+    else if(projectState.showItems){
+      return (
+        <>
+          <span className='list-chevron'>
+            <FontAwesomeIcon icon={faAngleDown as IconProp}/>
+          </span>
+          {` ${listItem.name}`}
+        </>
+      );
+    }
+    else {
+      return (
+        <>
+          <span className='list-chevron'>
+          </span>
+          {` ${listItem.name}`}
+        </>
+      );
+    };
+  };
+
   return (
     <div className='content__screen'>
       <div className='page-title__wrapper'>
@@ -61,7 +97,7 @@ const ProjectsDisplay: React.FC = () => {
                   ${projectState.showItems || projectState.selectedProject?.id === project.id ? 'show' : 'no-show'}
                   `}
               >
-                {project.name}
+                { displayProjectListItems(project) }
               </div>
             ))}
         </div>
