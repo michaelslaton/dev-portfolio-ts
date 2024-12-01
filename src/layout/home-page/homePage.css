@@ -302,6 +302,25 @@
 }
 
 @media (min-width: 1600px){
+  .home-page__title-wrapper {
+    right: -5rem;
+  }
+}
+
+@media (min-width: 1700px){
+  .home-page__profile-img--wrapper {
+    padding-left: 6rem;
+  }
+}
+
+@media (min-width: 1800px){
+  .home-page__profile-img--wrapper {
+    padding-left: 6rem;
+  }
+
+  .home-page__title-wrapper {
+    right: 0rem;
+  }
 }
 
 @media (min-width: 1920px){
@@ -309,6 +328,6 @@
 
 @media (min-width: 2560px){
   .home-page__profile-img--wrapper {
-    margin-left: 32rem;
+    margin-left: 22rem;
   }
 }

@@ -172,22 +172,65 @@
 }
 
 @media (min-width: 768px){
-}
-
-@media (min-width: 810px){ 
-}
-
-@media (min-width: 1280px){
   .projects-display__container {
     display: flex;
   }
-
   .projects__list {
     height: 80vh;
     overflow-y: hidden;
+  }
+  .projects__list-item {
+    padding: 0.5rem 2rem;
+    padding-left: .5rem;
+    margin-bottom: 0.5rem;
+  }
+  .projects__list-item.show {
+    display: block;
+  }
+  .projects__list-item.no-show {
+    display: block;
+  }
+  .projects__list-item__slide-up {
+    transform: translate(0%, 0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  .projects__list-item__slide-down {
+    transform: translate(0, 80vh);
+  }  
+  .project__skills-list {
+    width: 80%;
+  }
+  .project__skills-item {
+    font-size: 1rem;
+    margin-right: 1em;
+  }  
+  .project__header {
+    border-radius: var(--border-radius);
+  }
+  
+  .list-chevron {
+    display: none;
+  }
+}
+
+@media (min-width: 810px){ 
+  .projects__list-item {
+    padding-left: 1rem;
+  }
+  
+  .projects__list {
     padding-right: 0.5rem;
   }
+}
 
+@media (min-width: 1280px){
+}
+
+@media (min-width: 1366px){
+  
+}
+
+@media (min-width: 1440px){
   .project {
     margin: 1rem;
   }
@@ -197,7 +240,6 @@
     grid-template-columns: max-content 1fr;
     padding: 1rem;
     border: 1.5px solid var(--content-bg);
-    border-radius: var(--border-radius);
   }
   .project__header-info {
     margin-left: 1rem;
@@ -220,46 +262,15 @@
     font-size: 2rem;
   }
 
-  .projects__list-item {
-    padding: 0.5rem 2rem;
-    padding-left: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .projects__list-item.show {
-    display: block;
-  }
-  .projects__list-item.no-show {
-    display: block;
-  }
-  .projects__list-item__slide-up {
-    transform: translate(0%, 0);
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  }
-  .projects__list-item__slide-down {
-    transform: translate(0, 80vh);
-  }
 
-  .project__skills-list {
-    width: 80%;
-  }
-  .project__skills-item {
-    font-size: 1rem;
-    margin-right: 1em;
-  }
+
 
   .project__code-buttons-item {
     margin-right: 1em;
   }
-  
-  .list-chevron {
-    display: none;
+  .project__skills-list {
+    width: 100%;
   }
-}
-
-@media (min-width: 1366px){
-}
-
-@media (min-width: 1440px){
 }
 
 @media (min-width: 1536px){
