@@ -15,7 +15,7 @@ const Skill:React.FC<SkillProps> = ({ data }) =>{
         target='_blank'
       >
         <div 
-          className='icon skill__icon'
+          className='skill__icon'
           style={{ backgroundColor: `${data.iconColor}` }}
           >
           <img className='skill__icon-image' src={data.iconimg}/>

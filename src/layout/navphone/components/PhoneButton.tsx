@@ -32,7 +32,7 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
           }}
         >
           <div
-            className='icon'
+            className='phone-button__icon'
             style={{ backgroundColor: `${data.iconColor}`, color: `${data.fontColor}` }}
           >
             <FontAwesomeIcon data-testid='phone signal' icon={data.symbol as IconProp}/>
@@ -50,7 +50,7 @@ const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
           className='phone-button__container'
         >
           <div
-            className='icon'
+            className='phone-button__icon'
             style={{ backgroundColor: `${data.iconColor}`, color: `${data.fontColor}` }}
           >
             <FontAwesomeIcon data-testid='phone signal' icon={data.symbol as IconProp}/>
