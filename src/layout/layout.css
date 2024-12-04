@@ -240,19 +240,6 @@ img {
   font-family: "alien-encounters-italic";
 }
 
-.icon {
-  aspect-ratio: 1/1;
-  width: 3.5rem;
-  border-radius: var(--border-radius);
-  display: grid;
-  place-items: center;
-  font-size: 2rem;
-  transition: transform 100ms ease-in-out;
-}
-.icon:hover {
-  transform: scale(1.1);
-}
-
 .reveal {
   color: white;
   animation: fade-in .8s ease-in;

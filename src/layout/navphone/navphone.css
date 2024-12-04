@@ -148,6 +148,19 @@
   color: white;
 }
 
+.phone-button__icon {
+  aspect-ratio: 1/1;
+  width: 3.5rem;
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  transition: transform 100ms ease-in-out;
+}
+.phone-button__icon:hover {
+  transform: scale(1.1);
+}
+
 .power-button {
   color: #3b2e49;
   border: 0;
@@ -200,6 +213,21 @@
 }
 
 @media (min-width: 768px){
+  .phone-buttons__grid {
+    gap: .7rem 1.5rem;
+  }
+  .phone-button__icon {
+    width: 7rem;
+    border-radius: 2rem;
+    font-size: 3rem;
+  }
+  .phone-buttons__bottom-bar {
+    width: 70%;
+  }
+
+  .phone-button__name {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 810px){ 
@@ -229,6 +257,22 @@
 
   .phone-buttons__container {
     height: 100%;
+  }
+  
+  .phone-buttons__grid {
+    gap: .7rem .6rem;
+  }
+  .phone-button__icon {
+    width: 3.5rem;
+    border-radius: var(--border-radius);
+    font-size: 2rem;
+  }
+  .phone-buttons__bottom-bar {
+    width: 95%;
+  }
+
+  .phone-button__name {
+    font-size: .9rem;
   }
 }
 
