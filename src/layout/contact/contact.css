@@ -18,17 +18,17 @@
 
 .contact__input   {
   box-sizing: border-box;
-  width: 95%;
   display: block;
-  margin: 0 auto;
-  margin-bottom: 1.5rem;
+  width: 95%;
+  background-color: var(--input-background);
+  box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, .5);
   outline-style: none;
   border: 1px solid var(--input-border-color);
   border-radius: 10px;
-  background-color: var(--input-background);
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
   padding: .5rem 1rem;
   color: var(--font-color);
-  box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, .5);
 }
 .contact__input:is(:hover, :active, :focus) {
   border-color: var(--input-highlight-border-color);
@@ -47,17 +47,22 @@
 }
 
 .contact__form-submit {
-  text-decoration: none;
   background-color: var(--purple);
-  padding: .5em 1rem;
-  border-radius: 5px;
-  color: white;
-  border: 1px solid var(--input-border-color);
   box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, .5);
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
   margin-right: 3%;
+  padding: .5em 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 .contact__form-submit:is(:hover, :active) {
   border-color: var(--input-highlight-border-color);
+}
+[color-scheme='light'] .contact__form-submit {
+  color: black;
+  background-color: var(--input-background);
 }
 
 /* 320 */
@@ -95,15 +100,15 @@
   }
   
   .contact__input   {
+    background-color: var(--input-background);
+    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, .5);
     width: 30rem;
-    margin-bottom: 1.5rem;
-    outline-style: none;
     border: 1px solid var(--input-border-color);
     border-radius: 10px;
-    background-color: var(--input-background);
+    outline-style: none;
+    margin-bottom: 1.5rem;
     padding: .5rem 1rem;
     color: var(--font-color);
-    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, .5);
   }
   
   .contact__form-submit {

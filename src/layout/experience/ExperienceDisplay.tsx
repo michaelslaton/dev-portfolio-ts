@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Location, useLocation } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import Divider from '../components/divider/Divider';
 import Experience from './components/Experience';
 import ExperienceType from '../../types/experienceType';
 import experienceData from '../../data/experienceData';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import './experience.css';
 
 type ExperienceStateType = {
-  selectedExperience: ExperienceType | null;
+  selectedExperience: ExperienceType | undefined;
   showItems: boolean;
 };
 
@@ -19,58 +19,42 @@ const ExperienceDisplay: React.FC = () => {
   const location: Location = useLocation();
   const queryParams: URLSearchParams = new URLSearchParams(location.search);
   const id: string | null = queryParams.get('id');
+
   const [experienceState, setExperienceState] = useState<ExperienceStateType>({
-    selectedExperience: null,
+    selectedExperience: undefined,
     showItems: true,
   });
+  const formattedExperienceList: ExperienceType[] = useMemo(() => [...experienceData].reverse(), [experienceData]);
+
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const { ref: visibilityRef, inView: visible } = useInView();
-  const formattedExperienceList: ExperienceType[] = [
-    ...experienceData,
-  ].reverse();
-  
   if (visible && isVisible !== true) setIsVisible(true);
-  
-  if (Number(id) !== 0 && experienceState.selectedExperience === null) {
-    const foundExperience: ExperienceType | undefined = experienceData.find(
-      (experience) => experience.id === Number(id)
-    );
-    if (foundExperience) setExperienceState({ ...experienceState, selectedExperience: foundExperience });
-  };
 
-  if (formattedExperienceList[0] && !experienceState.selectedExperience && !id) setExperienceState({ ...experienceState, selectedExperience: formattedExperienceList[0] });
+  useEffect(() => {
+    if (id) {
+      const foundExperience = experienceData.find((exp) => exp.id === Number(id)) || undefined;
+      setExperienceState((prev) => ({ ...prev, selectedExperience: foundExperience }));
+    } else if (!id && !experienceState.selectedExperience) {
+      setExperienceState((prev) => ({
+        ...prev,
+        selectedExperience: formattedExperienceList[0] || undefined,
+      }));
+    }
+  }, [id, experienceState.selectedExperience, formattedExperienceList]);
 
   const displayExperienceListItems = (listItem: ExperienceType) => {
-
-    if(!experienceState.showItems && experienceState.selectedExperience?.id === listItem.id){
-      return (
-        <>
-          <span className='list-chevron'>
-            <FontAwesomeIcon icon={faAngleRight as IconProp}/>
-          </span>
-          {` ${listItem.name}`}
-        </>
-      );
-    }
-    else if(experienceState.showItems){
-      return (
-        <>
-          <span className='list-chevron'>
-            <FontAwesomeIcon icon={faAngleDown as IconProp}/>
-          </span>
-          {` ${listItem.name}`}
-        </>
-      );
-    }
-    else {
-      return (
-        <>
-          <span className='list-chevron'>
-          </span>
-          {` ${listItem.name}`}
-        </>
-      );
+    const getIcon = () => {
+      if (!experienceState.showItems && experienceState.selectedExperience?.id === listItem.id) return faAngleRight;
+      if (experienceState.showItems) return faAngleDown;
+      return null;
     };
+    const icon = getIcon();
+    return (
+      <>
+        {icon && <span className='list-chevron'><FontAwesomeIcon icon={icon as IconProp} /></span>}
+        {` ${listItem.name}`}
+      </>
+    );
   };
 
   return (
@@ -90,10 +74,12 @@ const ExperienceDisplay: React.FC = () => {
           { formattedExperienceList.map((experience,i)=>(
             <div
               key={experience.id}
-              onClick={() => setExperienceState({
-                showItems: !experienceState.showItems,
-                selectedExperience: experience,
-              })}
+              onClick={() => setExperienceState((prev) => ({
+                  ...prev,
+                  showItems: !prev.showItems,
+                  selectedExperience: prev.selectedExperience?.id === experience.id ? prev.selectedExperience : experience,
+                }))
+              }
               style={{transitionDelay: `${i * 50}ms`}}
               className={`projects__list-item 
                 ${experience.id === experienceState.selectedExperience?.id ? 'selected' : ''}

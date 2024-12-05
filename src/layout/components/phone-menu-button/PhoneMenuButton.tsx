@@ -1,7 +1,7 @@
-import {faMobileAlt} from '@fortawesome/fontawesome-free-solid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt } from '@fortawesome/fontawesome-free-solid';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { PortfolioState } from '../../../App';
 import './phoneMenuButton.css';
 
@@ -12,8 +12,8 @@ const PhoneMenuButton: React.FC = () => {
     setAppState({
       ...appState,
       showPhone: !appState.showPhone
-    })
-  }
+    });
+  };
 
   return (
     <button

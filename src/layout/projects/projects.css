@@ -62,6 +62,9 @@
   padding: .5rem;
   background-color: var(--content-bg);
 }
+/* [color-scheme='light'] .project__header {
+  background-color: var(--content-bg);
+} */
 
 .project__hero-img {
   display: block;
