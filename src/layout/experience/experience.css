@@ -15,19 +15,19 @@
 
 .experience__main-block {
   box-sizing: border-box;
+  background-color: var(--content-bg);
   display: grid;
   grid-template-rows: max-content 1fr;
-  padding: .5rem;
   width: 100%;
-  background-color: var(--content-bg);
+  padding: .5rem;
   border-radius: var(--border-radius);
 }
 
 .experience__img {
   display: block;
-  border-radius: var(--border-radius);
   width: 100%;
   margin: .5rem 0 1rem;
+  border-radius: var(--border-radius);
 }
 
 .experience__header {
@@ -52,9 +52,8 @@
 .experience__title > h3 {
   all: initial;
   margin: 0;
-  font-size: 1.7rem;
-  color: #ffffff;
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .experience__dates {
@@ -70,8 +69,8 @@
 .experience__bullet-points-wrapper {
   width: 95%;
   margin: 0 auto;
-  font-size: .9rem;
   padding-top: .5rem;
+  font-size: .9rem;
 }
 
 .experience__bullet-point {
@@ -107,8 +106,8 @@
 
   .experience__list {
     height: 80vh;
-    overflow-y: hidden;
     padding-right: 0.5rem;
+    overflow-y: hidden;
   }
 
   .experience__wrapper {
@@ -126,9 +125,8 @@
   }
   
   .experience__title {
-    justify-content: space-between;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: end;
   }
 
