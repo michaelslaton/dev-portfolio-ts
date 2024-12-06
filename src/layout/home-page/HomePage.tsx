@@ -3,7 +3,7 @@ import { PortfolioState } from '../../App';
 import SkillsSummary from './components/SkillsSummary';
 import RecentProject from './components/RecentProject';
 import RecentExperience from './components/RecentExperience';
-import mike from '../../assets/imgs/mike.jpg';
+import TitleCard from './components/TitleCard/TitleCard';
 import './homePage.css';
 
 const HomePage: React.FC = () => {
@@ -14,24 +14,7 @@ const HomePage: React.FC = () => {
   return (
     <div className='content__screen'>
 
-      <div className="home-page__title-wrapper">
-        <h1 className='home-page__title'>Michael Slaton</h1>
-      </div>
-      <div className='home-page__profile-img--wrapper'>
-        <img
-          src={mike}
-          alt={`It's Me!`}
-          className='home-page__profile-img'
-        />
-        
-
-        <div className='home-page__profile-img--back-line one'/>
-        <div className='home-page__profile-img--back-line two'/>
-        <div className='home-page__profile-img--back-line three'/>
-        <div className='home-page__profile-img--back-line four'/>
-        <div className='home-page__profile-img--back-line five'/>
-      </div>
-
+      <TitleCard/>
 
       <article className='home-page__summary'>
       Software developer with one year of experience in full-stack development, 
