@@ -1,14 +1,14 @@
-import Divider from '../components/divider/Divider';
-import projectData from '../../data/projectData';
 import { useState } from 'react';
-import ProjectType from '../../types/project.type';
-import Project from './components/Project';
 import { useInView } from 'react-intersection-observer';
-import './projects.css';
 import { Location, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import Divider from '../components/divider/Divider';
+import Project from './components/Project';
+import ProjectType from '../../types/project.type';
+import projectData from '../../data/projectData';
+import './projects.css';
 
 type ProjectStateType = {
   selectedProject: ProjectType | null;
@@ -39,7 +39,6 @@ const ProjectsDisplay: React.FC = () => {
   if (formattedProjectList[0] && !projectState.selectedProject && !id) setProjectState({ ...projectState, selectedProject: formattedProjectList[0] });
 
   const displayProjectListItems = (listItem: ProjectType) => {
-
     if(!projectState.showItems && projectState.selectedProject?.id === listItem.id){
       return (
         <>

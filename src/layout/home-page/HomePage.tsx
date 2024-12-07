@@ -17,10 +17,10 @@ const HomePage: React.FC = () => {
       <TitleCard/>
 
       <article className='home-page__summary'>
-      Software developer with one year of experience in full-stack development, 
-      skilled in React, Redux, and TypeScript. Focused on delivering user-centered 
-      solutions that enhance functionality and user experience. Adaptable, 
-      collaborative, and eager to contribute to innovative tech environments.
+        Software developer with one year of experience in full-stack development, 
+        skilled in React, Redux, and TypeScript. Focused on delivering user-centered 
+        solutions that enhance functionality and user experience. Adaptable, 
+        collaborative, and eager to contribute to innovative tech environments.
       </article>
 
       <section className='widgets-wrapper'>
