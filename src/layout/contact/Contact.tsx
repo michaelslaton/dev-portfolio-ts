@@ -5,7 +5,7 @@ import './contact.css';
 
 const Contact: React.FC = () => {
   const [response, setResponse] = useState<string>('unsent');
-  const [isValid, setIsValid] = useState<boolean | null>(null); // null means not validated yet
+  const [isValid, setIsValid] = useState<boolean | null>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -27,10 +27,10 @@ const Contact: React.FC = () => {
 
 
   const validateEmail = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    const email = event.target.value;
-    const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    const email: string = event.target.value;
+    const regex: RegExp = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
 
-    setIsValid(regex.test(email)); // Set validity based on the regex test
+    setIsValid(regex.test(email));
   };
 
   return (
