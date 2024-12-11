@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Location, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
+import { faAngleLeft, faAngleDown } from '@fortawesome/fontawesome-free-solid';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import Divider from '../components/divider/Divider';
 import Project from './components/Project';
@@ -43,7 +43,7 @@ const ProjectsDisplay: React.FC = () => {
       return (
         <>
           <span className='list-chevron'>
-            <FontAwesomeIcon icon={faAngleRight as IconProp}/>
+            <FontAwesomeIcon icon={faAngleLeft as IconProp}/>
           </span>
           {` ${listItem.name}`}
         </>
