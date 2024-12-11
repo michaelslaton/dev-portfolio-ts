@@ -11,14 +11,16 @@ import ExperienceDisplay from './layout/experience/ExperienceDisplay';
 import PhotoLayout from './photo-layout/PhotoLayout';
 
 export type portfolioStateType = {
-  power: boolean,
+  power: boolean;
   theme: string;
   screen: string;
   lowPower: boolean;
   showPhone: boolean;
 };
 
-export const PortfolioState = createContext<portfolioStateType | any>(undefined);
+export const PortfolioState = createContext<
+  [portfolioStateType, React.Dispatch<React.SetStateAction<portfolioStateType>>] | undefined
+>(undefined);
 
 
 const router = createBrowserRouter([

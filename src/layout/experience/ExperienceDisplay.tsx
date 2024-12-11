@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Location, useLocation } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleDown } from '@fortawesome/fontawesome-free-solid';
+import { faAngleLeft, faAngleDown } from '@fortawesome/fontawesome-free-solid';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import Divider from '../components/divider/Divider';
 import Experience from './components/Experience';
@@ -44,7 +44,7 @@ const ExperienceDisplay: React.FC = () => {
 
   const displayExperienceListItems = (listItem: ExperienceType) => {
     const getIcon = () => {
-      if (!experienceState.showItems && experienceState.selectedExperience?.id === listItem.id) return faAngleRight;
+      if (!experienceState.showItems && experienceState.selectedExperience?.id === listItem.id) return faAngleLeft;
       if (experienceState.showItems) return faAngleDown;
       return null;
     };
