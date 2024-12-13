@@ -12,7 +12,9 @@ import { PortfolioState } from '../../../App';
 import '../navphone.css';
 
 const NavPhoneMain: React.FC = () => {
-  const [ appState, setAppState ] = useContext(PortfolioState);
+  const context = useContext(PortfolioState);
+  if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
+  const [ appState, setAppState ] = context;
 
 
   return (
