@@ -14,7 +14,9 @@ type phoneButtonProps = {
 
 const PhoneButton: React.FC<phoneButtonProps> = ({ data, position }) => {
   const navigate: NavigateFunction = useNavigate();
-  const [ appState, setAppState ] = useContext(PortfolioState);
+  const context = useContext(PortfolioState);
+  if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
+  const [ appState, setAppState ] = context;
 
   return (
     <>

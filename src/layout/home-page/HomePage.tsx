@@ -7,7 +7,9 @@ import TitleCard from './components/TitleCard/TitleCard';
 import './homePage.css';
 
 const HomePage: React.FC = () => {
-  const [appState] = useContext(PortfolioState);
+  const context = useContext(PortfolioState);
+  if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
+  const [ appState ] = context;
 
   if (!appState.power) return ( <></> );
 

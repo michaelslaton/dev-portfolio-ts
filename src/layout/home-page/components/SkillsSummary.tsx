@@ -1,15 +1,12 @@
-import { NavigateFunction, useNavigate } from 'react-router-dom';
-import { default as skillsList } from '../../../data/skillsData';
-import Skill from '../../skills/components/Skill';
-import '../homePage.css';
 import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
+import Skill from '../../skills/components/Skill';
+import { default as skillsList } from '../../../data/skillsData';
+import '../homePage.css';
 
 const SkillsSummary: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { ref: visibilityRef, inView: visible } = useInView();
-  if(visible && isVisible !== true) setIsVisible(true);
+  const { ref: visibilityRef, inView: isVisible } = useInView();
 
   return (
     <div className='skills-summary__wrapper' ref={visibilityRef}>

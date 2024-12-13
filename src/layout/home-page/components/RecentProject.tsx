@@ -1,28 +1,35 @@
 
-import { NavigateFunction, useNavigate } from 'react-router-dom';
-import projectData from '../../../data/projectData';
-import '../homePage.css';
-import ProjectType from '../../../types/project.type';
+import { useMemo } from 'react';
+import { useNavigate, type NavigateFunction } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
+import ProjectType from '../../../types/project.type';
 import SkillType from '../../../types/skill.type';
+import projectData from '../../../data/projectData';
 import skillsData from '../../../data/skillsData';
+import '../homePage.css';
 
 const RecentProject: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
   const mostRecentProject: ProjectType | undefined = [...projectData].pop();
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { ref: visibilityRef, inView: visible } = useInView();
-  const projectSkills: SkillType[] = [];
-  
-  if (visible && isVisible !== true) setIsVisible(true);
-  
-  for (let i = 0; i < mostRecentProject!.tech.length; i++) {
-    const foundSkill = skillsData.find(
-      (skill) => skill.id === mostRecentProject!.tech[i]
-    );
-    if (foundSkill) projectSkills.push(foundSkill!);
-  }
+  const { ref: visibilityRef, inView: isVisible } = useInView();
+
+  const projectSkills = useMemo(() => {
+    if (!mostRecentProject?.tech) return [];
+    return mostRecentProject.tech
+      .map((tech) => skillsData.find((skill) => skill.id === tech))
+      .filter((skill): skill is SkillType => Boolean(skill));
+  }, [mostRecentProject]);
+
+  const renderSkillsList = (skills: SkillType[]) => (
+    <section className='recent-project__skills-list'>
+      {`Tech: `}
+      {skills.map((skill) => (
+        <div key={skill.id} className='recent-project__skills-list--item'>
+          {`${skill.name}, `}
+        </div>
+      ))}
+    </section>
+  );
 
   return (
     <div className='recent-project__wrapper' ref={visibilityRef}>
@@ -39,14 +46,7 @@ const RecentProject: React.FC = () => {
         <div className='recent-project__img--overlay'>
           <h3 className='recent-project__title'>{mostRecentProject!.name}</h3>
           <p>{mostRecentProject!.description}</p>
-          <section className='recent-project__skills-list'>
-            Tech:{' '}
-            {projectSkills.map((skill) => (
-              <div key={skill.id} className='recent-project__skills-list--item'>
-                {`${skill.name}, `}
-              </div>
-            ))}
-          </section>
+          {renderSkillsList(projectSkills)}
         </div>
 
         <img
