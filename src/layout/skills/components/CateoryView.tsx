@@ -1,49 +1,42 @@
-import {default as skillsList} from '../../../data/skillsData';
+import { default as skillsList } from '../../../data/skillsData';
 import SkillType from '../../../types/skill.type';
 import Skill from './Skill';
 import '../skills.css';
-import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { useMemo } from 'react';
+
+const CATEGORIES = ['Front-End', 'Back-End', 'Language', 'Testing', 'Version-Control', 'Other'];
 
 const CategoryView: React.FC = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { ref: visibilityRef, inView: visible } = useInView();
-  if (visible && isVisible !== true) setIsVisible(true);
-  
-  const createCategoryListing = (title: string, arr: SkillType[], order: number): JSX.Element => {
-    const includedSkills: SkillType[] = arr.filter((skill)=> skill.category.split(', ').includes(title));
+  const { ref: visibilityRef, inView: isVisible } = useInView();
 
-    return (
-      <div
-        style={{transitionDelay: `${order * 50}ms`}}
-        className={`skill-display__category  ${isVisible ? 'skill-display__fade-in' : 'skill-display__fade-out'}`}
-      >
-
-        <span className='skill-display__category-title'>{title}</span>
-
-        <div className='skill-display__divider'/>
-
-        <div className='skill-display__skills-list'>
-          {includedSkills.map((skill)=>(
-            <Skill key={skill.id} data={skill}/>
-          ))}
-        </div>
-        
-      </div>
-    );
-  };
+  const skillsByCategory = useMemo(() => {
+    const categoryMap: Record<string, SkillType[]> = {};
+    CATEGORIES.forEach((category) => {
+      categoryMap[category] = skillsList.filter(skill => skill.category.split(', ').includes(category));
+    });
+    return categoryMap;
+  }, [skillsList]);
 
   return (
-    <div
-      className='skill-display__wrapper'
-      ref={visibilityRef}
-    >
-      { createCategoryListing('Front-End', skillsList, 1) }
-      { createCategoryListing('Back-End', skillsList, 2) }
-      { createCategoryListing('Language', skillsList, 3) }
-      { createCategoryListing('Testing', skillsList, 4) }
-      { createCategoryListing('Version-Control', skillsList, 5) }
-      { createCategoryListing('Other', skillsList, 6) }
+    <div className='skill-display__wrapper' ref={visibilityRef}>
+      {CATEGORIES.map((category, i) => (
+        <div
+          key={category}
+          style={{ transitionDelay: `${i * 50}ms` }}
+          className={`skill-display__category ${isVisible ? 'skill-display__fade-in' : 'skill-display__fade-out'}`}
+        >
+          <span className='skill-display__category-title'>{category}</span>
+
+          <div className='skill-display__divider' />
+
+          <div className='skill-display__skills-list'>
+            {skillsByCategory[category].map((skill) => (
+              <Skill key={skill.id} data={skill} />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

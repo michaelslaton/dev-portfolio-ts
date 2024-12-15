@@ -1,59 +1,47 @@
 import {default as skillsList} from '../../../data/skillsData';
 import SkillType from '../../../types/skill.type';
-import GroupedItem from '../../../types/groupedItemType';
 import Skill from './Skill';
 import '../skills.css';
 import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
+import { useMemo } from 'react';
 
 const ListView: React.FC = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { ref: visibilityRef, inView: visible } = useInView();
-  if (visible && isVisible !== true) setIsVisible(true);
+  const { ref: visibilityRef, inView: isVisible } = useInView();
 
-  const groupItemsByAlphabet = (arr: SkillType[]): GroupedItem[] => {
-    const groupedItems = new Map();
+  const groupedSkills = useMemo(() => {
+    const groupedItems = new Map<string, SkillType[]>();
   
-    arr.forEach((item) => {
-      const firstLetter = item.name[0].toUpperCase();
-
+    skillsList.forEach((skill) => {
+      const firstLetter = skill.name[0].toUpperCase();
       if (!groupedItems.has(firstLetter)) {
         groupedItems.set(firstLetter, []);
       }
-  
-      groupedItems.get(firstLetter)!.push(item);
+      groupedItems.get(firstLetter)!.push(skill);
     });
   
-    const result: GroupedItem[] = [];
-    groupedItems.forEach((items, title) => {
-      result.push({
-        title,
-        items
-      });
-    });
-  
-    return result.sort((a, b) => a.title.localeCompare(b.title));
-  };
+    return Array.from(groupedItems.entries())
+      .map(([title, items]) => ({ title, items }))
+      .sort((a, b) => a.title.localeCompare(b.title));
+  }, [skillsList]);
 
   return (
     <div
       ref={visibilityRef}
       className='skill-display__wrapper'
     >
-      { groupItemsByAlphabet(skillsList).map((group,i)=>(
+      {groupedSkills.map((group, i) => (
         <div
-          key={i}
-          style={{transitionDelay: `${i * 50}ms`}}
+          key={group.title}
+          style={{ transitionDelay: `${i * 50}ms` }}
           className={`skill-display__category ${isVisible ? 'skill-display__fade-in' : 'skill-display__fade-out'}`}
         >
-
           <span className='skill-display__category-title'>{group.title}</span>
 
-          <div className='skill-display__divider'/>
+          <div className='skill-display__divider' />
 
           <div className='skill-display__skills-list'>
-            {group.items.map((skill)=>(
-              <Skill key={skill.id} data={skill}/>
+            {group.items.map((skill) => (
+              <Skill key={skill.id} data={skill} />
             ))}
           </div>
           

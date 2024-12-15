@@ -6,7 +6,9 @@ import './layout.css';
 import PhoneMenuButton from './components/phone-menu-button/PhoneMenuButton';
 
 const Layout: React.FC = () => {
-  const [ appState ] = useContext(PortfolioState);
+  const context = useContext(PortfolioState);
+  if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
+  const [ appState ] = context;
   const navigate: NavigateFunction = useNavigate();
 
   useEffect(()=>{
