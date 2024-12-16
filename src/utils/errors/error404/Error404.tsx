@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './error404.css';
 
-const Error404: React.FC = () => {
+const Error404 = () => {
   const navigate = useNavigate();
 
   return (

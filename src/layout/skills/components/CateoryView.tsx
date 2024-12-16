@@ -7,7 +7,7 @@ import { useMemo } from 'react';
 
 const CATEGORIES = ['Front-End', 'Back-End', 'Language', 'Testing', 'Version-Control', 'Other'];
 
-const CategoryView: React.FC = () => {
+const CategoryView = () => {
   const { ref: visibilityRef, inView: isVisible } = useInView();
 
   const skillsByCategory = useMemo(() => {

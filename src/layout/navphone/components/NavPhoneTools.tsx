@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PortfolioState } from '../../../App';
 import '../navphone.css';
 
-const NavPhoneTools: React.FC = () => {
+const NavPhoneTools = () => {
   const context = useContext(PortfolioState);
   if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
   const [appState, setAppState] = context;

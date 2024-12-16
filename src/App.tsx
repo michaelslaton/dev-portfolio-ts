@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, RouteObject } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Error404 from './utils/errors/error404/Error404';
 import RouteError from './utils/errors/route-error/RouteError';
@@ -10,10 +10,12 @@ import HomePage from './layout/home-page/HomePage';
 import ExperienceDisplay from './layout/experience/ExperienceDisplay';
 import PhotoLayout from './photo-layout/PhotoLayout';
 
+export type ThemeType = 'light' | 'dark';
+export type ScreenType = 'main' | 'tools';
 export type portfolioStateType = {
   power: boolean;
-  theme: string;
-  screen: string;
+  theme: ThemeType;
+  screen: ScreenType;
   lowPower: boolean;
   showPhone: boolean;
 };
@@ -22,54 +24,55 @@ export const PortfolioState = createContext<
   [portfolioStateType, React.Dispatch<React.SetStateAction<portfolioStateType>>] | undefined
 >(undefined);
 
-
-const router = createBrowserRouter([
+const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Layout/>,
-    errorElement: <RouteError/>,
+    element: <Layout />,
+    errorElement: <RouteError />,
     children: [
-      {
+      { 
         path: '/',
-        element: <HomePage/>,
-        errorElement: <RouteError/>,
+        element: <HomePage />,
+        errorElement: <RouteError />
       },
-      {
+      { 
         path: '/projects',
-        element: <Projects/>,
-        errorElement: <RouteError/>,
+        element: <Projects />,
+        errorElement: <RouteError />
       },
-      {
+      { 
         path: '/experience',
-        element: <ExperienceDisplay/>,
-        errorElement: <RouteError/>,
+        element: <ExperienceDisplay />,
+        errorElement: <RouteError />
       },
-      {
+      { 
         path: '/skills',
-        element: <SkillsDisplay/>,
-        errorElement: <RouteError/>,
+        element: <SkillsDisplay />,
+        errorElement: <RouteError />
       },
-      {
+      { 
         path: '/contact',
-        element: <Contact/>,
-        errorElement: <RouteError/>,
+        element: <Contact />,
+        errorElement: <RouteError />
       },
-      {
+      { 
         path: '*',
-        element: <Error404/>,
-        errorElement: <RouteError/>,
+        element: <Error404 />,
+        errorElement: <RouteError />
       },
     ],
   },
   {
     path: '/photography',
-    element: <PhotoLayout/>,
-    errorElement: <RouteError/>,
+    element: <PhotoLayout />,
+    errorElement: <RouteError />,
     children: [],
-  }
-])
+  },
+];
 
-const App: React.FC = () => {
+const router = createBrowserRouter(routes);
+
+const App = () => {
   const [appState, setAppState] = useState<portfolioStateType>({ 
     power: false,
     theme: 'dark',

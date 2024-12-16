@@ -9,10 +9,10 @@ type ProjectListItemProps = {
   isSelected: boolean; 
   isVisible: boolean; 
   showItems: boolean;
-  onClick: () => void 
+  onClick: () => void;
 };
 
-const ProjectListItem: React.FC<ProjectListItemProps> = React.memo(({ project, isSelected, isVisible, showItems, onClick }) => {
+const ProjectListItem = React.memo(({ project, isSelected, isVisible, showItems, onClick }: ProjectListItemProps) => {
   const getChevronIcon = () => {
     if (!isSelected) return <FontAwesomeIcon icon={faAngleLeft as IconProp} />;
     if (isVisible) return <FontAwesomeIcon icon={faAngleDown as IconProp} />;

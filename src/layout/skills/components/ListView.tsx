@@ -5,7 +5,7 @@ import '../skills.css';
 import { useInView } from 'react-intersection-observer';
 import { useMemo } from 'react';
 
-const ListView: React.FC = () => {
+const ListView = () => {
   const { ref: visibilityRef, inView: isVisible } = useInView();
 
   const groupedSkills = useMemo(() => {

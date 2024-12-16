@@ -1,0 +1,85 @@
+.page-title__wrapper {
+  box-sizing: border-box;
+  padding-left: 2rem;
+  width: 100%;
+}
+.page-title {
+  all: inherit;
+  width: 100%;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  font-family: "alien-encounters-italic";
+}
+
+.reveal {
+  color: white;
+  animation: fade-in .8s ease-in;
+}
+
+/* 320 */
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 810px){ 
+}
+
+@media (min-width: 1280px){  
+  .page-title__wrapper {
+    box-sizing: border-box;
+    padding-left: 0;
+    width: 100%;
+  }
+  .page-title {
+    all: inherit;
+    width: fit-content !important;
+    font-size: 3rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 5rem;
+  }
+
+  .reveal {
+    color: transparent;
+    background: var(--reveal-background), var(--reveal-background);
+    background-size: 0 100%;
+    padding: 0 2rem;
+    transform: translatex(-2rem);
+    border-radius: 25px;
+    -webkit-background-clip: padding-box,text;
+            background-clip: padding-box,text;
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+    animation: 
+    phase-in .3s .2s both,
+    phase-out .3s .5s both;
+  }
+}
+
+@media (min-width: 1366px){
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
+}
+

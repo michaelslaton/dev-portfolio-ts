@@ -1,11 +1,11 @@
-import { NavigateFunction, Outlet, useNavigate } from 'react-router-dom';
-import Navphone from './navphone/Navphone';
-import { PortfolioState } from '../App';
 import { useContext, useEffect } from 'react';
-import './layout.css';
+import { NavigateFunction, Outlet, useNavigate } from 'react-router-dom';
+import { PortfolioState } from '../App';
+import Navphone from './navphone/Navphone';
 import PhoneMenuButton from './components/phone-menu-button/PhoneMenuButton';
+import './layout.css';
 
-const Layout: React.FC = () => {
+const Layout = () => {
   const context = useContext(PortfolioState);
   if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
   const [ appState ] = context;

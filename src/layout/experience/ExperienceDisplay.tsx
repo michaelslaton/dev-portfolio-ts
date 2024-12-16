@@ -4,31 +4,27 @@ import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleDown } from '@fortawesome/fontawesome-free-solid';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import Divider from '../components/divider/Divider';
 import Experience from './components/Experience';
 import ExperienceType from '../../types/experienceType';
 import experienceData from '../../data/experienceData';
 import './experience.css';
+import SectionHeader from '../components/section-header/SectionHeader';
 
 type ExperienceStateType = {
   selectedExperience: ExperienceType | undefined;
   showItems: boolean;
 };
 
-const ExperienceDisplay: React.FC = () => {
+const ExperienceDisplay = () => {
   const location: Location = useLocation();
   const queryParams: URLSearchParams = new URLSearchParams(location.search);
   const id: string | null = queryParams.get('id');
-
   const [experienceState, setExperienceState] = useState<ExperienceStateType>({
     selectedExperience: undefined,
     showItems: true,
   });
   const formattedExperienceList: ExperienceType[] = useMemo(() => [...experienceData].reverse(), [experienceData]);
-
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { ref: visibilityRef, inView: visible } = useInView();
-  if (visible && isVisible !== true) setIsVisible(true);
+  const { ref: visibilityRef, inView: isVisible } = useInView();
 
   useEffect(() => {
     if (id) {
@@ -58,13 +54,8 @@ const ExperienceDisplay: React.FC = () => {
   };
 
   return (
-    <div className='content__screen'>
-      <div className='page-title__wrapper'>
-        <h1 className='page-title reveal'>
-          Experience
-        </h1>
-      </div>
-      <Divider />
+    <div className='content__screen'>     
+      <SectionHeader title='Experience'/>
 
       <div className='experience-display__container'>
         <div

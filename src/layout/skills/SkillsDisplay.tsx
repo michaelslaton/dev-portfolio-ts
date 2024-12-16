@@ -1,23 +1,18 @@
-import Divider from '../components/divider/Divider';
 import { useState } from 'react';
 import { faList, faTable } from '@fortawesome/fontawesome-free-solid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import './skills.css';
-import ListView from './components/ListView';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CategoryView from './components/CateoryView';
+import ListView from './components/ListView';
+import './skills.css';
+import SectionHeader from '../components/section-header/SectionHeader';
 
-const SkillsDisplay: React.FC = () => {
+const SkillsDisplay = () => {
   const [ menuSelected, setMenuSelected ] = useState<number>(2);
   
   return (
     <div className='content__screen'>
-      <div className='page-title__wrapper'>
-        <h1 className='page-title reveal'>
-            Skills
-        </h1>
-      </div>
-      <Divider/>
+      <SectionHeader title='Skills'/>
 
       <div className='skills__menu'>
         <span

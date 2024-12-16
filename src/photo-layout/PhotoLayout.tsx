@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import './photolayout.css';
 import Navbar from './navbar/Navbar';
+import './photolayout.css';
 
-const PhotoLayout: React.FC = () => {
+const PhotoLayout = () => {
 
   return (
     <div

@@ -1,11 +1,11 @@
 import { FormEvent, useState } from 'react';
 import emailjs from 'emailjs-com';
-import Divider from '../components/divider/Divider';
+import SectionHeader from '../components/section-header/SectionHeader';
 import './contact.css';
 
-const Contact: React.FC = () => {
-  const [response, setResponse] = useState<string>('unsent');
-  const [isValid, setIsValid] = useState<boolean | null>(null);
+const Contact = () => {
+  const [ response, setResponse ] = useState<string>('unsent');
+  const [ isValid, setIsValid ] = useState<boolean | null>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
       e.currentTarget.reset();
   };
 
-  const responseDisplay = (): JSX.Element => {
+  const responseDisplay = () => {
     if ( response === 'error' ) return ( <div className='response response__error'>An error Occured</div> );
     else if ( response === 'sent' ) return ( <div className='response response__sent'>Message Sent</div> );
     else return ( <></> );
@@ -29,18 +29,12 @@ const Contact: React.FC = () => {
   const validateEmail = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const email: string = event.target.value;
     const regex: RegExp = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-
     setIsValid(regex.test(email));
   };
 
   return (
     <div className='content__screen'>
-      <div className='page-title__wrapper'>
-        <h1 className='page-title reveal'>
-            Contact
-        </h1>
-      </div>
-      <Divider/>
+      <SectionHeader title='Contact'/>
 
       <div className='contact-response-wrapper'>
         {responseDisplay()}

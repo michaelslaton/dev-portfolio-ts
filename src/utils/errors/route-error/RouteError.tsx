@@ -1,6 +1,6 @@
 import './routeError.css';
 
-const RouteError: React.FC = () => {
+const RouteError = () => {
 
   return (
     <>

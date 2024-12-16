@@ -5,8 +5,10 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { PortfolioState } from '../../../App';
 import './phoneMenuButton.css';
 
-const PhoneMenuButton: React.FC = () => {
-  const [ appState, setAppState ] = useContext(PortfolioState);
+const PhoneMenuButton = () => {
+  const context = useContext(PortfolioState);
+  if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
+  const [appState, setAppState] = context;
 
   const onClickHandler = (): void => {
     setAppState({
