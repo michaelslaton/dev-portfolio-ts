@@ -5,32 +5,15 @@ import NavPhoneMain from './components/NavPhoneMain';
 import NavPhoneOff from './components/NavPhoneOff';
 import './navphone.css';
 
-const Navphone: React.FC = () => {
+const Navphone = () => {
   const context = useContext(PortfolioState);
   if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
   const [ appState ] = context;
 
-//  Off State -------------------------------------->
-  if (!appState.power) return (
-    <NavPhoneOff/>
-  );
-
-// On State ---------------------------------------->
-  else if (appState.screen === 'main') return (
-    <>
-      <NavPhoneMain/>
-    </>
-  );
-
-// Tools State -------------------------------------->
-  else if (appState.screen === 'tools') return (
-    <>
-      <NavPhoneTools/>
-    </>
-  );
-
-// This should never happen :D ----------------------->
-  else return <></>;
+  if (!appState.power) return (<NavPhoneOff/>);
+  if (appState.screen === 'main') return (<NavPhoneMain/>);
+  if (appState.screen === 'tools') return (<NavPhoneTools/>);
+  return null;
 };
 
 export default Navphone;

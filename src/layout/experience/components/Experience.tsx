@@ -9,7 +9,7 @@ type ExperienceProps = {
   data: ExperienceType;
 }
 
-const Experience: React.FC<ExperienceProps> = ({ data }) => {
+const Experience = ({ data }: ExperienceProps) => {
 
   return (
     <div className='experience__wrapper'>

@@ -1,7 +1,7 @@
 import mike from '../../../../assets/imgs/mike.jpg';
 import './titleCard.css';
 
-const TitleCard: React.FC = () => {
+const TitleCard = () => {
 
   return (
     <div className='title-card__wrapper'>
@@ -14,7 +14,6 @@ const TitleCard: React.FC = () => {
           alt={`It's Me!`}
           className='title-card__img'
         />
-        
 
         <div className='title-card__back-line one'/>
         <div className='title-card__back-line two'/>

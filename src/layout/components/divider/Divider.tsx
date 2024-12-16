@@ -1,6 +1,6 @@
 import './divider.css';
 
-const Divider: React.FC = () => {
+const Divider = () => {
 
   return (
     <div className='divider-wrapper'>

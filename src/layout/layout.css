@@ -227,24 +227,6 @@ img {
   flex-direction: column;
 }
 
-.page-title__wrapper {
-  box-sizing: border-box;
-  padding-left: 2rem;
-  width: 100%;
-}
-.page-title {
-  all: inherit;
-  width: 100%;
-  font-size: 2.2rem;
-  margin-top: 1rem;
-  font-family: "alien-encounters-italic";
-}
-
-.reveal {
-  color: white;
-  animation: fade-in .8s ease-in;
-}
-
 .slide-out {
   transform: translateX(4%) !important;
   opacity: 0 !important;
@@ -262,7 +244,6 @@ img {
 .slide-up {
   transform: translatey(0%) !important;
   opacity: 1 !important;
-  /* transition: all .6s ease-in-out !important; */
   transition: opacity .6s ease-in-out, transform .6s ease-in-out !important;
   transition-delay: 1s !important;
 }
@@ -343,36 +324,6 @@ img {
 
     width: 100%;
     max-width: 100%;
-  }
-  
-  .page-title__wrapper {
-    box-sizing: border-box;
-    padding-left: 0;
-    width: 100%;
-  }
-  .page-title {
-    all: inherit;
-    width: fit-content !important;
-    font-size: 3rem;
-    margin: 0;
-    margin-top: 1rem;
-    margin-left: 5rem;
-  }
-
-  .reveal {
-    color: transparent;
-    background: var(--reveal-background), var(--reveal-background);
-    background-size: 0 100%;
-    padding: 0 2rem;
-    transform: translatex(-2rem);
-    border-radius: 25px;
-    -webkit-background-clip: padding-box,text;
-            background-clip: padding-box,text;
-    -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-    animation: 
-    phase-in .3s .2s both,
-    phase-out .3s .5s both;
   }
 }
 

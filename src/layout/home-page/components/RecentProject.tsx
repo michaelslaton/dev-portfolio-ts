@@ -8,7 +8,7 @@ import projectData from '../../../data/projectData';
 import skillsData from '../../../data/skillsData';
 import '../homePage.css';
 
-const RecentProject: React.FC = () => {
+const RecentProject = () => {
   const navigate: NavigateFunction = useNavigate();
   const mostRecentProject: ProjectType | undefined = [...projectData].pop();
   const { ref: visibilityRef, inView: isVisible } = useInView();

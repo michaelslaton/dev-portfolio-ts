@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-import Divider from '../components/divider/Divider';
 import Project from './components/Project';
 import ProjectListItem from './components/ProjectListItem';
 import ProjectType from '../../types/project.type';
 import projectData from '../../data/projectData';
 import './projects.css';
+import SectionHeader from '../components/section-header/SectionHeader';
 
-const ProjectsDisplay: React.FC = () => {
+const ProjectsDisplay = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const id = queryParams.get('id');
@@ -36,11 +36,7 @@ const ProjectsDisplay: React.FC = () => {
 
   return (
     <div className='content__screen'>
-      <div className='page-title__wrapper'>
-        <h1 className='page-title reveal'>Projects</h1>
-      </div>
-
-      <Divider />
+      <SectionHeader title='Projects'/>
 
       <div className='projects-display__container'>
         <div className='projects__list' ref={visibilityRef}>

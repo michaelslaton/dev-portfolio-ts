@@ -4,7 +4,7 @@ import Skill from '../../skills/components/Skill';
 import { default as skillsList } from '../../../data/skillsData';
 import '../homePage.css';
 
-const SkillsSummary: React.FC = () => {
+const SkillsSummary = () => {
   const navigate: NavigateFunction = useNavigate();
   const { ref: visibilityRef, inView: isVisible } = useInView();
 

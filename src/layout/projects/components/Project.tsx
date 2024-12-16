@@ -1,7 +1,6 @@
 import ProjectType from '../../../types/project.type';
 import skillsData from '../../../data/skillsData';
 import SkillType from '../../../types/skill.type';
-import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import '../projects.css';
 
@@ -9,16 +8,12 @@ type ProjectProps = {
   data: ProjectType;
 };
 
-const Project: React.FC<ProjectProps> = ({ data }) => {
-  const projectSkills: SkillType[] = [];
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { ref: visibilityRef, inView: visible } = useInView();
-  if (visible && isVisible !== true) setIsVisible(true);
+const Project = ({ data: { img, name, type, description, tech, screenShots, code, codeb, demo } }: ProjectProps) => {
+  const { ref: visibilityRef, inView: isVisible } = useInView();
 
-  for (let i = 0; i < data.tech.length; i++) {
-    const foundSkill: SkillType | undefined = skillsData.find((skill) => skill.id === data.tech[i]);
-    if (foundSkill) projectSkills.push(foundSkill!);
-  };
+  const projectSkills: SkillType[] = tech
+    .map((techId) => skillsData.find((skill) => skill.id === techId))
+    .filter(Boolean) as SkillType[];
 
   return (
     <div
@@ -28,14 +23,14 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
       ref={visibilityRef}
     >
       <div className='project__header'>
-        <img src={data.img} className='project__hero-img' />
+        <img src={img} className='project__hero-img' alt={`${name} hero image`}/>
         <div className='project__header-info'>
           <div className='project__header--title-wrapper'>
-            <h2>{data.name}</h2>
-            <h3>{data.type}</h3>
+            <h2>{name}</h2>
+            <h3>{type}</h3>
           </div>
 
-          <p>{data.description}</p>
+          <p>{description}</p>
 
           <div className='project__skills-list'>
             {projectSkills.map((skill) => (
@@ -51,47 +46,26 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
           </div>
 
           <div className='project__code-buttons'>
-            {data.codeb ? (
-              <>
-                <a
-                  href={data.code}
-                  className='project__code-buttons-item'
-                  target='_blank'
-                >
-                  F: Code
-                </a>
-                <a
-                  className='project__code-buttons-item'
-                  href={data.codeb}
-                  target='_blank'
-                >
-                  B: Code
-                </a>
-              </>
-            ) : (
-              <a
-                href={data.code}
-                className='project__code-buttons-item'
-                target='_blank'
-              >
-                Code
+            <a href={code} className='project__code-buttons-item' target='_blank'>
+              {codeb ? 'F: Code' : 'Code'}
+            </a>
+            {codeb && (
+              <a href={codeb} className='project__code-buttons-item' target='_blank'>
+                B: Code
               </a>
             )}
-            {data.demo && (
-              <a
-                href={data.demo}
-                className='project__code-buttons-item'
-                target='_blank'
-              >
+            {demo && (
+              <a href={demo} className='project__code-buttons-item' target='_blank'>
                 Demo
               </a>
             )}
           </div>
+
         </div>
       </div>
-      {data.screenShots.length ? (
+      {screenShots?.length > 0 && (
         <div className='project__screenshots'>
-          {data.screenShots.map((image, i) => (
+          {screenShots.map((image, i) => (
             <div key={i}>
               <img
                 className='project__screenshots-item'
@@ -101,8 +75,6 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
             </div>
           ))}
         </div>
-      ) : (
-        <></>
       )}
     </div>
   );
