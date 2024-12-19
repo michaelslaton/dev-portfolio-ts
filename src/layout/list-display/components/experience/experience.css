@@ -1,20 +1,9 @@
-.experience-display__container {
-  box-sizing: border-box;
-}
-
-.experience__list {
-  box-sizing: border-box;
-  height: max-content;
-  min-width: fit-content;
-  padding-top: .5rem;
-}
-
 .experience__wrapper {
   display: block;
 }
 
 .experience__main-block {
-  box-sizing: border-box;
+  
   background-color: var(--content-bg);
   display: grid;
   grid-template-rows: max-content 1fr;
@@ -31,7 +20,7 @@
 }
 
 .experience__header {
-  box-sizing: border-box;
+  
   width: 100%;
   padding: 0 .5rem;
 }
@@ -100,16 +89,6 @@
 }
 
 @media (min-width: 1280px){
-  .experience-display__container {
-    display: flex;
-  }
-
-  .experience__list {
-    height: 80vh;
-    padding-right: 0.5rem;
-    overflow-y: hidden;
-  }
-
   .experience__wrapper {
     margin: 1rem;
   }

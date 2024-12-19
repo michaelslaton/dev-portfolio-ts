@@ -22,7 +22,7 @@
 }
 
 .title-card__img-wrapper {
-  box-sizing: border-box;
+  
   width: 100%;
   position: relative;
   animation: title-card__slide-in .3s .1s both;
@@ -141,7 +141,7 @@
   }
 
   .title-card__img-wrapper {
-    box-sizing: border-box;
+    
     width: 100%;
     padding-left: 1rem;
   }
