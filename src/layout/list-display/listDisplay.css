@@ -1,0 +1,127 @@
+.menu__list {
+  height: max-content;
+  min-width: fit-content;
+  padding-top: .5rem;
+}
+
+.list-item {
+  padding: 0.3rem 2rem;
+  padding-left: .7rem;
+  text-wrap: nowrap;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    var(--list-item-bg) 30%,
+    rgba(2, 45, 82, 0) 100%
+  );
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.list-item:is(:hover, :focus) {
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.list-item.selected {
+  background: linear-gradient(
+    90deg,
+    var(--list-item-bg-light) 50%,
+    rgba(2, 45, 82, 0) 100%
+  );
+}
+.list-item.show {
+  display: block;
+}
+.list-item.no-show {
+  display: none;
+}
+.list-item__slide-up {
+  transform: translate(0%, 0);
+  opacity: 1;
+  transition: transform 1s ease-in-out, opacity .5s ease-in-out;
+}
+.list-item__slide-down {
+  transform: translate(-50vh, 0);
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity .5s ease-in-out;
+}
+
+.list-chevron {
+  aspect-ratio: 1/1;
+  display: inline-block;
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* 320 */
+
+@media (min-width: 375px){
+}
+
+@media (min-width: 390px){
+}
+
+@media (min-width: 414px){
+}
+
+@media (min-width: 768px){
+  .list-display__container {
+    display: flex;
+  }
+  .list-item {
+    padding: 0.5rem 2rem;
+    padding-left: .5rem;
+    margin-bottom: 0.5rem;
+  }
+  .list-item.show {
+    display: block;
+  }
+  .list-item.no-show {
+    display: block;
+  }
+  .list-item__slide-up {
+    transform: translate(0%, 0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  .list-item__slide-down {
+    transform: translate(0, 80vh);
+  }
+  
+  .list-chevron {
+    display: none;
+  }
+}
+
+@media (min-width: 810px){
+  .list-item {
+    padding-left: 1rem;
+  }
+  
+  .list {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 1280px){
+}
+
+@media (min-width: 1366px){
+  
+}
+
+@media (min-width: 1440px){
+}
+
+@media (min-width: 1536px){
+}
+
+@media (min-width: 1600px){
+}
+
+@media (min-width: 1920px){
+}
+
+@media (min-width: 2560px){
+}

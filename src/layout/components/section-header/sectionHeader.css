@@ -1,5 +1,5 @@
 .page-title__wrapper {
-  box-sizing: border-box;
+  
   padding-left: 2rem;
   width: 100%;
 }
@@ -35,7 +35,7 @@
 
 @media (min-width: 1280px){  
   .page-title__wrapper {
-    box-sizing: border-box;
+    
     padding-left: 0;
     width: 100%;
   }
@@ -50,6 +50,7 @@
 
   .reveal {
     color: transparent;
+    font-family: 'alien-encounters-italic';
     background: var(--reveal-background), var(--reveal-background);
     background-size: 0 100%;
     padding: 0 2rem;

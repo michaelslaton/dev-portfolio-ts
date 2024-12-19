@@ -1,42 +1,42 @@
-import months from '../../../data/months';
-import ExperienceType from '../../../types/experienceType';
+import months from '../../../../data/months';
+import ExperienceType from '../../../../types/experienceType';
 import { faAngleRight } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import '../experience.css';
+import './experience.css';
 
 type ExperienceProps = {
-  data: ExperienceType;
+  experience: ExperienceType;
 }
 
-const Experience = ({ data }: ExperienceProps) => {
+const Experience = ({experience: { img, name, role, startDate, endDate, description, bulletPoints }}: ExperienceProps) => {
 
   return (
     <div className='experience__wrapper'>
       <div className='experience__main-block'>
-        <img className='experience__img' src={data.img} alt={data.name}/>
+        <img className='experience__img' src={img} alt={name}/>
         <div className='experience__header'>
 
           <div className='experience__title'>
-            <h2>{data.name}</h2>
-            <h3>{data.role}</h3>
+            <h2>{name}</h2>
+            <h3>{role}</h3>
           </div>
 
           <div className='experience__dates'>
-            { data.endDate ?
-              <>{`( ${months[data.startDate.getMonth()]} ${data.startDate.getFullYear()}`} - {`${months[data.endDate.getMonth()]} ${data.endDate.getFullYear()} )`}</>
+            { endDate ?
+              <>{`( ${months[startDate.getMonth()]} ${startDate.getFullYear()}`} - {`${months[endDate.getMonth()]} ${endDate.getFullYear()} )`}</>
             :
-              <>{`( ${months[data.startDate.getMonth()]} ${data.startDate.getFullYear()}`} - {`Current )`}</>
+              <>{`( ${months[startDate.getMonth()]} ${startDate.getFullYear()}`} - {`Current )`}</>
             }
           </div>
 
           <div className='experience__description'>
-            {data.description}
+            {description}
           </div>
 
           <div className='experience__bullet-points-wrapper'>
-            {data.bulletPoints?.map((bullet)=>(
-              <div className='experience__bullet-point'>
+            {bulletPoints?.map((bullet,i)=>(
+              <div key={i} className='experience__bullet-point'>
                 <span className='experience__bullet-point--arrow'><FontAwesomeIcon icon={faAngleRight as IconProp}/></span> {bullet}
               </div>
             ))}

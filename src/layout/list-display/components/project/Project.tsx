@@ -1,14 +1,14 @@
-import ProjectType from '../../../types/project.type';
-import skillsData from '../../../data/skillsData';
-import SkillType from '../../../types/skill.type';
 import { useInView } from 'react-intersection-observer';
-import '../projects.css';
+import skillsData from '../../../../data/skillsData';
+import ProjectType from '../../../../types/project.type';
+import SkillType from '../../../../types/skill.type';
+import './project.css';
 
 type ProjectProps = {
-  data: ProjectType;
+  project: ProjectType;
 };
 
-const Project = ({ data: { img, name, type, description, tech, screenShots, code, codeb, demo } }: ProjectProps) => {
+const Project = ({ project: { img, name, type, description, tech, screenShots, code, codeb, demo } }: ProjectProps) => {
   const { ref: visibilityRef, inView: isVisible } = useInView();
 
   const projectSkills: SkillType[] = tech
