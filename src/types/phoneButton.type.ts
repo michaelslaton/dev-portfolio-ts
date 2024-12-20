@@ -1,5 +1,6 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+// import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { IconDefinition as IconDefinitionSolid } from '@fortawesome/fontawesome-free-solid';
+import { IconDefinition as IconDefinitionBrands } from '@fortawesome/free-brands-svg-icons';
 
 type phoneButtonType = {
   id: number;
@@ -7,7 +8,7 @@ type phoneButtonType = {
   iconColor: string;
   fontColor: string;
   linkType: string;
-  symbol: IconDefinition | IconDefinitionSolid;
+  symbol: IconDefinitionSolid | IconDefinitionBrands;
   url: string;
 };
 
