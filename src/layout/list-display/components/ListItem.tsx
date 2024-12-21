@@ -8,10 +8,11 @@ type ListItemProps = {
   isSelected: boolean; 
   isVisible: boolean; 
   showItems: boolean;
+  index: number;
   onClick: () => void;
 };
 
-const ListItem = React.memo(({ title, isSelected, isVisible, showItems, onClick }: ListItemProps) => {
+const ListItem = React.memo(({ title, isSelected, isVisible, showItems, index, onClick }: ListItemProps) => {
   const getChevronIcon = () => {
     if (!isSelected) return <FontAwesomeIcon icon={faAngleLeft as IconProp} />;
     if (isVisible) return <FontAwesomeIcon icon={faAngleDown as IconProp} />;
@@ -26,6 +27,7 @@ const ListItem = React.memo(({ title, isSelected, isVisible, showItems, onClick 
         ${isVisible ? 'list-item__slide-up' : 'list-item__slide-down'}
         ${ showItems || isSelected ? 'show' : 'no-show'}
       `}
+      style={{ transitionDelay: `${index * 125}ms` }}
     >
       <span className='list-chevron'>{getChevronIcon()}</span>
       {` ${title}`}

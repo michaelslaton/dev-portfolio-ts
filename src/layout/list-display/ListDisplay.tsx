@@ -51,7 +51,7 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
 
       <div className='list-display__container'>
         <div className='menu__list' ref={visibilityRef}>
-          { formattedList.map((item)=>(
+          { formattedList.map((item,i)=>(
             <ListItem
               key={item.id}
               title={item.name}
@@ -59,6 +59,7 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
               showItems={listState.showItems}
               isVisible={isVisible}
               onClick={() => handleClick(item)}
+              index={i}
             />
           ))}
         </div>

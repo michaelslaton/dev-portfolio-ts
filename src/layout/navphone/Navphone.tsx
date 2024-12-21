@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { PortfolioState } from '../../App';
-import NavPhoneTools from './components/NavPhoneTools';
+import NavPhoneTools from './components/NavPhoneTools/NavPhoneTools';
 import NavPhoneMain from './components/NavPhoneMain';
 import NavPhoneOff from './components/NavPhoneOff';
 import './navphone.css';

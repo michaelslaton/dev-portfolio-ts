@@ -8,8 +8,8 @@ import {
  } from '@fortawesome/fontawesome-free-solid';
  import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PortfolioState } from '../../../App';
-import '../navphone.css';
+import { PortfolioState } from '../../../../App';
+import './NavPhoneTools.css';
 
 const NavPhoneTools = () => {
   const context = useContext(PortfolioState);
@@ -31,14 +31,14 @@ const NavPhoneTools = () => {
    };
 
   return (
-<div className='phone-container phone-tools'>
+    <div className='phone-container phone-tools'>
       <div className='phone-top'>
         <div className='phone-top__icons'/>
         <div className='phone-top__middle-bar'/>
         <div className='phone-top__icons'/>
       </div>
+
       <div className='phone-buttons__container'>
-        
         <div className='phone-tools__grids-wrapper'>
           <div className='phone-tools__grid-4-4'>
 
