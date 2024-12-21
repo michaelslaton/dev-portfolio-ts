@@ -67,6 +67,7 @@
 }
 
 @media (min-width: 768px){
+
   .list-display__container {
     display: flex;
   }
@@ -83,10 +84,10 @@
   }
   .list-item__slide-up {
     transform: translate(0%, 0);
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transition: transform 1s ease-out, opacity 1s ease-out;
   }
   .list-item__slide-down {
-    transform: translate(0, 80vh);
+    transform: translate(0, 3rem);
   }
   
   .list-chevron {
