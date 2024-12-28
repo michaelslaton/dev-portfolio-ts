@@ -13,46 +13,19 @@ const RecentExperience = () => {
 
   return (
     <div
-      className='recent-project__wrapper'
+      className='widget'
       ref={visibilityRef}
     >
-      <h2
-        className={`widget-title ${isVisible ? 'slide-in' : 'slide-out'}`}
-      >
-        Recent Experience
-      </h2>
-
-      <div
-        className={`recent-project__img--wrapper ${isVisible ? 'slide-up' : 'slide-down'}`}
-        onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
-      >
-        <div className='recent-project__img--overlay'>
-          <h3 className='recent-project__title'>{mostRecentExperience!.role} at {mostRecentExperience!.name}</h3>
-          <h3 className='recent-experience__date'>
-            { mostRecentExperience!.endDate ?
-              <>{`( ${months[mostRecentExperience!.startDate.getMonth()]} ${mostRecentExperience!.startDate.getFullYear()}`} - {`${months[mostRecentExperience!.endDate.getMonth()]} ${mostRecentExperience!.endDate.getFullYear()} )`}</>
-            :
-              <>{`( ${months[mostRecentExperience!.startDate.getMonth()]} ${mostRecentExperience!.startDate.getFullYear()}`} - {`Current )`}</>
-            }            
-          </h3>
-          <p>{mostRecentExperience!.description}</p>
-        </div>
-
-        <img
-          src={mostRecentExperience?.img}
-          className='recent-project__img'
-          alt='Most Recent Project'
-        />
+      <div className='widget-info'>
+        <h2>
+          {mostRecentExperience?.name}
+        </h2>
+        <article>
+          {mostRecentExperience?.description}
+        </article>
       </div>
 
-      <div className={`see-more--wrapper ${isVisible ? 'slide-in' : 'slide-out'}`}>
-        <div
-          onClick={() => navigate('/experience')}
-          className='see-more'
-        >
-          Full Experience List...
-        </div>
-      </div>
+      <img className='widget-hero' src={mostRecentExperience?.img} alt={mostRecentExperience?.name}/>
     </div>
   );
 };

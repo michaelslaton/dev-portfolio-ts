@@ -9,27 +9,40 @@ const SkillsSummary = () => {
   const { ref: visibilityRef, inView: isVisible } = useInView();
 
   return (
-    <div className='skills-summary__wrapper' ref={visibilityRef}>
-      <h2
-        className={`widget-title ${isVisible ? 'slide-in' : 'slide-out'}`}
-      >
-        Skills Summary
-      </h2>
-
-      <div className={`skills-summary__list ${isVisible ? 'slide-up' : 'slide-down'}`}>
+    <div
+    className='widget'
+    ref={visibilityRef}
+    >
+      <div className='widget-info'>
+        <h2>
+          Skills
+        </h2>
+        <article>
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things 
+        Some stuff about things
+        </article>
+      </div>
+      <section>
         {skillsList.map((skill) => {
           if (skill.homePage) return <Skill key={skill.id} data={skill} />;
         })}
-      </div>
-      
-      <div className={`see-more--wrapper ${isVisible ? 'slide-in' : 'slide-out'}`}>
-        <div
-          onClick={() => navigate('/skills')}
-          className='see-more'
-        >
-          See more...
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
