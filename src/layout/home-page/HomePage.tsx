@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { PortfolioState } from '../../App';
-import SkillsSummary from './components/SkillsSummary';
-import RecentProject from './components/RecentProject';
-import RecentExperience from './components/RecentExperience';
 import TitleCard from './components/TitleCard/TitleCard';
 import './homePage.css';
+import RecentExperience from './components/RecentExperience';
+import SkillsSummary from './components/SkillsSummary';
+import RecentProject from './components/RecentProject';
 
 const HomePage = () => {
   const context = useContext(PortfolioState);
@@ -26,8 +26,8 @@ const HomePage = () => {
       </article>
 
       <section className='widgets-wrapper'>
-        <RecentExperience/>
         <SkillsSummary/>
+        <RecentExperience/>
         <RecentProject/>
       </section>
     </div>

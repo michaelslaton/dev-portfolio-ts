@@ -32,37 +32,20 @@ const RecentProject = () => {
   );
 
   return (
-    <div className='recent-project__wrapper' ref={visibilityRef}>
-      <h2 className={`widget-title ${isVisible ? 'slide-in' : 'slide-out'}`}>
-        Recent Project
-      </h2>
-
-      <div
-        className={`recent-project__img--wrapper ${
-          isVisible ? 'slide-up' : 'slide-down'
-        }`}
-        onClick={() => navigate(`/projects?id=${mostRecentProject?.id}`)}
-      >
-        <div className='recent-project__img--overlay'>
-          <h3 className='recent-project__title'>{mostRecentProject!.name}</h3>
-          <p>{mostRecentProject!.description}</p>
-          {renderSkillsList(projectSkills)}
-        </div>
-
-        <img
-          src={mostRecentProject?.img}
-          className='recent-project__img'
-          alt='Most Recent Project'
-        />
+    <div
+      className='widget'
+      ref={visibilityRef}
+    >
+      <div className='widget-info'>
+        <h2>
+          {mostRecentProject?.name}
+        </h2>
+        <article>
+          {mostRecentProject?.description}
+        </article>
       </div>
 
-      <div
-        className={`see-more--wrapper ${isVisible ? 'slide-in' : 'slide-out'}`}
-      >
-        <div onClick={() => navigate('/projects')} className='see-more'>
-          More Projects...
-        </div>
-      </div>
+      <img className='widget-hero' src={mostRecentProject?.img} alt={mostRecentProject?.name}/>
     </div>
   );
 };
