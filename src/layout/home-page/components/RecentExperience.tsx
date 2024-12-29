@@ -11,18 +11,38 @@ const RecentExperience = () => {
   const mostRecentExperience: ExperienceType | undefined = [...experienceData].pop();
   const { ref: visibilityRef, inView: isVisible } = useInView();
 
+  const createDateString = ({ startDate, endDate }: ExperienceType): string => {
+    const formatDate = (date?: Date): string => 
+      date ? `${months[date.getMonth()]} ${date.getFullYear()}` : 'Current';
+  
+    const startDateString = formatDate(startDate);
+    const endDateString = formatDate(endDate);
+  
+    return `( ${startDateString} - ${endDateString} )`;
+  };
+
   return (
     <div
       className='widget'
       ref={visibilityRef}
+      onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
     >
       <div className='widget-info'>
         <h2>
           {mostRecentExperience?.name}
         </h2>
+
+        <div className='widget__experience-dates'>
+          {mostRecentExperience && createDateString(mostRecentExperience)}
+        </div>
+
         <article>
           {mostRecentExperience?.description}
         </article>
+
+        <div className='widget__click-for-more'>
+          Click for more!
+        </div>
       </div>
 
       <img className='widget-hero' src={mostRecentExperience?.img} alt={mostRecentExperience?.name}/>

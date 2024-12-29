@@ -19,6 +19,7 @@
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   overflow: hidden;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .widget:nth-child(even) {
   flex-direction: row-reverse;
@@ -39,10 +40,25 @@
   margin: 0 1rem;
 }
 
+.widget-info > h2 {
+  margin: 0;
+}
+
+.widget__click-for-more {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
 .widget > section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.widget__experience-dates {
+  font-size: .9rem;
+  margin-bottom: 1rem;
 }
 
 /* 320 */
