@@ -25,14 +25,13 @@ const RecentExperience = () => {
     <div
       className='widget'
       ref={visibilityRef}
-      onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
     >
       <div className='widget-info'>
         <h2>
           {mostRecentExperience?.name}
         </h2>
 
-        <div className='widget__experience-dates'>
+        <div className='widget__sub-title'>
           {mostRecentExperience && createDateString(mostRecentExperience)}
         </div>
 
@@ -40,7 +39,10 @@ const RecentExperience = () => {
           {mostRecentExperience?.description}
         </article>
 
-        <div className='widget__click-for-more'>
+        <div
+          className='widget__click-for-more'
+          onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
+        >
           Click for more!
         </div>
       </div>

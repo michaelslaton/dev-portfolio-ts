@@ -40,9 +40,21 @@ const RecentProject = () => {
         <h2>
           {mostRecentProject?.name}
         </h2>
+
+        <div className='widget__sub-title'>
+          {mostRecentProject?.type}
+        </div>
+
         <article>
           {mostRecentProject?.description}
         </article>
+
+        <div
+          className='widget__click-for-more'
+          onClick={()=> navigate(`/projects?id=${mostRecentProject?.id}`)}
+        >
+          Click for more!
+        </div>
       </div>
 
       <img className='widget-hero' src={mostRecentProject?.img} alt={mostRecentProject?.name}/>
