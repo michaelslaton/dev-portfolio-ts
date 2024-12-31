@@ -19,7 +19,6 @@
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   overflow: hidden;
   margin-bottom: 1rem;
-  cursor: pointer;
 }
 .widget:nth-child(even) {
   flex-direction: row-reverse;
@@ -38,16 +37,25 @@
 
 .widget-info {
   margin: 0 1rem;
+  padding: .5rem;
 }
 
 .widget-info > h2 {
+  font-size: 2rem;
   margin: 0;
 }
 
 .widget__click-for-more {
   margin-top: 1rem;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom .2s ease-out;
+}
+.widget__click-for-more:hover {
+  border-bottom: 1px solid var(--purple);
 }
 
 .widget > section {
@@ -56,7 +64,7 @@
   justify-content: center;
 }
 
-.widget__experience-dates {
+.widget__sub-title {
   font-size: .9rem;
   margin-bottom: 1rem;
 }

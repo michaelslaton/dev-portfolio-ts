@@ -37,6 +37,13 @@ const SkillsSummary = () => {
         Some stuff about things 
         Some stuff about things
         </article>
+
+        <div
+          className='widget__click-for-more'
+          onClick={()=> navigate(`/skills`)}
+        >
+          Click for more!
+        </div>
       </div>
       <section>
         {skillsList.map((skill) => {
