@@ -54,6 +54,7 @@
   border-radius: 5px;
   color: #ffffff;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 .project__skills-item:is(:active, :hover) {
   border-color: #ffffff;

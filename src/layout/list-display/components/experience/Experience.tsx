@@ -22,7 +22,7 @@ const Experience = ({experience: { img, name, role, startDate, endDate, descript
             <h3>{role}</h3>
           </div>
 
-          <div className='experience__dates'>
+          <div className='experience__dates italic'>
             { endDate ?
               <>{`( ${months[startDate.getMonth()]} ${startDate.getFullYear()}`} - {`${months[endDate.getMonth()]} ${endDate.getFullYear()} )`}</>
             :
