@@ -21,12 +21,16 @@ const RecentProject = () => {
   }, [mostRecentProject]);
 
   const renderSkillsList = (skills: SkillType[]) => (
-    <section className='recent-project__skills-list'>
-      {`Tech: `}
+    <section className='widget__skills-list'>
       {skills.map((skill) => (
-        <div key={skill.id} className='recent-project__skills-list--item'>
-          {`${skill.name}, `}
-        </div>
+        <a
+          key={skill.id}
+          className='project__skills-item'
+          href={skill.url}
+          target='_blank'
+        >
+          {`${skill.name}`}
+        </a>
       ))}
     </section>
   );
@@ -38,16 +42,20 @@ const RecentProject = () => {
     >
       <div className='widget-info'>
         <h2>
-          {mostRecentProject?.name}
+          Recent Project: <span className='italic'>{mostRecentProject?.name}</span>
         </h2>
 
-        <div className='widget__sub-title'>
+        <div className='widget__sub-title italic'>
           {mostRecentProject?.type}
         </div>
 
         <article>
           {mostRecentProject?.description}
         </article>
+
+        <div>
+          {renderSkillsList(projectSkills)}
+        </div>
 
         <div
           className='widget__click-for-more'

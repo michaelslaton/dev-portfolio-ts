@@ -151,6 +151,10 @@ p, li, figcaption {
   max-width: 65ch;
 }
 
+.italic {
+  font-style: italic;
+}
+
 abbr {
   border-bottom: none !important;
   text-decoration: none !important;

@@ -28,10 +28,10 @@ const RecentExperience = () => {
     >
       <div className='widget-info'>
         <h2>
-          {mostRecentExperience?.name}
+          Recent Experience: <span className='italic'>{mostRecentExperience?.name}</span>
         </h2>
 
-        <div className='widget__sub-title'>
+        <div className='widget__sub-title italic'>
           {mostRecentExperience && createDateString(mostRecentExperience)}
         </div>
 

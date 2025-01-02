@@ -15,7 +15,7 @@ const SkillsSummary = () => {
     >
       <div className='widget-info'>
         <h2>
-          Skills
+          Top Skills
         </h2>
         <article>
         Some stuff about things 
