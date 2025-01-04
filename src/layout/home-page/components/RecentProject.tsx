@@ -1,5 +1,5 @@
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useNavigate, type NavigateFunction } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import ProjectType from '../../../types/project.type';
@@ -11,7 +11,9 @@ import '../homePage.css';
 const RecentProject = () => {
   const navigate: NavigateFunction = useNavigate();
   const mostRecentProject: ProjectType | undefined = [...projectData].pop();
+  const [hasAnimated, setHasAnimated] = useState<boolean>(false);
   const { ref: visibilityRef, inView: isVisible } = useInView();
+  if( isVisible && !hasAnimated) setHasAnimated(true);
 
   const projectSkills = useMemo(() => {
     if (!mostRecentProject?.tech) return [];
@@ -37,7 +39,7 @@ const RecentProject = () => {
 
   return (
     <div
-      className='widget'
+    className={`widget ${hasAnimated ? 'widget__slide-in' : 'widget__slide-out'}`}
       ref={visibilityRef}
     >
       <div className='widget-info'>
@@ -58,7 +60,7 @@ const RecentProject = () => {
         </div>
 
         <div
-          className='widget__click-for-more'
+          className='widget__click-for-more italic'
           onClick={()=> navigate(`/projects?id=${mostRecentProject?.id}`)}
         >
           Click for more!
