@@ -37,6 +37,7 @@ const NavPhoneMain = () => {
           <FontAwesomeIcon data-testid='phone battery' className='phone-top__battery' icon={faBatteryThreeQuarters as IconProp}/>
         </div>
       </div>
+
       <div className='phone-buttons__container'>
         <div className='phone-buttons__grid'>
           {phoneButtonsData.mainButtons.map((button)=>(
@@ -47,6 +48,7 @@ const NavPhoneMain = () => {
             />
           ))}
         </div>
+        
         <div className='phone-buttons__bottom-bar'>
             {phoneButtonsData.bottomBar.map((button)=>(
               <PhoneButton
