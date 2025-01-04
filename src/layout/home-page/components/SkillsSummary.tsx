@@ -3,14 +3,17 @@ import { NavigateFunction, useNavigate } from 'react-router-dom';
 import Skill from '../../skills/components/Skill';
 import { default as skillsList } from '../../../data/skillsData';
 import '../homePage.css';
+import { useState } from 'react';
 
 const SkillsSummary = () => {
   const navigate: NavigateFunction = useNavigate();
+  const [hasAnimated, setHasAnimated] = useState<boolean>(false);
   const { ref: visibilityRef, inView: isVisible } = useInView();
+  if( isVisible && !hasAnimated) setHasAnimated(true);
 
   return (
     <div
-    className='widget'
+    className={`widget ${hasAnimated ? 'widget__slide-in' : 'widget__slide-out'}`}
     ref={visibilityRef}
     >
       <div className='widget-info'>
@@ -39,7 +42,7 @@ const SkillsSummary = () => {
         </article>
 
         <div
-          className='widget__click-for-more'
+          className='widget__click-for-more italic'
           onClick={()=> navigate(`/skills`)}
         >
           Click for more!

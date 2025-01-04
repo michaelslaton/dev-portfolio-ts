@@ -5,11 +5,14 @@ import experienceData from '../../../data/experienceData';
 import ExperienceType from '../../../types/experienceType';
 import months from '../../../data/months';
 import '../homePage.css';
+import { useState } from 'react';
 
 const RecentExperience = () => {
   const navigate: NavigateFunction = useNavigate();
   const mostRecentExperience: ExperienceType | undefined = [...experienceData].pop();
+  const [hasAnimated, setHasAnimated] = useState<boolean>(false);
   const { ref: visibilityRef, inView: isVisible } = useInView();
+  if( isVisible && !hasAnimated) setHasAnimated(true);
 
   const createDateString = ({ startDate, endDate }: ExperienceType): string => {
     const formatDate = (date?: Date): string => 
@@ -23,7 +26,7 @@ const RecentExperience = () => {
 
   return (
     <div
-      className='widget'
+    className={`widget ${hasAnimated ? 'widget__slide-in' : 'widget__slide-out'}`}
       ref={visibilityRef}
     >
       <div className='widget-info'>
@@ -40,7 +43,7 @@ const RecentExperience = () => {
         </article>
 
         <div
-          className='widget__click-for-more'
+          className='widget__click-for-more italic'
           onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
         >
           Click for more!

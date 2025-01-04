@@ -19,11 +19,23 @@
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   overflow: hidden;
   margin-bottom: 1rem;
+  transition: transform 0.5s ease-in-out; /* Add transition for smooth movement */
 }
 .widget:nth-child(even) {
   flex-direction: row-reverse;
   margin-left: auto;
   border-radius: var(--border-radius) 0 0 var(--border-radius);
+  transition: transform 0.5s ease-in-out; /* Add transition here as well */
+}
+
+.widget__slide-in {
+  transform: translateX(0) !important;
+}
+.widget__slide-out {
+  transform: translateX(-100%);
+}
+.widget__slide-out:nth-child(even)  {
+  transform: translateX(100%);
 }
 
 .widget-hero {
@@ -47,7 +59,6 @@
 
 .widget__click-for-more {
   margin-top: 1rem;
-  font-style: italic;
   font-size: 1.3rem;
   cursor: pointer;
   width: fit-content;
