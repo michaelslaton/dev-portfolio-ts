@@ -6,11 +6,11 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
   mainButtons: [
     {
       id: 1,
-      name: 'Experience',
-      iconColor: '#4376f7',
-      fontColor: 'white',
-      symbol: faChalkboard,
-      url: '/experience',
+      name: 'Projects',
+      iconColor: '#f5c84c',
+      fontColor: 'black',
+      symbol: faProjectDiagram,
+      url: '/projects',
       linkType: 'local',
     },
     {
@@ -24,11 +24,11 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     },
     {
       id: 3,
-      name: 'Projects',
-      iconColor: '#f5c84c',
-      fontColor: 'black',
-      symbol: faProjectDiagram,
-      url: '/projects',
+      name: 'Experience',
+      iconColor: '#4376f7',
+      fontColor: 'white',
+      symbol: faChalkboard,
+      url: '/experience',
       linkType: 'local',
     },
     {

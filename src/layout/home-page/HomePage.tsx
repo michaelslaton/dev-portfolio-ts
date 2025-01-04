@@ -11,7 +11,7 @@ const HomePage = () => {
   if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
   const [ appState ] = context;
 
-  if (!appState.power) return ( <></> );
+  if (!appState.power) return null;
 
   return (
     <div className='content__screen'>
