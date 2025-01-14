@@ -1,8 +1,6 @@
 .home-page__summary {
   width: 90%;
-  margin: 0 auto;
-  margin-top: 1.5rem;
-  margin-bottom: .5rem;
+  margin: 4rem auto;
 }
 
 .widgets-wrapper {
@@ -18,7 +16,7 @@
   width: 100%;
   background-color: rgba(46, 20, 141, 0.5);
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -33,6 +31,7 @@
 }
 
 .widget-hero {
+  display: block;
   margin: 0;
   padding: 0;
   border-radius: var(--border-radius);
@@ -43,6 +42,7 @@
 .widget-info {
   margin: 0 1rem;
   padding: .5rem;
+  align-self: start;
 }
 
 .widget-info > h2 {
@@ -99,8 +99,6 @@
 @media (min-width: 1280px){
   .home-page__summary {
     width: 70%;
-    margin-top: .5rem;
-    margin-bottom: 1rem;
   }
 
   .widget {
