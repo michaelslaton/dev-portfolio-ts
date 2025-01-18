@@ -18,7 +18,7 @@
   color: var(--font-color);
   font-family: alien-encounters-italic;
   font-size: 2rem;
-  animation: title-card__slide-in .3s .3s both;
+  /* animation: title-card__slide-in .3s .3s both; */
 }
 
 .title-card__img-wrapper {

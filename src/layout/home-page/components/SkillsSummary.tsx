@@ -21,24 +21,7 @@ const SkillsSummary = () => {
           Top Skills
         </h2>
         <article>
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things 
-        Some stuff about things
+          A selection of the skills I consider my strongest and most enjoyable to work with.
         </article>
 
         <div
