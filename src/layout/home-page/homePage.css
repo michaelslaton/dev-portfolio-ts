@@ -130,6 +130,7 @@
   .widget > section {
     flex-wrap: nowrap;
     justify-content: center;
+    width : 85%;
   }
 }
 
