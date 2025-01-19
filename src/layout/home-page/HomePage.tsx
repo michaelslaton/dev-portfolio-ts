@@ -27,8 +27,8 @@ const HomePage = () => {
 
       <section className='widgets-wrapper'>
         <SkillsSummary/>
-        <RecentProject/>
         <RecentExperience/>
+        <RecentProject/>
       </section>
     </div>
   );
