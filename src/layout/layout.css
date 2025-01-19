@@ -44,6 +44,7 @@
   );
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
+  --div-background: rgba(46, 20, 141, 0.5);
   --divider-background: linear-gradient(-45deg,
     #F600FF,
     var(--purple),
@@ -51,6 +52,7 @@
     #00B9FF
   );
   --font-color: #ffffff;
+  --font-title-color: #ffffff;
   --input-background: #6900BA;
   --input-border-color: black;
   --input-highlight-border-color: white;
@@ -64,22 +66,6 @@
   --border-radius: 1rem;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: .5rem;
-}
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, .3);
-  border-radius: var(--border-radius);
-}
-::-webkit-scrollbar-thumb {
-  border-radius: var(--border-radius);
-  background: var(--purple);
-}
-[color-scheme='light'] ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, .5);
-}
-
 /* Themes */
 [color-scheme='light'] {
   --backdrops-sliders: linear-gradient(-60deg,
@@ -90,11 +76,12 @@
   );
   --content-bg: #9c97c7;
   --content-screen-bg: rgba(202, 202, 202, .6);
+  --div-background: rgba(121, 121, 121, 0.5);
   --divider-background: linear-gradient(-45deg,
     white,
     rgb(0, 0, 0)
   );
-  --font-color: #382847;
+  --font-color: #150d1d;
   --input-background: #e2d1ee;
   --input-highlight-border-color: var(--purple);
   --list-item-bg: #6d4e9f;
@@ -111,6 +98,7 @@
   );
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
+  --div-background: rgba(46, 20, 141, 0.5);
   --divider-background: linear-gradient(-45deg,
     #F600FF,
     var(--purple),
@@ -123,7 +111,22 @@
   --list-item-bg: #4e1b8d;
   --list-item-bg-light: var(--purple);
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
-  
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .3);
+  border-radius: var(--border-radius);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius);
+  background: var(--purple);
+}
+[color-scheme='light'] ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .5);
 }
 /*  */
 
