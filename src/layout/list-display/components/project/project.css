@@ -53,7 +53,7 @@
   display: inline-block;
   margin-right: .5em;
   margin-bottom: 0.7rem;
-  background-color: var(--list-item-bg-light);
+  background-color: var(--tech-listing);
   padding: 0.2em 0.5rem;
   border-radius: 5px;
   color: #ffffff;
