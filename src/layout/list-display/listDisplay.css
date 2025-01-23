@@ -27,7 +27,7 @@
 .list-item.selected {
   background: linear-gradient(
     90deg,
-    var(--list-item-bg-light) 50%,
+    var(--list-item-bg-selected) 50%,
     rgba(2, 45, 82, 0) 100%
   );
 }

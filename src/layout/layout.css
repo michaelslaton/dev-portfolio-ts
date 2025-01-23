@@ -42,6 +42,7 @@
     rgba(31,0,56,1) 56%,
     rgba(0,0,0,1) 10%
   );
+  --bullet-point-arrow: var(--purple);
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
   --div-background: rgba(46, 20, 141, 0.5);
@@ -57,10 +58,11 @@
   --input-border-color: black;
   --input-highlight-border-color: white;
   --list-item-bg: #552a8b;
-  --list-item-bg-light: var(--purple);
+  --list-item-bg-selected: var(--purple);
   --phone-shadow: 1rem 1rem .3rem rgba(0, 0, 0, .5);
   --purple: #8d00ff;
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
+  --tech-listing: var(--purple);
 
   /* Values */
   --border-radius: 1rem;
@@ -81,12 +83,14 @@
     white,
     rgb(0, 0, 0)
   );
+  --bullet-point-arrow: #ffffff;
   --font-color: #150d1d;
   --input-background: #e2d1ee;
   --input-highlight-border-color: var(--purple);
-  --list-item-bg: #6d4e9f;
-  --list-item-bg-light: #491881;
+  --list-item-bg: #616161;
+  --list-item-bg-selected: #252525;
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
+  --tech-listing: black;
 }
 
 [color-scheme='dark'] {
@@ -96,6 +100,7 @@
     rgba(31,0,56,1) 56%,
     rgba(0,0,0,1) 10%
   );
+  --bullet-point-arrow: var(--purple);
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
   --div-background: rgba(46, 20, 141, 0.5);
@@ -109,8 +114,9 @@
   --input-background: #6900BA;
   --input-highlight-border-color: white;
   --list-item-bg: #4e1b8d;
-  --list-item-bg-light: var(--purple);
+  --list-item-bg-selected: var(--purple);
   --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
+  --tech-listing: var(--purple);
 }
 
 /* Scrollbar */
