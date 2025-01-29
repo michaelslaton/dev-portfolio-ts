@@ -66,6 +66,10 @@
 
   /* Values */
   --border-radius: 1rem;
+
+  /* Images */
+  --phone-bg: url(../assets/imgs/phone/phoneBg.jpg);
+  --phone-bg-blur: url(../assets/imgs/phone/phoneBgBlur.jpg);
 }
 
 /* Themes */
@@ -89,7 +93,6 @@
   --input-highlight-border-color: var(--purple);
   --list-item-bg: #616161;
   --list-item-bg-selected: #252525;
-  --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
   --tech-listing: black;
 }
 
@@ -115,7 +118,6 @@
   --input-highlight-border-color: white;
   --list-item-bg: #4e1b8d;
   --list-item-bg-selected: var(--purple);
-  --reveal-background: no-repeat linear-gradient(white 0 0) 0 0;
   --tech-listing: var(--purple);
 }
 
@@ -144,7 +146,7 @@ html, body {
 body {
   background-color: var(--backdrop);
   color: var(--font-color);
-  font-family: 'sf-regular', sans-serif;
+  font-family: 'sf-regular', Arial, sans-serif;
 }
 
 * {
@@ -213,7 +215,6 @@ img {
 }
 
 .content {
-  box-sizing:border-box;
   background: var(--content-screen-bg);
   width: 100%;
   height: 100vh;
@@ -222,7 +223,6 @@ img {
   backdrop-filter: blur(5px);
 }
 .content-off {
-  box-sizing:border-box;
   width: 75%;
   height: 90vh;
   margin: auto;

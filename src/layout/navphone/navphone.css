@@ -9,7 +9,7 @@
   z-index: 20;
 }
 .phone-container.phone-main {
-  background-image: url(../../assets/imgs/phone/phoneBg.jpg);
+  background-image: var(--phone-bg);
 }
 .phone-container.phone-off {
   background-color: var(--content-bg);
@@ -129,9 +129,7 @@
 .theme-button {
   transition: .2s all ease-in-out;
 }
-/* .theme-button.dark {
-  color: white;
-} */
+
 .theme-button.light {
   background-color: rgb(255, 255, 255);
   color: rgb(42, 39, 255);

@@ -114,8 +114,8 @@
   cursor: pointer;
 }
 .project__screenshots-item:is(:hover, :active) {
-  scale: 1.03;
-  transition: scale 0.1s ease-in-out;
+  transform: scale(1.03);
+  transition: transform 0.1s ease-in-out;
 }
 
 /* 320 */
@@ -147,7 +147,7 @@
 }
 
 @media (min-width: 810px){ 
-  .projects__list-item {
+  .project__list-item {
     padding-left: 1rem;
   }
   
