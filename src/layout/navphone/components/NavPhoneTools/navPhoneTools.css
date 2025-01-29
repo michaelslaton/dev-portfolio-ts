@@ -1,6 +1,6 @@
 
 .phone-container.phone-tools {
-  background-image: url(../../../../assets/imgs/phone/phoneBgBlur.jpg);
+  background-image: var(--phone-bg-blur);
 }
 
 .phone-tools__grids-wrapper {
