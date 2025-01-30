@@ -27,13 +27,7 @@ const SkillsDisplay = () => {
         >
           <FontAwesomeIcon icon={faTable as IconProp}/>
         </span>
-        <span
-          className='skills__menu--item'
-          onClick={()=> setMenuSelected(3)}
-        >
-          <FontAwesomeIcon icon={faList as IconProp}/>
-        </span>
-        <div className={`skills__menu--highlight ${menuSelected === 1 && 'left'} ${menuSelected === 2 && 'center'} ${menuSelected === 3 && 'right'}`}/>
+        <div className={`skills__menu--highlight ${menuSelected === 1 && 'left'} ${menuSelected === 2 && 'right'}`}/>
       </div>
                 
       <div className='skills__display'>
@@ -42,9 +36,6 @@ const SkillsDisplay = () => {
         }
         { menuSelected === 2 &&
           <CategoryView/>
-        }
-        { menuSelected === 3 &&
-          <ListView/>
         }
       </div>
 
