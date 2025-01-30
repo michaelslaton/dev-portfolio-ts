@@ -6,7 +6,7 @@
 
 .skills__menu {
   background-color: var(--content-bg);
-  width: 9rem;
+  width: 4.5rem;
   height: 1.5rem;
   position: relative;
   display: flex;
@@ -30,7 +30,7 @@
   height: 1.5rem;
   border-radius: var(--border-radius);
   transform: translateX(-50%);
-  transition: left .2s ease-in-out, width .2s ease-in-out;
+  transition: left .1s ease-in-out, width .2s ease-in-out;
   padding: .2rem .3rem;
   width: 2.5rem;
 }
@@ -38,16 +38,12 @@
   background: black;
 }
 .skills__menu--highlight.left {
-  left: 1rem;
+  left: 23%;
 }
-
-.skills__menu--highlight.center {
-  left: 50%;
-}
-
 .skills__menu--highlight.right {
-  left: 7.8rem;
+  left: 77%;
 }
+
 .skills__menu--item {
   cursor: pointer;
   z-index: 2;

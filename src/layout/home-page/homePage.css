@@ -33,7 +33,6 @@
 
 .widget-hero {
   display: block;
-  margin: 0;
   padding: 0;
   border-radius: var(--border-radius);
   width: 90%;
@@ -68,8 +67,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1rem;
-  padding-bottom: 0;
+  padding: 1rem 1rem 0;
 }
 
 .widget__sub-title {
