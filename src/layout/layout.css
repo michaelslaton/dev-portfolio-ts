@@ -45,7 +45,7 @@
   --bullet-point-arrow: var(--purple);
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
-  --div-background: rgba(46, 20, 141, 0.5);
+  --div-bg: rgba(46, 20, 141, 0.5);
   --divider-background: linear-gradient(-45deg,
     #F600FF,
     var(--purple),
@@ -82,7 +82,7 @@
   );
   --content-bg: #9c97c7;
   --content-screen-bg: rgba(202, 202, 202, .6);
-  --div-background: rgba(121, 121, 121, 0.5);
+  --div-bg: rgba(121, 121, 121, 0.5);
   --divider-background: linear-gradient(-45deg,
     white,
     rgb(0, 0, 0)
@@ -106,7 +106,7 @@
   --bullet-point-arrow: var(--purple);
   --content-bg: rgba(17, 16, 26, .7);
   --content-screen-bg: rgba(27, 24, 71, .6);
-  --div-background: rgba(46, 20, 141, 0.5);
+  --div-bg: rgba(46, 20, 141, 0.5);
   --divider-background: linear-gradient(-45deg,
     #F600FF,
     var(--purple),
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-p, li, figcaption, article {
+p, li, figcaption {
   text-wrap: pretty;
   max-width: 65ch;
 }

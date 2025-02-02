@@ -19,23 +19,25 @@ const SkillsDisplay = () => {
           className='skills__menu--item'
           onClick={()=> setMenuSelected(1)}
         >
-          <FontAwesomeIcon icon={faList as IconProp}/>
+          <FontAwesomeIcon icon={faTable as IconProp}/>
         </span>
+
         <span
           className='skills__menu--item'
           onClick={()=> setMenuSelected(2)}
         >
-          <FontAwesomeIcon icon={faTable as IconProp}/>
+          <FontAwesomeIcon icon={faList as IconProp}/>
         </span>
+
         <div className={`skills__menu--highlight ${menuSelected === 1 && 'left'} ${menuSelected === 2 && 'right'}`}/>
       </div>
                 
       <div className='skills__display'>
         { menuSelected === 1 &&
-          <ListView/>
+          <CategoryView/>
         }
         { menuSelected === 2 &&
-          <CategoryView/>
+          <ListView/>
         }
       </div>
 

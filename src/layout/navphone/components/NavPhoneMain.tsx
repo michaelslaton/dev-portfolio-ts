@@ -50,14 +50,14 @@ const NavPhoneMain = () => {
         </div>
         
         <div className='phone-buttons__bottom-bar'>
-            {phoneButtonsData.bottomBar.map((button)=>(
-              <PhoneButton
-                key={button.id}
-                data={button}
-                position='bottom'
-              />
-            ))}
-          </div>
+          {phoneButtonsData.bottomBar.map((button)=>(
+            <PhoneButton
+              key={button.id}
+              data={button}
+              position='bottom'
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
