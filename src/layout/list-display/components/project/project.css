@@ -7,7 +7,7 @@
 
 .project__header {
   padding: .5rem;
-  background-color: var(--div-background);
+  background-color: var(--div-bg);
 }
 /* [color-scheme='light'] .project__header {
   background-color: var(--content-bg);

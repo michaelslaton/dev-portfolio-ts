@@ -1,7 +1,10 @@
 import { FormEvent, useState } from 'react';
 import emailjs from 'emailjs-com';
 import SectionHeader from '../components/section-header/SectionHeader';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const Contact = () => {
   const [ response, setResponse ] = useState<string>('unsent');
@@ -41,8 +44,34 @@ const Contact = () => {
       </div>
 
       <div className='contact__grid'>
-        <div>
-          <p>Lets work together!</p>
+        
+        <div className='contact__info'>
+          <article>
+            I'm always open to new opportunities, collaborations, and conversations. Whether you have a project idea, a job opportunity, or just want to connect, feel free to reach out!
+          </article>
+
+          <div className='contact__info--buttons-wrapper'>
+            <a
+              className='contact__info--button linkedin'
+              href='https://www.linkedin.com/in/michaelslatondev/'
+              target='_blank'
+            >
+              <span>
+                <FontAwesomeIcon data-testid='phone signal' icon={faLinkedin as IconProp}/>
+              </span>
+              LinkedIn
+            </a>
+            <a
+              className='contact__info--button github'
+              href='https://github.com/michaelslaton'
+              target='_blank'
+            >
+              <span>
+                <FontAwesomeIcon data-testid='phone signal' icon={faGithub as IconProp}/>
+              </span>
+              GitHub
+            </a>
+          </div>
         </div>
 
         <div className='contact__form-wrapper'>
