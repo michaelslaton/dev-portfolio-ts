@@ -8,7 +8,7 @@ import './skills.css';
 import SectionHeader from '../components/section-header/SectionHeader';
 
 const SkillsDisplay = () => {
-  const [ menuSelected, setMenuSelected ] = useState<number>(2);
+  const [ menuSelected, setMenuSelected ] = useState<number>(1);
   
   return (
     <div className='content__screen'>
