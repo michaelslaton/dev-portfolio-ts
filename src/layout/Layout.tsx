@@ -17,9 +17,9 @@ const Layout = () => {
 
   return (
     <>
-      <PhoneMenuButton data-testid='phone-menu-button'/>
+      <PhoneMenuButton/>
       <div className='main-screen'>
-        <div data-testid='navphone' className={`nav-container ${appState.showPhone || !appState.power ? 'show' : 'no-show'}`}>
+        <div className={`nav-container ${appState.showPhone || !appState.power ? 'show' : 'no-show'}`}>
           <Navphone/>
         </div>
         <div className={`${appState.power ? 'content' : `content-off`}`}>
