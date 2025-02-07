@@ -22,7 +22,7 @@ const Layout = () => {
         <div className={`nav-container ${appState.showPhone || !appState.power ? 'show' : 'no-show'}`}>
           <Navphone/>
         </div>
-        <div className={`${appState.power ? 'content' : `content-off`}`}>
+        <div className={`${appState.power ? `content ${appState.showPhone ? 'content-menu' : ''}` : `content-off`}`}>
           <Outlet/>
         </div>
       </div>

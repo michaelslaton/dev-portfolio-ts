@@ -6,8 +6,7 @@
   background-attachment: fixed;
   background-position: center;
   z-index: 20;
-  overflow: hidden;
-  touch-action: none;
+  overflow: hidden !important;
 }
 .phone-container.phone-main {
   background-image: var(--phone-bg);
@@ -64,12 +63,12 @@
 }
 
 .phone-buttons__bottom-bar {
-  
   width: 95%;
   bottom: 0;
   background-color: rgba(17, 12, 61, 0.85);
   border-radius: 1rem;
   margin: .5rem auto;
+  margin-bottom: 1.5rem;
   padding: .4rem .3rem;
   display: flex;
   justify-content: space-around;
@@ -218,6 +217,7 @@
   }
   .phone-buttons__bottom-bar {
     width: 95%;
+    margin-bottom: 2.5rem;
   }
 
   .phone-button__name {
