@@ -231,6 +231,9 @@ img {
   border-right: .14rem solid transparent;
   box-shadow: 0 0 1.3rem transparent;
 }
+.content-menu {
+  display: none;
+}
 
 .content__screen {
   width: 100%;
@@ -308,6 +311,7 @@ img {
 }
 
 @media (min-width: 1280px){
+  
   .main-screen {
     display: flex;
     width: 100%;
@@ -333,9 +337,11 @@ img {
     margin: auto 3rem;
     overflow-y: auto;
     backdrop-filter: blur(30px);
-
     width: 100%;
     max-width: 100%;
+  }
+  .content-menu {
+    display: block;
   }
 }
 
