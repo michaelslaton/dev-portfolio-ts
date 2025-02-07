@@ -8,10 +8,36 @@
   border-radius: 6px;
   font-size: 1.5rem;
   z-index: 10;
+  place-items: center;
+  color: var(--content-bg);
+  background-color: var(--purple);
+  border: 1px solid transparent;
+}
+[color-scheme='light'] .phone-menu-button {
+  color: var(--content-bg);
+  background-color: #363636;
+  border-color: transparent;
+}
+.phone-menu-button:is(hover) {
+  color: white;
+}
+[color-scheme='light'] .phone-menu-button:is(:hover) {
+  color: white;
+}
+.phone-menu-button:is(:active) {
+  color: var(--purple);
+  background-color: var(--content-bg);
+  border-color: var(--purple);
+}
+[color-scheme='light'] .phone-menu-button:is(:active) {
+  color: white;
+  background-color: var(--content-bg);
+  border-color: white;
 }
 .phone-menu-button.no-power {
   display: none;
 }
+
 
 /* 320 */
 
