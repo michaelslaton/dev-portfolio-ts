@@ -39,17 +39,12 @@ const Contact = () => {
     <div className='content__screen'>
       <SectionHeader title='Contact'/>
 
-      <div className='contact-response-wrapper'>
-        {responseDisplay()}
-      </div>
+      <div className="contact__grid">
 
-      <div className='contact__grid'>
-        
         <div className='contact__info'>
           <article>
             I'm always open to new opportunities, collaborations, and conversations. Whether you have a project idea, a job opportunity, or just want to connect, feel free to reach out!
           </article>
-
           <div className='contact__info--buttons-wrapper'>
             <a
               className='contact__info--button linkedin'
@@ -75,6 +70,9 @@ const Contact = () => {
         </div>
 
         <div className='contact__form-wrapper'>
+          <div className='contact-response__wrapper'>
+            {responseDisplay()}
+          </div>
           <form
             className='contact__form'
             onSubmit={(e) => sendEmail(e)}
@@ -116,7 +114,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-
     </div>
   );
 };
