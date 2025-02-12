@@ -73,6 +73,7 @@ const Contact = () => {
           <div className='contact-response__wrapper'>
             {responseDisplay()}
           </div>
+          <h2>Email</h2>
           <form
             className='contact__form'
             onSubmit={(e) => sendEmail(e)}
