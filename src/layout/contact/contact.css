@@ -12,13 +12,23 @@
   width: 100%;
   background-color: var(--div-bg);
   height: max-content;
-  padding: 1rem 2rem;
+  padding: 1rem .5rem;
 }
 
 .contact-response__wrapper {
   width: 100%;
-  height: 1rem;
+  height: 1.4rem;
   background-color: transparent;
+  text-align: center;
+  padding: .2rem 0;
+  margin-bottom: .2rem;
+}
+.contact-response__wrapper.sent {
+  background-color: #00be00;
+}
+.contact-response__wrapper.error {
+  background-color: rgb(180, 0, 0);
+  color: black;
 }
 
 .contact__form-wrapper {
@@ -35,10 +45,33 @@
   flex-direction: column;
 }
 .contact__form--buttons-wrapper {
-
+  text-align: end;
 }
 .contact__form-submit {
+  border-radius: var(--border-radius);
+  padding: .3rem 1rem;
+  border: 0;
+  border: 1px solid black;
+  background-color: var(--purple);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contact__form-submit:is(:hover, :focus) {
+  color: var(--purple);
+  background-color: black;
+  border-color: var(--purple);
+}
+.contact__form-submit:active {
+  color: white;
+  background-color: black;
+  border-color: white;
+}
 
+.contact__form-wrapper > span {
+  font-size: 2.5rem;
+  margin: 1rem .5rem .5rem;
+  font-family: 'alien-encounters-italic';
 }
 
 .contact__input {
@@ -111,6 +144,8 @@
 @media (min-width: 1280px){
   .contact__grid {
     flex-direction: row;
+    width: 95%;
+    margin: 2rem auto 0;
   }
 
   .contact__info > article {
@@ -125,9 +160,14 @@
     min-width: 25rem;
     padding-bottom: 1rem;
     border-radius: var(--border-radius);
+    margin: auto;
   }
   .contact__form {
     padding: 1rem 2.5rem;
+  }
+
+  .contact__form-wrapper > span {
+    margin: 1rem 2.5rem .5rem;
   }
 
   .contact__input {
