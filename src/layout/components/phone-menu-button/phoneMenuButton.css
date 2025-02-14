@@ -12,6 +12,7 @@
   color: var(--content-bg);
   background-color: var(--purple);
   border: 1px solid transparent;
+  text-align: center;
 }
 [color-scheme='light'] .phone-menu-button {
   color: var(--content-bg);
