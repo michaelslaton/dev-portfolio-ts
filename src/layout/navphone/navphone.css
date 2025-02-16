@@ -7,6 +7,8 @@
   background-position: center;
   z-index: 20;
   overflow: hidden !important;
+  touch-action: none;
+  scroll-behavior: none;
 }
 .phone-container.phone-main {
   background-image: var(--phone-bg);
@@ -195,6 +197,8 @@
     background-attachment: fixed;
     background-position: center;
     box-shadow: var(--phone-shadow);
+    touch-action: auto;
+    scroll-behavior: auto;
   }
 
   .phone-top {
