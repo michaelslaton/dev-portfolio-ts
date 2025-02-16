@@ -8,11 +8,14 @@
   border-radius: 6px;
   font-size: 1.5rem;
   z-index: 10;
-  place-items: center;
+  /* place-items: center; */
   color: var(--content-bg);
   background-color: var(--purple);
   border: 1px solid transparent;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 [color-scheme='light'] .phone-menu-button {
   color: var(--content-bg);
