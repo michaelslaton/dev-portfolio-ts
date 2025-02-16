@@ -56,6 +56,7 @@
   background: var(--purple);
   position: absolute;
   z-index: -5;
+  will-change: transform, opacity;
 }
 [color-scheme='light'] .title-card__back-line {
   background: rgb(54, 54, 54);
