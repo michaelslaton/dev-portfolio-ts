@@ -41,6 +41,11 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
     else setListState({showItems: false, selectedItem: item});
   };
 
+  const handleChange = (itemId: string): void => {
+    const foundItem = formattedList.find((item)=> item.id === Number(itemId));
+    if(foundItem) setListState({...listState, selectedItem: foundItem});
+  };
+
   function isExperienceType(item: ProjectType | ExperienceType): item is ExperienceType {
     return (item as ExperienceType).startDate !== undefined;
   };
@@ -49,8 +54,8 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
     <div key={location.pathname} className='content__screen'>
       <SectionHeader title={title}/>
 
-      <div className='list-display__container'>
-        <div className='menu__list' ref={visibilityRef}>
+      <div className='list-display__container' ref={visibilityRef}>
+        <div className='menu__list'>
           { formattedList.map((item,i)=>(
             <ListItem
               key={item.id}
@@ -63,6 +68,28 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
             />
           ))}
         </div>
+        <select
+          id='item list'
+          name='item list'
+          className='list__drop-down'
+          defaultValue={id ? `${id}` : ''}
+          onChange={(e)=> handleChange(e.target.value)}
+        >
+          <option
+            disabled={true}
+            value=''
+          >
+              {title}
+          </option>
+          { formattedList.map((item,i)=>(
+            <option
+              key={i}
+              value={`${item.id}`}
+            >
+              {item.name}
+            </option>
+          ))}
+        </select>
 
         { listState.selectedItem &&
           <>
