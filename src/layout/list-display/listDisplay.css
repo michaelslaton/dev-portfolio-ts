@@ -2,6 +2,7 @@
   height: max-content;
   min-width: fit-content;
   padding-top: .5rem;
+  display: none;
 }
 
 .list-item {
@@ -55,6 +56,17 @@
   font-size: 1.5rem;
 }
 
+.list__drop-down {
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: .2rem .5rem;
+  width: 95%;
+  text-align: center;
+  margin: .5rem auto;
+  display: block;
+  font-size: 1.1rem;
+}
 /* 320 */
 
 @media (min-width: 375px){
@@ -67,6 +79,12 @@
 }
 
 @media (min-width: 768px){
+  .menu__list {
+    display: block;
+  }
+  .list__drop-down {
+    display: none;
+  }
 
   .list-display__container {
     display: flex;
