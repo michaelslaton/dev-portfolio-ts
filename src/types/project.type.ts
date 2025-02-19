@@ -2,7 +2,7 @@ type ProjectType = {
   id: number;
   name: string;
   img: string;
-  type: string;
+  subTitle: string;
   description: string;
   tech: number[];
   screenShots: string[];

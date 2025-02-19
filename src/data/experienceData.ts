@@ -5,7 +5,7 @@ const experienceData: ExperienceType[] = [
   {
     id: 1,
     name: 'Remazon Prime',
-    role: 'Software Engineer',
+    subTitle: 'Software Engineer',
     startDate: new Date('09-01-2023'),
     endDate: new Date('09-01-2024'),
     employmentType: 'Contract',

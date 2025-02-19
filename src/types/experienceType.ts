@@ -1,7 +1,7 @@
 type ExperienceType = {
   id: number;
   name: string;
-  role: string;
+  subTitle: string;
   startDate: Date;
   endDate?: Date;
   employmentType?: string;

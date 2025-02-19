@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
-import Experience from './components/experience/Experience';
-import ListItem from './components/ListItem';
-import Project from './components/project/Project';
-import SectionHeader from '../components/section-header/SectionHeader';
 import ExperienceType from '../../types/experienceType';
+import Item from './components/item/Item';
+import ListItem from './components/ListItem';
 import ProjectType from '../../types/project.type';
+import SectionHeader from '../components/section-header/SectionHeader';
 import './listDisplay.css';
 
 type ListDisplayProps = {
@@ -29,11 +28,10 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
   });
     
   useEffect(()=>{
-    if(id) {
+    if(id){
       const foundItem = formattedList.find((item)=> item.id === Number(id));
       if(foundItem) setListState({...listState, selectedItem: foundItem});
-    }
-    else if (formattedList.length) setListState({...listState, selectedItem: formattedList[0]});
+    } else if (formattedList.length) setListState({...listState, selectedItem: formattedList[0]});
   },[location.pathname]);
 
   const handleClick = (item: ProjectType | ExperienceType): void => {
@@ -44,10 +42,6 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
   const handleChange = (itemId: string): void => {
     const foundItem = formattedList.find((item)=> item.id === Number(itemId));
     if(foundItem) setListState({...listState, selectedItem: foundItem});
-  };
-
-  function isExperienceType(item: ProjectType | ExperienceType): item is ExperienceType {
-    return (item as ExperienceType).startDate !== undefined;
   };
 
   return (
@@ -68,6 +62,7 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
             />
           ))}
         </div>
+
         <select
           id='item list'
           name='item list'
@@ -91,15 +86,8 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
           ))}
         </select>
 
-        { listState.selectedItem &&
-          <>
-            { isExperienceType(listState.selectedItem) ?
-              <Experience experience={listState.selectedItem as ExperienceType}/>
-              :
-              <Project project={listState.selectedItem as ProjectType}/>
-            }
-          </>
-        }
+        { listState.selectedItem && <Item data={listState.selectedItem}/> }
+
       </div>
     </div>
   );
