@@ -1,49 +1,3 @@
-
-
-.project {
-  
-  width: 100%;
-}
-
-.project__header {
-  padding: .5rem;
-  background-color: var(--div-bg);
-}
-/* [color-scheme='light'] .project__header {
-  background-color: var(--content-bg);
-} */
-
-.project__hero-img {
-  display: block;
-  border-radius: var(--border-radius);
-  width: 100%;
-}
-.project__header-info {
-  text-wrap: wrap;
-  padding: 1rem 0rem;
-}
-
-.project__header--title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #552a8b;
-  align-items: end;
-}
-[color-scheme='light'] .project__header--title-wrapper {
-  border-bottom: 1px solid black;
-}
-
-.project__header--title-wrapper > h2 {
-  all: initial;
-  margin: 0;
-  font-size: 1.5rem;
-  color: var(--font-title-color);
-}
-.project__header--title-wrapper > h3 {
-  all: initial;
-  margin: 0;
-  color: var(--font-title-color);
-}
 .project__skills-list {
   width: 100%;
 }
@@ -96,28 +50,6 @@
   color: #9c97c7;
 }
 
-.project__screenshots {
-  display: flex;
-  margin-top: 0.7rem;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1.5px solid var(--content-bg);
-  border-radius: var(--border-radius);
-  background-color: var(--content-bg);
-  flex-wrap: wrap;
-}
-.project__screenshots-item {
-  display: block;
-  border-radius: var(--border-radius);
-  width: 20rem;
-  scale: 1;
-  cursor: pointer;
-}
-.project__screenshots-item:is(:hover, :active) {
-  transform: scale(1.03);
-  transition: transform 0.1s ease-in-out;
-}
-
 /* 320 */
 
 @media (min-width: 375px){
@@ -136,9 +68,6 @@
   .project__skills-item {
     font-size: 1rem;
     margin-right: 1em;
-  }  
-  .project__header {
-    border-radius: var(--border-radius);
   }
   
   .list-chevron {
@@ -164,37 +93,6 @@
 }
 
 @media (min-width: 1440px){
-  .project {
-    margin: 1rem;
-  }
-
-  .project__header {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    padding: 1rem;
-    border: 1.5px solid var(--content-bg);
-  }
-  .project__header-info {
-    margin-left: 1rem;
-    padding: auto;
-  }
-
-  .project__hero-img {
-    display: block;
-    border-radius: var(--border-radius);
-    width: 25rem;
-  }
-
-  .project__header--title-wrapper {
-    display: flex;
-    justify-content:space-between;
-    border-bottom: 1px solid #552a8b;
-    align-items: end;
-  }
-  .project__header--title-wrapper > h2 {
-    font-size: 2rem;
-  }
-
   .project__code-buttons-item {
     margin-right: 1em;
   }
