@@ -48,7 +48,7 @@ const RecentProject = () => {
         </h2>
 
         <div className='widget__sub-title italic'>
-          {mostRecentProject?.type}
+          {mostRecentProject?.subTitle}
         </div>
 
         <article>
