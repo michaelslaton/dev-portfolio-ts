@@ -6,27 +6,116 @@
 .phone-tools__grids-wrapper {
   width: 100%;
 }
-.phone-tools__grid-4-4 {
+
+.phone-tools__grid-2-2 {
   display: grid;
-  grid-template-columns: repeat(4, 60px);
+  grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
-  width: fit-content;
+  width: 85%;
+  gap: .6rem;
+  margin-bottom: .6rem;
+}
+.phone-tools__grid-2-2--inner-2-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  width: 100%;
   gap: .6rem;
 }
+.phone-tools__grid-4-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  width: 85%;
+  gap: .6rem;
+}
+.phone-tools__grid-2-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  width: 85%;
+  gap: .6rem;
+  margin-bottom: .6rem;
+}
 
-.phone-tools__grid-item {
-  display: block;
-  background-color: rgba(88, 88, 88, .6);
+.span2 {
+  grid-column: span 2;
+}
+
+.phone-tools__big-box {
+  aspect-ratio: 1/1;
+  background-color: rgba(38, 38, 43, 0.6);
   width: 100%;
   min-height: 60px;
   height: 100%;
   border: none;
-  border-radius: var(--border-radius);  
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  transition: .2s all ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.phone-tools__big-box--item {
+  background-color: rgba(255, 255, 255, .1);
+  width: 2.7rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border: 0;
+  color: white;
+  font-size: 1.3rem;
+  transition: .2s all ease-in-out;
+}
+
+.blue-background {
+  background-color: #007bff;
+}
+.green-background {
+  background-color: #34c85a;
+}
+.orange-background {
+  background-color: #ff9501;
+}
+
+.phone-tools__grid-item {
+  background-color: rgba(38, 38, 43, 0.6);
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  border: none;
+  border-radius: var(--border-radius);
   text-align: center;
   color: white;
   font-size: 1.3rem;
   transition: .2s all ease-in-out;
   cursor: pointer;
+}
+.phone-tools__grid-item > span {
+  font-size: 1rem;
+  margin-left: .5rem;
+}
+
+.phone-tools__grid-slider {
+  background-color: rgba(38, 38, 43, 0.6);
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  border: none;
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 1.4rem;
 }
 
 .phone-tools__bottom {

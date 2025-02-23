@@ -17,8 +17,12 @@ export type portfolioStateType = {
   power: boolean;
   theme: ThemeType;
   screen: ScreenType;
-  lowPower: boolean;
   showPhone: boolean;
+  lowPower: boolean;
+  blueTooth: boolean;
+  wifi: boolean;
+  airplaneMode: boolean;
+  data: boolean;
 };
 
 export const PortfolioState = createContext<
@@ -80,6 +84,10 @@ const App = () => {
     screen: 'main',
     lowPower: false,
     showPhone: false,
+    blueTooth: true,
+    wifi: true,
+    airplaneMode: false,
+    data: true,
   });
 
   return (
