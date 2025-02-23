@@ -32,6 +32,10 @@ describe('Layout Component', () => {
     theme: 'light',
     screen: 'main',
     lowPower: false,
+    blueTooth: true,
+    wifi: true,
+    airplaneMode: false,
+    data: true,
   };
 
   it('renders correctly when power is on', () => {
