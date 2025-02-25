@@ -42,7 +42,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
     },
     {
       id: 5,
-      name: 'Controls',
+      name: 'Settings',
       iconColor: '#888888',
       fontColor: 'black',
       symbol: faCog,

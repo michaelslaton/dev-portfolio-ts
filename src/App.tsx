@@ -12,7 +12,7 @@ import ListDisplay from './layout/list-display/ListDisplay';
 import experienceData from './data/experienceData';
 
 export type ThemeType = 'light' | 'dark';
-export type ScreenType = 'main' | 'tools';
+export type ScreenType = 'main' | 'tools' | 'settings';
 export type portfolioStateType = {
   power: boolean;
   theme: ThemeType;

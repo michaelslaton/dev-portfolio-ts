@@ -24,7 +24,7 @@ const PhoneButton = ({ data, position }: phoneButtonProps) => {
         <div
           className='phone-button__container'
           onClick={()=>{
-            if(data.name === 'Controls') setAppState!({ ...appState, screen: 'tools' });
+            if(data.name === 'Settings') setAppState!({ ...appState, screen: 'settings' });
             else { navigate(data.url);
               setAppState({
                 ...appState,
