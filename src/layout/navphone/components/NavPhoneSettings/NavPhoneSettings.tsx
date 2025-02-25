@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import { PortfolioState } from '../../../../App';
 import {
   faLightbulb,
-  faPlane,
-  faBroadcastTower,
-  faWifi,
+  // faPlane,
+  // faBroadcastTower,
+  // faWifi,
  } from '@fortawesome/fontawesome-free-solid';
 import './navPhoneSettings.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
