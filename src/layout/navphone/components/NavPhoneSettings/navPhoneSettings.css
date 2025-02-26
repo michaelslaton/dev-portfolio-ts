@@ -44,6 +44,10 @@
   display: flex;
   width: 100%;
   align-items: center;
+  margin-bottom: 1rem;
+}
+.phone-settings__item.last {
+  margin-bottom: 0;
 }
 
 .phone-settings__item-icon {
@@ -51,7 +55,6 @@
   place-items: center;
   aspect-ratio: 1/1;
   width: 2rem;
-  background-color: #007bff;
   padding: .5rem;
   border-radius: 5px;
   margin-right: 1rem;
