@@ -64,7 +64,7 @@ const NavPhoneTools = () => {
                 <button
                   className={`phone-tools__big-box--item ${appState.data && 'green-background'}`}
                   onClick={()=> {
-                      if(!appState.airplaneMode) setAppState({...appState, data: !appState.data})
+                    setAppState({...appState, airplaneMode: false, data: !appState.data})
                   }}
                 >
                   <FontAwesomeIcon icon={faBroadcastTower as IconProp} />
@@ -72,7 +72,7 @@ const NavPhoneTools = () => {
                 <button
                   className={`phone-tools__big-box--item ${appState.wifi && 'blue-background'}`}
                   onClick={()=> {
-                    if(!appState.airplaneMode) setAppState({...appState, wifi: !appState.wifi})
+                    setAppState({...appState, airplaneMode: false, wifi: !appState.wifi})
                   }}
                 >
                   <FontAwesomeIcon icon={faWifi as IconProp} />
@@ -80,7 +80,7 @@ const NavPhoneTools = () => {
                 <button
                   className={`phone-tools__big-box--item ${appState.blueTooth && 'blue-background'}`}
                   onClick={()=> {
-                    if(!appState.airplaneMode) setAppState({...appState, blueTooth: !appState.blueTooth})
+                    setAppState({...appState, airplaneMode: false, blueTooth: !appState.blueTooth})
                   }}
                 >
                   <FontAwesomeIcon icon={faBluetoothB as IconProp} />

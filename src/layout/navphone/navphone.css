@@ -43,6 +43,16 @@
   cursor: pointer;
 }
 
+.blue-background {
+  background-color: #007bff !important;
+}
+.green-background {
+  background-color: #34c85a !important;
+}
+.orange-background {
+  background-color: #ff9501 !important;
+}
+
 /* .phone-top__time {
 
 } */

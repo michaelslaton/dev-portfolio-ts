@@ -2,10 +2,11 @@ import { useContext } from 'react';
 import { PortfolioState } from '../../../../App';
 import {
   faLightbulb,
-  // faPlane,
-  // faBroadcastTower,
-  // faWifi,
+  faWifi,
+  faPlane,
+  faBroadcastTower,
  } from '@fortawesome/fontawesome-free-solid';
+ import { faBluetoothB } from '@fortawesome/free-brands-svg-icons';
 import './navPhoneSettings.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
@@ -27,18 +28,6 @@ const NavPhoneSettings = () => {
       setAppState({ ...appState , theme: 'dark' });
     };
     return;
-   };
-
-   const switchButton = (fn: Function) => {
-
-    return (
-      <div
-        className={`phone-settings__switch  ${appState.theme === 'light' && 'switched'}`}
-        onClick={()=> fn()}
-      >
-        <div className={`phone-settings__switch-circle ${appState.theme === 'light' && 'right'}`}/>
-      </div>
-    );
    };
 
   return (
@@ -69,12 +58,79 @@ const NavPhoneSettings = () => {
 
       <div className='phone-settings__settings'>
         <div className='phone-settings__item'>
-          <div className='phone-settings__item-icon'>
+          <div className='phone-settings__item-icon blue-background'>
             <FontAwesomeIcon icon={faLightbulb as IconProp} />
           </div>
           Light Mode
-          {switchButton(loadTheme)}
+          <div
+            className={`phone-settings__switch  ${appState.theme === 'light' && 'switched'}`}
+            onClick={()=> loadTheme()}
+          >
+            <div className={`phone-settings__switch-circle ${appState.theme === 'light' && 'right'}`}/>
+          </div>
         </div>
+
+        <div className='phone-settings__item'>
+          <div className='phone-settings__item-icon blue-background'>
+            <FontAwesomeIcon icon={faWifi as IconProp} />
+          </div>
+          Wifi
+          <div
+            className={`phone-settings__switch  ${appState.wifi === true && 'switched'}`}
+            onClick={()=> {
+              setAppState({...appState, airplaneMode: false, wifi: !appState.wifi})
+            }}
+          >
+            <div className={`phone-settings__switch-circle ${appState.wifi === true && 'right'}`}/>
+          </div>
+        </div>
+
+        <div className='phone-settings__item'>
+          <div className='phone-settings__item-icon green-background'>
+            <FontAwesomeIcon icon={faBroadcastTower as IconProp} />
+          </div>
+          Data
+          <div
+            className={`phone-settings__switch  ${appState.data === true && 'switched'}`}
+            onClick={()=> {
+              setAppState({...appState, airplaneMode: false, data: !appState.data})
+            }}
+          >
+            <div className={`phone-settings__switch-circle ${appState.data === true && 'right'}`}/>
+          </div>
+        </div>
+
+        <div className='phone-settings__item'>
+          <div className='phone-settings__item-icon blue-background'>
+            <FontAwesomeIcon icon={faBluetoothB as IconProp} />
+          </div>
+          Bluetooth
+          <div
+            className={`phone-settings__switch  ${appState.blueTooth === true && 'switched'}`}
+            onClick={()=> {
+              setAppState({...appState, airplaneMode: false, blueTooth: !appState.blueTooth})
+            }}
+          >
+            <div className={`phone-settings__switch-circle ${appState.blueTooth === true && 'right'}`}/>
+          </div>
+        </div>
+        
+        <div className='phone-settings__item last'>
+          <div className='phone-settings__item-icon orange-background'>
+            <FontAwesomeIcon icon={faPlane as IconProp} />
+          </div>
+          Airplane Mode
+          <div
+            className={`phone-settings__switch  ${appState.airplaneMode === true && 'switched'}`}
+            onClick={()=> {
+              if(!appState.airplaneMode) setAppState({ ...appState, data: false, wifi: false, blueTooth: false, airplaneMode: true });
+              else setAppState({ ...appState, airplaneMode: false });
+            }}
+          >
+            <div className={`phone-settings__switch-circle ${appState.airplaneMode === true && 'right'}`}/>
+          </div>
+        </div>
+
       </div>
 
     </div>

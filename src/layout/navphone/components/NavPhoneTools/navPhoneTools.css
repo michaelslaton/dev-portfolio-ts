@@ -75,16 +75,6 @@
   align-items: center;
 }
 
-.blue-background {
-  background-color: #007bff;
-}
-.green-background {
-  background-color: #34c85a;
-}
-.orange-background {
-  background-color: #ff9501;
-}
-
 .phone-tools__grid-item {
   background-color: rgba(38, 38, 43, 0.6);
   width: 100%;
