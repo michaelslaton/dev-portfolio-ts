@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { PortfolioState } from '../../App';
-import TitleCard from './components/TitleCard/TitleCard';
+import TitleCard from './components/title-card/TitleCard';
 import './homePage.css';
 import RecentExperience from './components/RecentExperience';
 import SkillsSummary from './components/SkillsSummary';

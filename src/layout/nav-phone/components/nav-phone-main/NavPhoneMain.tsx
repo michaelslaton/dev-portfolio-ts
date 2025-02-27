@@ -5,7 +5,7 @@ import {
  } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import PhoneButton from './../../components/PhoneButton';
+import PhoneButton from '../PhoneButton';
 import phoneButtonsData from '../../../../data/phoneButtonsData';
 import { useContext } from 'react';
 import { PortfolioState } from '../../../../App';

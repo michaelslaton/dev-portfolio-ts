@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { NavigateFunction, Outlet, useNavigate } from 'react-router-dom';
 import { PortfolioState } from '../App';
-import Navphone from './navphone/Navphone';
+import Navphone from './nav-phone/Navphone';
 import PhoneMenuButton from './components/phone-menu-button/PhoneMenuButton';
 import './layout.css';
 
