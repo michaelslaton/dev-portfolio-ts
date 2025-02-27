@@ -1,10 +1,9 @@
 import { faPowerOff } from '@fortawesome/fontawesome-free-solid';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useContext } from 'react';
-import { PortfolioState } from '../../../App';
-import '../navphone.css';
+import { PortfolioState } from '../../../../App';
+import '../../navphone.css';
 
 const NavPhoneOff = () => {
   const context = useContext(PortfolioState);
