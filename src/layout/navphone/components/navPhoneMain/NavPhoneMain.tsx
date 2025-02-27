@@ -5,17 +5,16 @@ import {
  } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import PhoneButton from './../components/PhoneButton';
-import phoneButtonsData from '../../../data/phoneButtonsData';
+import PhoneButton from './../../components/PhoneButton';
+import phoneButtonsData from '../../../../data/phoneButtonsData';
 import { useContext } from 'react';
-import { PortfolioState } from '../../../App';
-import '../navphone.css';
+import { PortfolioState } from '../../../../App';
+import '../../navphone.css';
 
 const NavPhoneMain = () => {
   const context = useContext(PortfolioState);
   if (!context) throw new Error('PortfolioState must be used within a PortfolioState.Provider');
   const [ appState, setAppState ] = context;
-
 
   return (
     <div className='phone-container phone-main'>
