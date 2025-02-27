@@ -27,13 +27,6 @@
   font-size: 1.5rem;
 }
 
-.phone-settings__profile {
-  background-color: rgb(24, 24, 24);
-  border-radius: var(--border-radius);
-  margin-bottom: 1rem;
-  padding: .5rem 1rem;
-}
-
 .phone-settings__settings {
   background-color: rgb(24, 24, 24);
   border-radius: var(--border-radius);
@@ -81,4 +74,24 @@
 }
 .phone-settings__switch-circle.right {
   margin-left: auto;
+}
+
+.settings-profile {
+  background-color: rgb(24, 24, 24);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settings-profile__img {
+  width: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
+  margin-right: 1rem;
+}
+.settings-profile__name {
+  margin: 0;
 }

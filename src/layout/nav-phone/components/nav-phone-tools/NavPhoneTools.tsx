@@ -15,8 +15,8 @@ import {
   faBroadcastTower,
   faWifi,
  } from '@fortawesome/fontawesome-free-solid';
- import { faBluetoothB } from '@fortawesome/free-brands-svg-icons';
- import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { faBluetoothB } from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PortfolioState } from '../../../../App';
 import './navPhoneTools.css';
@@ -51,43 +51,44 @@ const NavPhoneTools = () => {
       <div className='phone-buttons__container'>
         <div className='phone-tools__grids-wrapper'>
           <div className='phone-tools__grid-2-1'>
-              <div className='phone-tools__big-box'>
-                <button
-                  className={`phone-tools__big-box--item ${appState.airplaneMode && 'orange-background'}`}
-                  onClick={()=> {
-                    if(!appState.airplaneMode) setAppState({ ...appState, data: false, wifi: false, blueTooth: false, airplaneMode: true });
-                    else setAppState({ ...appState, airplaneMode: false });
-                  }}
-                >
-                  <FontAwesomeIcon icon={faPlane as IconProp} />
-                </button>
-                <button
-                  className={`phone-tools__big-box--item ${appState.data && 'green-background'}`}
-                  onClick={()=> {
-                    setAppState({...appState, airplaneMode: false, data: !appState.data})
-                  }}
-                >
-                  <FontAwesomeIcon icon={faBroadcastTower as IconProp} />
-                </button>
-                <button
-                  className={`phone-tools__big-box--item ${appState.wifi && 'blue-background'}`}
-                  onClick={()=> {
-                    setAppState({...appState, airplaneMode: false, wifi: !appState.wifi})
-                  }}
-                >
-                  <FontAwesomeIcon icon={faWifi as IconProp} />
-                </button>
-                <button
-                  className={`phone-tools__big-box--item ${appState.blueTooth && 'blue-background'}`}
-                  onClick={()=> {
-                    setAppState({...appState, airplaneMode: false, blueTooth: !appState.blueTooth})
-                  }}
-                >
-                  <FontAwesomeIcon icon={faBluetoothB as IconProp} />
-                </button>
-              </div>
-              <div className='phone-tools__big-box'>
-              </div>
+            <div className='phone-tools__big-box'>
+              <button
+                className={`phone-tools__big-box--item ${appState.airplaneMode && 'orange-background'}`}
+                onClick={()=> {
+                  if(!appState.airplaneMode) setAppState({ ...appState, data: false, wifi: false, blueTooth: false, airplaneMode: true });
+                  else setAppState({ ...appState, airplaneMode: false });
+                }}
+              >
+                <FontAwesomeIcon icon={faPlane as IconProp} />
+              </button>
+              <button
+                className={`phone-tools__big-box--item ${appState.data && 'green-background'}`}
+                onClick={()=> {
+                  setAppState({...appState, airplaneMode: false, data: !appState.data})
+                }}
+              >
+                <FontAwesomeIcon icon={faBroadcastTower as IconProp} />
+              </button>
+              <button
+                className={`phone-tools__big-box--item ${appState.wifi && 'blue-background'}`}
+                onClick={()=> {
+                  setAppState({...appState, airplaneMode: false, wifi: !appState.wifi})
+                }}
+              >
+                <FontAwesomeIcon icon={faWifi as IconProp} />
+              </button>
+              <button
+                className={`phone-tools__big-box--item ${appState.blueTooth && 'blue-background'}`}
+                onClick={()=> {
+                  setAppState({...appState, airplaneMode: false, blueTooth: !appState.blueTooth})
+                }}
+              >
+                <FontAwesomeIcon icon={faBluetoothB as IconProp} />
+              </button>
+            </div>
+
+            <div className='phone-tools__big-box'>
+            </div>
           </div>
 
           <div className='phone-tools__grid-2-2'>
@@ -114,33 +115,31 @@ const NavPhoneTools = () => {
           </div>
 
           <div className='phone-tools__grid-4-2'>
+            <button
+              className={`phone-tools__grid-item theme-button ${appState.theme === 'dark' ? '' : 'light'}`}
+              onClick={()=> loadTheme()}
+            >
+              <FontAwesomeIcon icon={faLightbulb as IconProp} />
+            </button>
 
-              <button
-                className={`phone-tools__grid-item theme-button ${appState.theme === 'dark' ? '' : 'light'}`}
-                onClick={()=> loadTheme()}
-              >
-                <FontAwesomeIcon icon={faLightbulb as IconProp} />
-              </button>
+            <button className='phone-tools__grid-item'>
+              <FontAwesomeIcon icon={faClock as IconProp} />
+            </button>
 
-              <button className='phone-tools__grid-item'>
-                <FontAwesomeIcon icon={faClock as IconProp} />
-              </button>
+            <button className='phone-tools__grid-item'>
+              <FontAwesomeIcon icon={faCalculator as IconProp} />
+            </button>
 
-              <button className='phone-tools__grid-item'>
-                <FontAwesomeIcon icon={faCalculator as IconProp} />
-              </button>
+            <button className='phone-tools__grid-item'>
+              <FontAwesomeIcon icon={faCamera as IconProp} />
+            </button>
 
-              <button className='phone-tools__grid-item'>
-                <FontAwesomeIcon icon={faCamera as IconProp} />
-              </button>
-
-              <button
-                className={`phone-tools__grid-item ${appState.lowPower ? 'low-power' : ''}`}
-                onClick={()=> setAppState({...appState, lowPower: !appState.lowPower })}
-              >
-                <FontAwesomeIcon icon={faBatteryThreeQuarters as IconProp} />
-              </button>
-
+            <button
+              className={`phone-tools__grid-item ${appState.lowPower ? 'low-power' : ''}`}
+              onClick={()=> setAppState({...appState, lowPower: !appState.lowPower })}
+            >
+              <FontAwesomeIcon icon={faBatteryThreeQuarters as IconProp} />
+            </button>
           </div>
         </div>
 
