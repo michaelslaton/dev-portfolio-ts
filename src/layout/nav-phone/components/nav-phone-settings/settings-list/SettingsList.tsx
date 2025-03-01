@@ -3,6 +3,7 @@ import {
   faWifi,
   faPlane,
   faBroadcastTower,
+  faBatteryThreeQuarters,
 } from '@fortawesome/fontawesome-free-solid';
 import { useContext } from 'react';
 import { faBluetoothB } from '@fortawesome/free-brands-svg-icons';
@@ -42,6 +43,21 @@ const SettingsList = () => {
           onClick={()=> loadTheme()}
         >
           <div className={`phone-settings__switch-circle ${appState.theme === 'light' && 'right'}`}/>
+        </div>
+      </div>
+
+      <div className='phone-settings__item'>
+        <div className='phone-settings__item-icon orange-background'>
+          <FontAwesomeIcon icon={faBatteryThreeQuarters as IconProp} />
+        </div>
+        Low Power Mode
+        <div
+          className={`phone-settings__switch  ${appState.lowPower === true && 'switched'}`}
+          onClick={()=> {
+            setAppState({...appState, lowPower: !appState.lowPower})
+          }}
+        >
+          <div className={`phone-settings__switch-circle ${appState.lowPower === true && 'right'}`}/>
         </div>
       </div>
 
