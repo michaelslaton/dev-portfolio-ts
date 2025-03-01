@@ -64,7 +64,7 @@
   cursor: pointer;
 }
 .phone-settings__switch.switched {
-  background-color: rgb(20, 173, 0);
+  background-color: rgb(148, 148, 148);
 }
 .phone-settings__switch-circle {
   aspect-ratio: 1/1;

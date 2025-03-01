@@ -147,11 +147,6 @@
   color: rgb(42, 39, 255);
 }
 
-.low-power {
-  background-color: white;
-  color: rgb(255, 187, 0);
-}
-
 @keyframes power-button-pulse {
   0% {
     color: var(--purple);
