@@ -29,6 +29,9 @@
 [color-scheme='light'] .item__titles {
   border-bottom: 1px solid black;
 }
+.item__titles.school {
+  display: none;
+}
 
 .item__titles > h2 {
   all: initial;
@@ -53,8 +56,8 @@
   width: 20rem;
   border-radius: var(--border-radius);
 }
-.item__screenshot:is(:hover, :active) {
-}
+/* .item__screenshot:is(:hover, :active) {
+} */
 
 /* 320 */
 
@@ -104,6 +107,12 @@
     width: 50%;
     aspect-ratio: 1.76/1;
     align-self: start;
+  }  
+  .item__img.school {
+    width: 60%;
+    aspect-ratio: auto;
+    align-self: start;
+    border-radius: 0;
   }
 
   .item__screenshots-wrapper {

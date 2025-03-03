@@ -31,8 +31,17 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       url: '/experience',
       linkType: 'local',
     },
+    // {
+    //   id: 4,
+    //   name: 'School',
+    //   iconColor: '#ffffff',
+    //   fontColor: 'black',
+    //   symbol: faGraduationCap,
+    //   url: '/school',
+    //   linkType: 'local',
+    // },
     {
-      id: 4,
+      id: 5,
       name: 'Contact',
       iconColor: '#d20001',
       fontColor: 'white',
@@ -41,7 +50,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'local',
     },
     {
-      id: 5,
+      id: 6,
       name: 'Settings',
       iconColor: '#888888',
       fontColor: 'black',
@@ -52,7 +61,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
   ],
   bottomBar: [
     {
-      id: 6,
+      id: 7,
       name: 'Home',
       iconColor: '#8d00ff',
       fontColor: 'white',
@@ -61,7 +70,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'local',
     },
     {
-      id: 7,
+      id: 8,
       name: 'GitHub',
       iconColor: '#24292f',
       fontColor: 'white',
@@ -70,7 +79,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 8,
+      id: 9,
       name: 'LinkedIn',
       iconColor: '#0275b4',
       fontColor: 'white',
@@ -79,7 +88,7 @@ const phoneButtonsData: { mainButtons: phoneButtonType[], bottomBar: phoneButton
       linkType: 'external',
     },
     {
-      id: 9,
+      id: 10,
       name: 'Browser',
       iconColor: 'white',
       fontColor: '#07bbd3',

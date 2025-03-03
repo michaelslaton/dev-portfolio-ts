@@ -6,11 +6,12 @@ import Item from './components/item/Item';
 import ListItem from './components/ListItem';
 import ProjectType from '../../types/project.type';
 import SectionHeader from '../components/section-header/SectionHeader';
+import SchoolType from '../../types/school.type';
 import './listDisplay.css';
 
 type ListDisplayProps = {
-  title: 'Projects' | 'Experience';
-  listData: ProjectType[] | ExperienceType[];
+  title: 'Projects' | 'Experience' | 'School';
+  listData: ProjectType[] | ExperienceType[] | SchoolType[];
 };
 
 const ListDisplay = ({ listData, title }: ListDisplayProps) => {
@@ -20,7 +21,7 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
   const formattedList = [...listData].reverse();
   const { ref: visibilityRef, inView: isVisible } = useInView();
   const [ listState, setListState ] = useState<{
-    selectedItem: ProjectType | ExperienceType | null;
+    selectedItem: ProjectType | ExperienceType | SchoolType | null;
     showItems: boolean;
   }>({
     selectedItem: null,
@@ -34,7 +35,7 @@ const ListDisplay = ({ listData, title }: ListDisplayProps) => {
     } else if (formattedList.length) setListState({...listState, selectedItem: formattedList[0]});
   },[location.pathname]);
 
-  const handleClick = (item: ProjectType | ExperienceType): void => {
+  const handleClick = (item: ProjectType | ExperienceType | SchoolType): void => {
     if(!listState.showItems) setListState({showItems: true, selectedItem: item});
     else setListState({showItems: false, selectedItem: item});
   };
