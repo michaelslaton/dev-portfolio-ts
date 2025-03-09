@@ -11,6 +11,7 @@ const schoolsData: SchoolType[] = [
     link: 'https://www.sfcc.edu/',
     img: sfccimg,
     type: 'school',
+    course: 'Creative Photography'
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const schoolsData: SchoolType[] = [
     link: 'https://www.thinkful.com/',
     img: thinkfulimg,
     type: 'school',
+    course: 'Software Engineering'
   },
 ];
 

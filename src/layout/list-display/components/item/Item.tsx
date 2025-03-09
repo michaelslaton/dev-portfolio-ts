@@ -4,6 +4,7 @@ import ProjectInfo from '../project/ProjectInfo';
 import ExperienceInfo from '../experience/ExperienceInfo';
 import './item.css';
 import SchoolType from '../../../../types/school.type';
+import SchoolInfo from '../school/SchoolInfo';
 
 type ItemProps = {
   data: ProjectType | ExperienceType | SchoolType;
@@ -13,6 +14,8 @@ const Item = ({data}: ItemProps) => {
 
   const formatScreenshots = (data: ProjectType | ExperienceType | SchoolType) => {
     if ('link' in data) return;
+    if (data.screenShots.length === 0) return <></>;
+
     return (
       <div className='item__screenshots-wrapper'>
         {data.screenShots.map((image, i) => (
@@ -30,9 +33,11 @@ const Item = ({data}: ItemProps) => {
 
   const formatInfo = (data: ProjectType | ExperienceType | SchoolType) => {
     let results = <></>;
+    
     if('startDate' in data) results = <ExperienceInfo experience={data}/>;
-    else if('link' in data) results = <></>;
+    else if('link' in data) results = <SchoolInfo school={data}/>;
     else results = <ProjectInfo project={data}/>;
+
     return results;
   };
 

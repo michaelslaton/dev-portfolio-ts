@@ -6,6 +6,7 @@ type SchoolType = {
   link: string;
   img: string;
   type: string;
+  course: string;
 };
 
 export default SchoolType;
