@@ -1,12 +1,11 @@
 import { useInView } from 'react-intersection-observer';
-import { NavigateFunction, useNavigate } from 'react-router-dom';
 import Skill from '../../skills/components/Skill';
 import { default as skillsList } from '../../../data/skillsData';
-import '../homePage.css';
 import { useState } from 'react';
+import ClickForMoreButton from './click-for-button/ClickForMoreButton';
+import '../homePage.css';
 
 const SkillsSummary = () => {
-  const navigate: NavigateFunction = useNavigate();
   const [hasAnimated, setHasAnimated] = useState<boolean>(false);
   const { ref: visibilityRef, inView: isVisible } = useInView();
   if( isVisible && !hasAnimated) setHasAnimated(true);
@@ -24,12 +23,7 @@ const SkillsSummary = () => {
           A selection of the skills I consider my strongest and most enjoyable to work with.
         </article>
 
-        <div
-          className='widget__click-for-more italic'
-          onClick={()=> navigate(`/skills`)}
-        >
-          Click for more!
-        </div>
+        <ClickForMoreButton url={'/skills'}/>
       </div>
       <section>
         {skillsList.map((skill) => {

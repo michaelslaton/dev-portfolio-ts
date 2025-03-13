@@ -6,6 +6,7 @@ import ProjectType from '../../../types/project.type';
 import SkillType from '../../../types/skill.type';
 import projectData from '../../../data/projectData';
 import skillsData from '../../../data/skillsData';
+import ClickForMoreButton from './click-for-button/ClickForMoreButton';
 import '../homePage.css';
 
 const RecentProject = () => {
@@ -59,15 +60,15 @@ const RecentProject = () => {
           {renderSkillsList(projectSkills)}
         </div>
 
-        <div
-          className='widget__click-for-more italic'
-          onClick={()=> navigate(`/projects?id=${mostRecentProject?.id}`)}
-        >
-          Click for more!
-        </div>
+        <ClickForMoreButton url={`/projects?id=${mostRecentProject?.id}`}/>
       </div>
 
-      <img className='widget-hero' src={mostRecentProject?.img} alt={mostRecentProject?.name}/>
+      <img
+        onClick={()=> navigate(`/projects?id=${mostRecentProject?.id}`)}
+        className='widget-hero'
+        src={mostRecentProject?.img}
+        alt={mostRecentProject?.name}
+      />
     </div>
   );
 };

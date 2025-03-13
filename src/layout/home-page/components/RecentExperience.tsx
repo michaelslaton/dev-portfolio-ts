@@ -6,6 +6,7 @@ import ExperienceType from '../../../types/experienceType';
 import months from '../../../data/months';
 import '../homePage.css';
 import { useState } from 'react';
+import ClickForMoreButton from './click-for-button/ClickForMoreButton';
 
 const RecentExperience = () => {
   const navigate: NavigateFunction = useNavigate();
@@ -42,15 +43,15 @@ const RecentExperience = () => {
           {mostRecentExperience?.description}
         </article>
 
-        <div
-          className='widget__click-for-more italic'
-          onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
-        >
-          Click for more!
-        </div>
+        <ClickForMoreButton url={`/experience?id=${mostRecentExperience?.id}`}/>
       </div>
 
-      <img className='widget-hero' src={mostRecentExperience?.img} alt={mostRecentExperience?.name}/>
+      <img
+        onClick={()=> navigate(`/experience?id=${mostRecentExperience?.id}`)}
+        className='widget-hero'
+        src={mostRecentExperience?.img}
+        alt={mostRecentExperience?.name}
+      />
     </div>
   );
 };
