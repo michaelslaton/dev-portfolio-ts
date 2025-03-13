@@ -1,0 +1,17 @@
+.clickFor__button {
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  padding: .3rem 1.5rem;
+  margin: 1rem 0 .5rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  background-color: var(--purple);
+  color: white;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.clickFor__button:is(:hover,:focus,:active) {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
