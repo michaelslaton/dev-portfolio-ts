@@ -3,16 +3,14 @@ import ExperienceType from '../../../../types/experienceType';
 import ProjectInfo from '../project/ProjectInfo';
 import ExperienceInfo from '../experience/ExperienceInfo';
 import './item.css';
-import SchoolType from '../../../../types/school.type';
-import SchoolInfo from '../school/SchoolInfo';
 
 type ItemProps = {
-  data: ProjectType | ExperienceType | SchoolType;
+  data: ProjectType | ExperienceType;
 }
 
 const Item = ({data}: ItemProps) => {
 
-  const formatScreenshots = (data: ProjectType | ExperienceType | SchoolType) => {
+  const formatScreenshots = (data: ProjectType | ExperienceType) => {
     if ('link' in data) return;
     if (data.screenShots.length === 0) return <></>;
 
@@ -31,11 +29,10 @@ const Item = ({data}: ItemProps) => {
     );
   };
 
-  const formatInfo = (data: ProjectType | ExperienceType | SchoolType) => {
+  const formatInfo = (data: ProjectType | ExperienceType) => {
     let results = <></>;
     
     if('startDate' in data) results = <ExperienceInfo experience={data}/>;
-    else if('link' in data) results = <SchoolInfo school={data}/>;
     else results = <ProjectInfo project={data}/>;
 
     return results;
@@ -46,12 +43,12 @@ const Item = ({data}: ItemProps) => {
       <div className='item'>
         <img
           src={data.img}
-          className={`item__img ${'link' in data && 'school'}`}
+          className='item__img'
           alt={`${data.name} hero image`}
         />
 
         <div className='item__info'>
-          <div className={`item__titles ${'link' in data && 'school'}`}>
+          <div className='item__titles'>
             <h2>{data.name}</h2>
             <h3>{data.subTitle}</h3>
           </div>
