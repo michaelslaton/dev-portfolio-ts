@@ -10,7 +10,6 @@ import PhotoLayout from './photo-layout/PhotoLayout';
 import projectData from './data/projectData';
 import ListDisplay from './layout/list-display/ListDisplay';
 import experienceData from './data/experienceData';
-// import schoolData from './data/schoolsData';
 
 export type ThemeType = 'light' | 'dark';
 export type ScreenType = 'main' | 'tools' | 'settings';
@@ -51,11 +50,6 @@ const routes: RouteObject[] = [
         element: <ListDisplay title='Experience' listData={experienceData}/>,
         errorElement: <RouteError />
       },
-      // { 
-      //   path: '/school',
-      //   element: <ListDisplay title='School' listData={schoolData}/>,
-      //   errorElement: <RouteError />
-      // },
       { 
         path: '/skills',
         element: <SkillsDisplay />,
