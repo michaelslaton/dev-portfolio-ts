@@ -64,7 +64,7 @@ const routes: RouteObject[] = [
         path: '*',
         element: <Error404 />,
         errorElement: <RouteError />
-      },
+      }
     ],
   },
   {
